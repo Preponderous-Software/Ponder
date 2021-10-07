@@ -27,9 +27,9 @@ public class DansAPI implements IDansAPI {
     public DansAPI(JavaPlugin plugin) {
         this.plugin = plugin;
         commandInterpreter = new CommandInterpreter();
-        configService = new ConfigService();
+        configService = new ConfigService(this);
         storageService = new StorageService();
-        toolbox = new Toolbox();
+        toolbox = new Toolbox(this);
     }
 
     public JavaPlugin getPlugin() {

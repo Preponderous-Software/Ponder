@@ -1,5 +1,6 @@
 package dansplugins.dansapi.implementation.toolbox;
 
+import dansplugins.dansapi.implementation.DansAPI;
 import dansplugins.dansapi.implementation.toolbox.tools.*;
 import dansplugins.dansapi.specification.toolbox.IToolbox;
 import dansplugins.dansapi.specification.toolbox.tools.*;
@@ -13,12 +14,12 @@ public class Toolbox implements IToolbox {
     private Scheduler scheduler;
     private UUIDChecker uuidChecker;
 
-    public Toolbox() {
+    public Toolbox(DansAPI dansAPI) {
         argumentParser = new ArgumentParser();
-        eventHandlerRegistry = new EventHandlerRegistry();
-        logger = new Logger();
+        eventHandlerRegistry = new EventHandlerRegistry(dansAPI);
+        logger = new Logger(dansAPI);
         permissionChecker = new PermissionChecker();
-        scheduler = new Scheduler();
+        scheduler = new Scheduler(dansAPI);
         uuidChecker = new UUIDChecker();
     }
 

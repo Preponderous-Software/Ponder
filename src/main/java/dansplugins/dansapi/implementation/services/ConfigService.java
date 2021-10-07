@@ -1,10 +1,17 @@
 package dansplugins.dansapi.implementation.services;
 
+import dansplugins.dansapi.implementation.DansAPI;
 import dansplugins.dansapi.specification.services.IConfigService;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 
 public class ConfigService implements IConfigService {
+
+    private DansAPI dansAPI;
+
+    public ConfigService(DansAPI dansAPI) {
+        this.dansAPI = dansAPI;
+    }
 
     @Override
     public void saveMissingConfigDefaultsIfNotPresent() {

@@ -6,29 +6,29 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class Logger implements ILogger {
 
-    JavaPlugin plugin;
+    private DansAPI dansAPI;
 
-    public Logger(JavaPlugin plugin) {
-        this.plugin = plugin;
+    public Logger(DansAPI dansAPI) {
+        this.dansAPI = dansAPI;
     }
 
     @Override
     public void log(boolean debug, String message) {
-        if (plugin == null) {
+        if (dansAPI.getPlugin() == null) {
             System.out.println("Error: Plugin was null.");
             return;
         }
         if (debug) {
-            System.out.println("[" + plugin.getName() + "] " + message);
+            System.out.println("[" + dansAPI.getPlugin().getName() + "] " + message);
         }
     }
 
     @Override
     public void print(String message) {
-        if (plugin == null) {
+        if (dansAPI.getPlugin() == null) {
             System.out.println("Error: Plugin was null.");
             return;
         }
-        System.out.println("[" + plugin.getName() + "] " + message);
+        System.out.println("[" + dansAPI.getPlugin().getName() + "] " + message);
     }
 }
