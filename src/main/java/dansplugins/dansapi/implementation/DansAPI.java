@@ -15,6 +15,8 @@ public class DansAPI implements IDansAPI {
 
     private boolean debug = true;
 
+    private static int numInstances = 0;
+
     private JavaPlugin plugin;
 
     private CommandInterpreter commandInterpreter;
@@ -22,14 +24,15 @@ public class DansAPI implements IDansAPI {
     private StorageService storageService;
     private Toolbox toolbox;
 
-    int timesInitialized = 0;
-
     public DansAPI(JavaPlugin plugin) {
+        numInstances++;
         this.plugin = plugin;
         commandInterpreter = new CommandInterpreter();
         configService = new ConfigService(this);
         storageService = new StorageService();
         toolbox = new Toolbox(this);
+
+        System.out.println("There are now " + numInstances + " instances of Dan's API running.");
     }
 
     public JavaPlugin getPlugin() {
