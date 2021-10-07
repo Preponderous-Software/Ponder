@@ -1,10 +1,10 @@
 package dansplugins.dansapi.implementation;
 
-import dansplugins.dansapi.commands.ICommandInterpreter;
-import dansplugins.dansapi.services.IConfigService;
-import dansplugins.dansapi.services.IStorageService;
 import dansplugins.dansapi.specification.IDansAPI;
-import dansplugins.dansapi.toolbox.IToolbox;
+import dansplugins.dansapi.specification.commands.ICommandInterpreter;
+import dansplugins.dansapi.specification.services.IConfigService;
+import dansplugins.dansapi.specification.services.IStorageService;
+import dansplugins.dansapi.specification.toolbox.IToolbox;
 
 public class DansAPI implements IDansAPI {
 
