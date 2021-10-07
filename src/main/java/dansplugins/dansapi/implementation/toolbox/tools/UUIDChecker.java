@@ -1,6 +1,5 @@
 package dansplugins.dansapi.implementation.toolbox.tools;
 
-import dansplugins.dansapi.specification.toolbox.tools.IPermissionChecker;
 import dansplugins.dansapi.specification.toolbox.tools.IUUIDChecker;
 
 import java.util.UUID;

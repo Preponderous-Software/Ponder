@@ -1,7 +1,6 @@
 package dansplugins.dansapi.implementation.toolbox.tools;
 
 import dansplugins.dansapi.implementation.DansAPI;
-import dansplugins.dansapi.specification.toolbox.tools.IEventHandlerRegistry;
 import dansplugins.dansapi.specification.toolbox.tools.ILogger;
 import org.bukkit.plugin.java.JavaPlugin;
 

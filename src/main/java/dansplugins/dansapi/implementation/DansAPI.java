@@ -4,7 +4,6 @@ import dansplugins.dansapi.implementation.commands.CommandInterpreter;
 import dansplugins.dansapi.implementation.services.ConfigService;
 import dansplugins.dansapi.implementation.services.StorageService;
 import dansplugins.dansapi.implementation.toolbox.Toolbox;
-import dansplugins.dansapi.implementation.toolbox.tools.Logger;
 import dansplugins.dansapi.specification.IDansAPI;
 import dansplugins.dansapi.specification.commands.ICommandInterpreter;
 import dansplugins.dansapi.specification.services.IConfigService;

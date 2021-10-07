@@ -1,6 +1,5 @@
 package dansplugins.dansapi.implementation.toolbox.tools;
 
-import dansplugins.dansapi.specification.toolbox.tools.ILogger;
 import dansplugins.dansapi.specification.toolbox.tools.IPermissionChecker;
 import org.bukkit.command.CommandSender;
 
