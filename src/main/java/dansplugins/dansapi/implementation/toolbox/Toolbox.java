@@ -1,43 +1,45 @@
 package dansplugins.dansapi.implementation.toolbox;
 
+import dansplugins.dansapi.implementation.toolbox.tools.*;
 import dansplugins.dansapi.specification.toolbox.IToolbox;
 import dansplugins.dansapi.specification.toolbox.tools.*;
 
 public class Toolbox implements IToolbox {
 
+    private ArgumentParser argumentParser = new ArgumentParser();
+    private EventHandlerRegistry eventHandlerRegistry = new EventHandlerRegistry();
+    private Logger logger = new Logger();
+    private PermissionChecker permissionChecker = new PermissionChecker();
+    private Scheduler scheduler = new Scheduler();
+    private UUIDChecker UUIDChecker = new UUIDChecker();
+
     @Override
     public IArgumentParser getArgumentParser() {
-        // TODO: implement
-        return null;
+        return argumentParser;
     }
 
     @Override
     public IEventHandlerRegistry getEventHandlerRegistry() {
-        // TODO: implement
-        return null;
+        return eventHandlerRegistry;
     }
 
     @Override
     public ILogger getLogger() {
-        // TODO: implement
-        return null;
+        return logger;
     }
 
     @Override
     public IPermissionChecker getPermissionChecker() {
-        // TODO: implement
-        return null;
+        return permissionChecker;
     }
 
     @Override
     public IScheduler getScheduler() {
-        // TODO: implement
-        return null;
+        return scheduler;
     }
 
     @Override
     public IUUIDChecker getUUIDChecker() {
-        // TODO: implement
-        return null;
+        return UUIDChecker;
     }
 }
