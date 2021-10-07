@@ -14,13 +14,14 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class DansAPI implements IDansAPI {
 
+    private boolean debug = true;
+
     private JavaPlugin plugin;
 
     private CommandInterpreter commandInterpreter;
     private ConfigService configService;
     private StorageService storageService;
     private Toolbox toolbox;
-    private boolean debug = true;
 
     int timesInitialized = 0;
 
