@@ -1,0 +1,4 @@
+name: DansAPI
+version: 0.1
+main: dansplugins.dansapi.implementation.DansAPI
+api-version: 1.13

@@ -4,6 +4,7 @@ import dansplugins.dansapi.implementation.commands.CommandInterpreter;
 import dansplugins.dansapi.implementation.services.ConfigService;
 import dansplugins.dansapi.implementation.services.StorageService;
 import dansplugins.dansapi.implementation.toolbox.Toolbox;
+import dansplugins.dansapi.implementation.toolbox.tools.Logger;
 import dansplugins.dansapi.specification.IDansAPI;
 import dansplugins.dansapi.specification.commands.ICommandInterpreter;
 import dansplugins.dansapi.specification.services.IConfigService;
@@ -19,6 +20,9 @@ public class DansAPI implements IDansAPI {
     private ConfigService configService;
     private StorageService storageService;
     private Toolbox toolbox;
+    private boolean debug = true;
+
+    int timesInitialized = 0;
 
     public DansAPI(JavaPlugin plugin) {
         this.plugin = plugin;
@@ -50,5 +54,13 @@ public class DansAPI implements IDansAPI {
     @Override
     public IToolbox getToolbox() {
         return toolbox;
+    }
+
+    public boolean isDebugEnabled() {
+        return debug;
+    }
+
+    public void setDebug(boolean b) {
+        debug = b;
     }
 }
