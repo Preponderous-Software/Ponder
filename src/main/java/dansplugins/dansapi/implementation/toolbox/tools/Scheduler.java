@@ -3,7 +3,6 @@ package dansplugins.dansapi.implementation.toolbox.tools;
 import dansplugins.dansapi.implementation.DansAPI;
 import dansplugins.dansapi.specification.toolbox.tools.IScheduler;
 import org.bukkit.Bukkit;
-import org.bukkit.plugin.java.JavaPlugin;
 
 public class Scheduler implements IScheduler {
 

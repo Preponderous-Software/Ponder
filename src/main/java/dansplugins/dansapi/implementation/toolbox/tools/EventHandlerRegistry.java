@@ -4,7 +4,6 @@ import dansplugins.dansapi.implementation.DansAPI;
 import dansplugins.dansapi.specification.toolbox.tools.IEventHandlerRegistry;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.PluginManager;
-import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.ArrayList;
 
