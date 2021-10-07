@@ -8,42 +8,49 @@ import dansplugins.dansapi.specification.toolbox.tools.*;
 
 public class Toolbox implements IToolbox {
 
-    private static Toolbox instance;
+    private ArgumentParser argumentParser;
+    private EventHandlerRegistry eventHandlerRegistry;
+    private Logger logger;
+    private PermissionChecker permissionChecker;
+    private Scheduler scheduler;
+    private UUIDChecker uuidChecker;
 
-    public static Toolbox getInstance() {
-        if (instance == null) {
-            instance = new Toolbox();
-        }
-        return instance;
+    public Toolbox() {
+        argumentParser = new ArgumentParser();
+        eventHandlerRegistry = new EventHandlerRegistry();
+        logger = new Logger();
+        permissionChecker = new PermissionChecker();
+        scheduler = new Scheduler();
+        uuidChecker = new UUIDChecker();
     }
 
     @Override
     public IArgumentParser getArgumentParser() {
-        return ArgumentParser.getInstance();
+        return argumentParser;
     }
 
     @Override
     public IEventHandlerRegistry getEventHandlerRegistry() {
-        return EventHandlerRegistry.getInstance();
+        return eventHandlerRegistry;
     }
 
     @Override
     public ILogger getLogger() {
-        return Logger.getInstance();
+        return logger;
     }
 
     @Override
     public IPermissionChecker getPermissionChecker() {
-        return PermissionChecker.getInstance();
+        return permissionChecker;
     }
 
     @Override
     public IScheduler getScheduler() {
-        return Scheduler.getInstance();
+        return scheduler;
     }
 
     @Override
     public IUUIDChecker getUUIDChecker() {
-        return UUIDChecker.getInstance();
+        return uuidChecker;
     }
 }

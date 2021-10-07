@@ -11,19 +11,6 @@ import java.util.Map;
 
 public class StorageService implements IStorageService {
 
-    private static StorageService instance;
-
-    private StorageService() {
-
-    }
-
-    public static StorageService getInstance() {
-        if (instance == null) {
-            instance = new StorageService();
-        }
-        return instance;
-    }
-
     @Override
     public void save() {
         // TODO: implement

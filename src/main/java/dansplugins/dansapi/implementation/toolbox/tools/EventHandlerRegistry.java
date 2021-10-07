@@ -6,19 +6,6 @@ import dansplugins.dansapi.specification.toolbox.tools.IEventHandlerRegistry;
 
 public class EventHandlerRegistry implements IEventHandlerRegistry {
 
-    private static EventHandlerRegistry instance;
-
-    private EventHandlerRegistry() {
-
-    }
-
-    public static EventHandlerRegistry getInstance() {
-        if (instance == null) {
-            instance = new EventHandlerRegistry();
-        }
-        return instance;
-    }
-
     @Override
     public void registerEvents() {
         // TODO: implement

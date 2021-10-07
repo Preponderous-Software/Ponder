@@ -7,19 +7,6 @@ import java.util.UUID;
 
 public class UUIDChecker implements IUUIDChecker {
 
-    private static UUIDChecker instance;
-
-    private UUIDChecker() {
-
-    }
-
-    public static UUIDChecker getInstance() {
-        if (instance == null) {
-            instance = new UUIDChecker();
-        }
-        return instance;
-    }
-
     @Override
     public String findPlayerNameBasedOnUUID(UUID playerUUID) {
         // TODO: implement

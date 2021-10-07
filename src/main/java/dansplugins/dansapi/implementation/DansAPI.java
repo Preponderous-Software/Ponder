@@ -13,23 +13,19 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class DansAPI implements IDansAPI {
 
-    private static DansAPI instance;
-
     private JavaPlugin plugin;
 
-    private DansAPI() {
+    private CommandInterpreter commandInterpreter;
+    private ConfigService configService;
+    private StorageService storageService;
+    private Toolbox toolbox;
 
-    }
-
-    public static DansAPI getInstance() {
-        if (instance == null) {
-            instance = new DansAPI();
-        }
-        return instance;
-    }
-
-    public void initialize(JavaPlugin plugin) {
+    public DansAPI(JavaPlugin plugin) {
         this.plugin = plugin;
+        commandInterpreter = new CommandInterpreter();
+        configService = new ConfigService();
+        storageService = new StorageService();
+        toolbox = new Toolbox();
     }
 
     public JavaPlugin getPlugin() {
@@ -38,21 +34,21 @@ public class DansAPI implements IDansAPI {
 
     @Override
     public ICommandInterpreter getCommandInterpreter() {
-        return CommandInterpreter.getInstance();
+        return commandInterpreter;
     }
 
     @Override
     public IConfigService getConfigService() {
-        return ConfigService.getInstance();
+        return configService;
     }
 
     @Override
     public IStorageService getStorageService() {
-        return StorageService.getInstance();
+        return storageService;
     }
 
     @Override
     public IToolbox getToolbox() {
-        return Toolbox.getInstance();
+        return toolbox;
     }
 }
