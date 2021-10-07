@@ -1,5 +1,9 @@
 package dansplugins.dansapi.implementation;
 
+import dansplugins.dansapi.implementation.commands.CommandInterpreter;
+import dansplugins.dansapi.implementation.services.ConfigService;
+import dansplugins.dansapi.implementation.services.StorageService;
+import dansplugins.dansapi.implementation.toolbox.Toolbox;
 import dansplugins.dansapi.specification.IDansAPI;
 import dansplugins.dansapi.specification.commands.ICommandInterpreter;
 import dansplugins.dansapi.specification.services.IConfigService;
@@ -8,27 +12,28 @@ import dansplugins.dansapi.specification.toolbox.IToolbox;
 
 public class DansAPI implements IDansAPI {
 
+    private CommandInterpreter commandInterpreter = new CommandInterpreter();
+    private ConfigService configService = new ConfigService();
+    private StorageService storageService = new StorageService();
+    private Toolbox toolbox = new Toolbox();
+
     @Override
     public ICommandInterpreter getCommandInterpreter() {
-        // TODO: implement
-        return null;
+        return commandInterpreter;
     }
 
     @Override
     public IConfigService getConfigService() {
-        // TODO: implement
-        return null;
+        return configService;
     }
 
     @Override
     public IStorageService getStorageService() {
-        // TODO: implement
-        return null;
+        return storageService;
     }
 
     @Override
     public IToolbox getToolbox() {
-        // TODO: implement
-        return null;
+        return toolbox;
     }
 }
