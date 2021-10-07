@@ -11,4 +11,6 @@ public interface IDansAPI {
     IConfigService getConfigService();
     IStorageService getStorageService();
     IToolbox getToolbox();
+    boolean isDebugEnabled();
+    void setDebug(boolean b);
 }
