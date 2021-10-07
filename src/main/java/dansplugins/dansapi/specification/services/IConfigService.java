@@ -1,4 +1,4 @@
-package dansplugins.dansapi.services;
+package dansplugins.dansapi.specification.services;
 
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;

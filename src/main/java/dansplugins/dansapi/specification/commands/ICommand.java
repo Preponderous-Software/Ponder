@@ -1,4 +1,4 @@
-package dansplugins.dansapi.commands;
+package dansplugins.dansapi.specification.commands;
 
 import org.bukkit.command.CommandSender;
 

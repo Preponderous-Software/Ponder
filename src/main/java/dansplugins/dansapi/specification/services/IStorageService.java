@@ -1,4 +1,4 @@
-package dansplugins.dansapi.services;
+package dansplugins.dansapi.specification.services;
 
 import java.util.ArrayList;
 import java.util.HashMap;
