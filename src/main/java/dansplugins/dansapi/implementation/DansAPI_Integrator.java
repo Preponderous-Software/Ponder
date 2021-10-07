@@ -14,11 +14,12 @@ public class DansAPI_Integrator implements IDansAPI_Integrator {
 
     public DansAPI_Integrator(JavaPlugin plugin) {
         if (isDansAPIPresent()) {
-            Logger.getInstance().log("Dan's API was found successfully!");
+            initialize(plugin);
+            Logger.getInstance().print("Dan's API was found successfully!");
             dansAPI = DansAPI.getInstance();
         }
         else {
-            Logger.getInstance().log("Dan's API was not found!");
+            Logger.getInstance().print("Dan's API was not found!");
         }
     }
 

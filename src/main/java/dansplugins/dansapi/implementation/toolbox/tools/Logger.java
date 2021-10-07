@@ -24,6 +24,7 @@ public class Logger implements ILogger {
     public void log(String message) {
         JavaPlugin plugin = DansAPI.getInstance().getPlugin();
         if (plugin == null) {
+            System.out.println("Error: Plugin was null.");
             return;
         }
         if (DansAPI.getInstance().isDebugEnabled()) {
@@ -35,6 +36,7 @@ public class Logger implements ILogger {
     public void print(String message) {
         JavaPlugin plugin = DansAPI.getInstance().getPlugin();
         if (plugin == null) {
+            System.out.println("Error: Plugin was null.");
             return;
         }
         System.out.println("[" + plugin.getName() + "] " + message);
