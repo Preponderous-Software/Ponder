@@ -32,7 +32,7 @@ public class PonderAPI implements IPonderAPI {
         storageService = new StorageService();
         toolbox = new Toolbox(this);
 
-        System.out.println("There are now " + numInstances + " instances of Dan's API running.");
+        System.out.println("There are now " + numInstances + " instances of Ponder running.");
     }
 
     public JavaPlugin getPlugin() {
