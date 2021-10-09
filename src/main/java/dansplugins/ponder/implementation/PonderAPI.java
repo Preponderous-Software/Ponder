@@ -27,7 +27,7 @@ public class PonderAPI implements IPonderAPI {
     public PonderAPI(JavaPlugin plugin) {
         numInstances++;
         this.plugin = plugin;
-        commandInterpreter = new CommandInterpreter();
+        commandInterpreter = new CommandInterpreter(this);
         configService = new ConfigService(this);
         storageService = new StorageService();
         toolbox = new Toolbox(this);
