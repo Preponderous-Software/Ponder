@@ -1,10 +1,10 @@
 package dansplugins.ponder.implementation;
 
-import dansplugins.ponder.specification.IPonder_Integrator;
+import dansplugins.ponder.specification.IPonderAPI_Integrator;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class PonderAPI_Integrator implements IPonder_Integrator {
+public class PonderAPI_Integrator implements IPonderAPI_Integrator {
 
     private PonderAPI ponderAPI = null;
 
