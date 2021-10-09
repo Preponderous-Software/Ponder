@@ -1,7 +1,7 @@
 package dansplugins.ponder.implementation;
 
 import dansplugins.ponder.specification.IPonderAPI_Integrator;
-import dansplugins.ponder.specification.commands.ICommandInterpreter;
+import dansplugins.ponder.specification.services.ICommandService;
 import dansplugins.ponder.specification.services.IConfigService;
 import dansplugins.ponder.specification.services.IStorageService;
 import org.bukkit.Bukkit;
@@ -21,7 +21,7 @@ public class PonderAPI_Integrator implements IPonderAPI_Integrator {
         }
     }
 
-    public PonderAPI_Integrator(JavaPlugin plugin, ICommandInterpreter commandInterpreter, IConfigService configService, IStorageService storageService) {
+    public PonderAPI_Integrator(JavaPlugin plugin, ICommandService commandInterpreter, IConfigService configService, IStorageService storageService) {
         if (isDansAPIPresent()) {
             System.out.println("Dan's API was found successfully!");
             ponderAPI = new PonderAPI(plugin, commandInterpreter, configService, storageService);
