@@ -1,8 +1,5 @@
 package dansplugins.ponder.implementation;
 
-import dansplugins.ponder.implementation.commands.CommandInterpreter;
-import dansplugins.ponder.implementation.services.ConfigService;
-import dansplugins.ponder.implementation.services.StorageService;
 import dansplugins.ponder.implementation.toolbox.Toolbox;
 import dansplugins.ponder.specification.IPonderAPI;
 import dansplugins.ponder.specification.commands.ICommandInterpreter;
@@ -19,17 +16,26 @@ public class PonderAPI implements IPonderAPI {
 
     private JavaPlugin plugin;
 
-    private CommandInterpreter commandInterpreter;
-    private ConfigService configService;
-    private StorageService storageService;
+    private ICommandInterpreter commandInterpreter;
+    private IConfigService configService;
+    private IStorageService storageService;
+
     private Toolbox toolbox;
 
     public PonderAPI(JavaPlugin plugin) {
         numInstances++;
         this.plugin = plugin;
-        commandInterpreter = new CommandInterpreter(this);
-        configService = new ConfigService(this);
-        storageService = new StorageService();
+        toolbox = new Toolbox(this);
+
+        System.out.println("There are now " + numInstances + " instances of Ponder running.");
+    }
+
+    public PonderAPI(JavaPlugin plugin, ICommandInterpreter commandInterpreter, IConfigService configService, IStorageService storageService) {
+        numInstances++;
+        this.plugin = plugin;
+        this.commandInterpreter = commandInterpreter;
+        this.configService = configService;
+        this.storageService = storageService;
         toolbox = new Toolbox(this);
 
         System.out.println("There are now " + numInstances + " instances of Ponder running.");
