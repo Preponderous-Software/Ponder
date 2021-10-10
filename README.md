@@ -1,2 +1,39 @@
 # Ponder
+
+## Description
 Built on top of Spigot, the Ponder API is intended to facilitate the creation and expansion of Spigot plugins. Essentially what I’m doing here is abstracting out the core functionality of my plugins into a reusable API. It is my hope that this will greatly simplify the process of creating and updating plugins.
+
+## Server Software
+This API was developed on top of the Spigot API. Users may run into trouble using it with other available server softwares like Paper.
+
+## Installation
+This API is not ready for public use, yet.
+
+## Usage
+- [User Guide](https://github.com/Preponderous-Software/Ponder/wiki/Guide) (coming soon)
+- [FAQ](https://github.com/Preponderous-Software/Ponder/wiki/FAQ) (coming soon)
+
+## Support
+You can find the support discord server [here](https://discord.gg/xXtuAQ2).
+
+### Experiencing a bug?
+Please fill out a bug report [here](https://github.com/Preponderous-Software/Ponder/issues?q=is%3Aissue+is%3Aopen+label%3Abug).
+
+## Roadmap
+- [Known Bugs](https://github.com/Preponderous-Software/Ponder/issues?q=is%3Aopen+is%3Aissue+label%3Abug)
+- [Planned Features](https://github.com/Preponderous-Software/Ponder/issues?q=is%3Aopen+is%3Aissue+label%3AEpic)
+- [Planned Improvements](https://github.com/Preponderous-Software/Ponder/issues?q=is%3Aopen+is%3Aissue+label%3Aimprovement)
+
+## Contributing
+- [Notes for Developers](https://github.com/Preponderous-Software/Ponder/wiki/Developer-Notes) (coming soon)
+
+## Authors and acknowledgement
+Name | Main Contributions
+------------ | -------------
+DanTheTechMan | Creator
+
+## License
+GPL3
+
+## Project Status
+This project is in active development.
