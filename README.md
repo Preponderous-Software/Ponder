@@ -14,7 +14,7 @@ This API is not ready for public use, yet.
 - [FAQ](https://github.com/Preponderous-Software/Ponder/wiki/FAQ) (coming soon)
 
 ## Support
-You can find the support discord server [here](https://discord.gg/xXtuAQ2).
+You can find the support discord server [here](https://discord.gg/G6wQxfcBMt).
 
 ### Experiencing a bug?
 Please fill out a bug report [here](https://github.com/Preponderous-Software/Ponder/issues?q=is%3Aissue+is%3Aopen+label%3Abug).
