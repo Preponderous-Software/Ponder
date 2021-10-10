@@ -30,7 +30,7 @@ Please fill out a bug report [here](https://github.com/Preponderous-Software/Pon
 ## Authors and acknowledgement
 Name | Main Contributions
 ------------ | -------------
-DanTheTechMan | Creator
+Daniel Stephenson | Creator
 
 ## License
 GPL3
