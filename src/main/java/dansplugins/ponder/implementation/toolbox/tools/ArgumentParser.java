@@ -3,55 +3,52 @@ package dansplugins.ponder.implementation.toolbox.tools;
 import dansplugins.ponder.specification.toolbox.tools.IArgumentParser;
 
 import java.util.ArrayList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class ArgumentParser implements IArgumentParser {
 
+    /**
+     * Method to drop the first argument from an Array of Strings.
+     *
+     * @param args to modify.
+     * @return Modified Array of Strings.
+     * @throws IllegalArgumentException if the arguments given are invalid.
+     */
     @Override
     public String[] dropFirstArgument(String[] args) {
+        if (args == null || args.length < 2) throw new IllegalArgumentException("Arguments not valid.");
         String[] toReturn = new String[args.length - 1];
-
-        for (int i = 1; i < args.length; i++) {
-            toReturn[i - 1] = args[i];
-        }
-
+        System.arraycopy(args, 1, toReturn, 0, args.length-1);
         return toReturn;
     }
 
+    /**
+     * Method to get all arguments within Double Quotes.
+     *
+     * @param args to compile and scan.
+     * @return {@link ArrayList} of {@link String} which were surrounded by " or Double-Quotes.
+     * @throws IllegalArgumentException if the arguments given are invalid.
+     */
     @Override
     public ArrayList<String> getArgumentsInsideDoubleQuotes(String[] args) {
-        ArrayList<String> toReturn = new ArrayList<>();
-
-        String argumentString = String.join(" ", args);
-
-        int index = 0;
-        while (true) {
-            int start = findIndexOfFirstDoubleQuote(index, argumentString);
-            if (start == -1) {
-                break;
-            }
-            int end = findIndexOfFirstDoubleQuote(start + 1, argumentString);
-
-            if (end == -1) {
-                break;
-            }
-
-            toReturn.add(argumentString.substring(start + 1, end));
-            index = end + 1;
-        }
-
+        if (args == null || args.length == 0) throw new IllegalArgumentException("Arguments not valid.");
+        final ArrayList<String> toReturn = new ArrayList<>();
+        final String argumentString = String.join(" ", args);
+        final Matcher matcher = Pattern.compile("\"[^\"]*\"").matcher(argumentString);
+        while (matcher.find()) toReturn.add(matcher.group().replace("\"", ""));
         return toReturn;
     }
 
-    private int findIndexOfFirstDoubleQuote(int startingIndex, String argumentString) {
-
-        for (int i = startingIndex; i < argumentString.length(); i++) {
-
-            if (argumentString.charAt(i) == '"') {
-                return i;
-            }
-
-        }
-
-        return -1;
+    /**
+     * Test harness to confirm the functionality of the Argument Parser class.
+     *
+     * @param args of the program.
+     */
+    public static void main(String[] args) {
+        System.out.println("Argument Parser - Test Harness");
+        System.out.println("To utilise the Argument Parser Test Harness, provide some Program Arguments!");
+        System.out.println(new ArgumentParser().getArgumentsInsideDoubleQuotes(args));
     }
+
 }
