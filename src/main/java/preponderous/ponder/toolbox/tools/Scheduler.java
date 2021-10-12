@@ -12,6 +12,10 @@ public class Scheduler implements IScheduler {
         this.ponderAPI = ponderAPI;
     }
 
+    /**
+     * Method to schedule an hourly autosave.
+     *
+     */
     @Override
     public void scheduleAutosave() {
         int delay = 60 * 60; // 1 hour

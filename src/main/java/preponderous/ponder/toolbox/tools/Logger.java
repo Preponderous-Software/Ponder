@@ -11,17 +11,31 @@ public class Logger implements ILogger {
         this.ponderAPI = dansAPI;
     }
 
+    /**
+     * Method to print a message to the console if the debug flag is set to true.
+     *
+     * @param debug to check.
+     * @param message to print.
+     * @return Whether or not the method was successful.
+     */
     @Override
-    public void log(boolean debug, String message) {
+    public boolean log(boolean debug, String message) {
         if (ponderAPI.getPlugin() == null) {
             System.out.println("Error: Plugin was null.");
-            return;
+            return false;
         }
         if (debug) {
             System.out.println("[" + ponderAPI.getPlugin().getName() + "] " + message);
+            return true;
         }
+        return false;
     }
 
+    /**
+     * Method to print a message to the console.
+     *
+     * @param message to print.
+     */
     @Override
     public void print(String message) {
         if (ponderAPI.getPlugin() == null) {
