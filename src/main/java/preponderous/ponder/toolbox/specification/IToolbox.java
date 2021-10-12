@@ -7,6 +7,7 @@ public interface IToolbox {
     IColorChecker getColorChecker();
     IEventHandlerRegistry getEventHandlerRegistry();
     ILogger getLogger();
+    IMessenger getMessenger();
     IPermissionChecker getPermissionChecker();
     IScheduler getScheduler();
     IUUIDChecker getUUIDChecker();

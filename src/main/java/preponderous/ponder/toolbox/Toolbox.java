@@ -11,6 +11,7 @@ public class Toolbox implements IToolbox {
     private ColorChecker colorChecker;
     private EventHandlerRegistry eventHandlerRegistry;
     private Logger logger;
+    private Messenger messenger;
     private PermissionChecker permissionChecker;
     private Scheduler scheduler;
     private UUIDChecker uuidChecker;
@@ -24,6 +25,7 @@ public class Toolbox implements IToolbox {
         colorChecker = new ColorChecker();
         eventHandlerRegistry = new EventHandlerRegistry(ponderAPI);
         logger = new Logger(ponderAPI);
+        messenger = new Messenger();
         permissionChecker = new PermissionChecker();
         scheduler = new Scheduler(ponderAPI);
         uuidChecker = new UUIDChecker();
@@ -67,6 +69,16 @@ public class Toolbox implements IToolbox {
     @Override
     public ILogger getLogger() {
         return logger;
+    }
+
+    /**
+     * Method to drop the get the messenger tool.
+     *
+     * @return Messenger
+     */
+    @Override
+    public IMessenger getMessenger() {
+        return messenger;
     }
 
     /**
