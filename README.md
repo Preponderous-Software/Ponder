@@ -35,7 +35,7 @@ Please fill out a bug report [here](https://github.com/Preponderous-Software/Pon
 Name | Main Contributions
 ------------ | -------------
 Daniel Stephenson | Creator
-Callum | Condensed some code and wrote some comments.
+Callum | Condensed the code of several tools.
 
 ## License
 GPL3
