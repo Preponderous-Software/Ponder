@@ -38,6 +38,7 @@ public class PonderAPI_Integrator implements IPonderAPI_Integrator {
      */
     @Override
     public boolean isPonderPresent() {
+        // TODO: remove this method if the API doesn't have to be a separate plugin
         return (Bukkit.getServer().getPluginManager().getPlugin("PonderAPI") != null);
     }
 
