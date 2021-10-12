@@ -2,4 +2,3 @@ name: Ponder
 version: 0.2
 main: dansplugins.ponder.Ponder
 api-version: 1.13
-softdepend:
