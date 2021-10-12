@@ -1,4 +1,4 @@
 name: Ponder
 version: 0.2
-main: dansplugins.ponder.Ponder
+main: preponderous.ponder.Ponder
 api-version: 1.13
