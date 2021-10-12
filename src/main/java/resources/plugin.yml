@@ -1,5 +1,5 @@
 name: Ponder
-version: 0.2
+version: 0.3-alpha-1
 authors: [Daniel Stephenson, Callum]
 main: preponderous.ponder.Ponder
 api-version: 1.13

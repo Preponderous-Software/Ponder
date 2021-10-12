@@ -22,6 +22,8 @@ public class PonderAPI implements IPonderAPI {
 
     private Toolbox toolbox;
 
+    private String version = "v0.3-alpha-1";
+
     /**
      * Constructor to initialize the API with a plugin. This should only be used if the developer doesn't plan on using service classes.
      *
@@ -114,5 +116,14 @@ public class PonderAPI implements IPonderAPI {
      */
     public void setDebug(boolean b) {
         debug = b;
+    }
+
+    /**
+     * Method to get the version of the API.
+     *
+     * @return The version of the API.
+     */
+    public String getVersion() {
+        return version;
     }
 }
