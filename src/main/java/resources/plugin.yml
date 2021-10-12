@@ -3,3 +3,4 @@ version: 0.2
 authors: [Daniel Stephenson, Callum]
 main: preponderous.ponder.Ponder
 api-version: 1.13
+description: Intended to facilitate the creation and expansion of Minecraft plugins.
