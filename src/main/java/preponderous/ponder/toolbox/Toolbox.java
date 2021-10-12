@@ -8,6 +8,7 @@ import preponderous.ponder.toolbox.tools.specification.*;
 public class Toolbox implements IToolbox {
 
     private ArgumentParser argumentParser;
+    private ColorChecker colorChecker;
     private EventHandlerRegistry eventHandlerRegistry;
     private Logger logger;
     private PermissionChecker permissionChecker;
@@ -20,6 +21,7 @@ public class Toolbox implements IToolbox {
      */
     public Toolbox(PonderAPI ponderAPI) {
         argumentParser = new ArgumentParser();
+        colorChecker = new ColorChecker();
         eventHandlerRegistry = new EventHandlerRegistry(ponderAPI);
         logger = new Logger(ponderAPI);
         permissionChecker = new PermissionChecker();
@@ -35,6 +37,16 @@ public class Toolbox implements IToolbox {
     @Override
     public IArgumentParser getArgumentParser() {
         return argumentParser;
+    }
+
+    /**
+     * Method to drop the get the color checker tool.
+     *
+     * @return Color Checker
+     */
+    @Override
+    public IColorChecker getColorChecker() {
+        return colorChecker;
     }
 
     /**
