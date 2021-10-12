@@ -31,11 +31,21 @@ public class PonderAPI_Integrator implements IPonderAPI_Integrator {
         }
     }
 
+    /**
+     * Method to check whether the Ponder plugin is present on the server.
+     *
+     * @return Whether or not the Ponder plugin is present on the server.
+     */
     @Override
     public boolean isPonderPresent() {
         return (Bukkit.getServer().getPluginManager().getPlugin("PonderAPI") != null);
     }
 
+    /**
+     * Method to get the instance of the Ponder API that is managed by this class.
+     *
+     * @return The instance of the Ponder API that is managed by this class.
+     */
     @Override
     public PonderAPI getAPI() {
         return ponderAPI;
