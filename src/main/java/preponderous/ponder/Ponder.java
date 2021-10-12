@@ -36,7 +36,7 @@ public class Ponder extends JavaPlugin {
     }
 
     /**
-     * Method to drop the get the Ponder API Integrator.
+     * Method to get the Ponder API Integrator.
      *
      * @return Ponder API Integrator
      */
