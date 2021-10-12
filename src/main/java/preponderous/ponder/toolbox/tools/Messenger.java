@@ -6,6 +6,10 @@ import preponderous.ponder.toolbox.tools.specification.IMessenger;
 
 public class Messenger implements IMessenger {
 
+    /**
+     * Method to message every online player.
+     *
+     */
     @Override
     public void sendAllPlayersOnServerMessage(String message) {
         try {
