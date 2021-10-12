@@ -10,8 +10,12 @@ This API was developed on top of the Spigot API. Users may run into trouble usin
 This API is not ready for public use, yet.
 
 ## Usage
+- [Configuration w/ Maven & IntelliJ](https://github.com/Preponderous-Software/Ponder/wiki/Configuring-the-API-with-Maven-&-IntelliJ)
 - [User Guide](https://github.com/Preponderous-Software/Ponder/wiki/Guide) (coming soon)
 - [FAQ](https://github.com/Preponderous-Software/Ponder/wiki/FAQ) (coming soon)
+
+## Projects
+- [Projects](https://github.com/Preponderous-Software/Ponder/wiki/Projects)
 
 ## Support
 You can find the support discord server [here](https://discord.gg/G6wQxfcBMt).
@@ -31,7 +35,7 @@ Please fill out a bug report [here](https://github.com/Preponderous-Software/Pon
 Name | Main Contributions
 ------------ | -------------
 Daniel Stephenson | Creator
-Callum | Condensed some code and wrote some comments.
+Callum | Condensed the code of several tools.
 
 ## License
 GPL3
