@@ -14,6 +14,10 @@ public class Toolbox implements IToolbox {
     private Scheduler scheduler;
     private UUIDChecker uuidChecker;
 
+    /**
+     * Constructor to initialize the tools of the toolbox.
+     *
+     */
     public Toolbox(PonderAPI ponderAPI) {
         argumentParser = new ArgumentParser();
         eventHandlerRegistry = new EventHandlerRegistry(ponderAPI);

@@ -9,11 +9,19 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class Ponder extends JavaPlugin {
 
+    /**
+     * Method to enable the plugin.
+     */
     @Override
     public void onEnable() {
         System.out.println("Ponder is enabling.");
     }
 
+
+    /**
+     * Method to disable the plugin.
+     *
+     */
     public void onDisable() {
         System.out.println("Ponder is disabling.");
     }

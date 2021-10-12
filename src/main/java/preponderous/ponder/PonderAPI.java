@@ -49,6 +49,11 @@ public class PonderAPI implements IPonderAPI {
         System.out.println("There are now " + numInstances + " instances of Ponder running.");
     }
 
+    /**
+     * Method to get the plugin that the API has been instantiated with.
+     *
+     * @return JavaPlugin
+     */
     public JavaPlugin getPlugin() {
         return plugin;
     }
