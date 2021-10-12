@@ -2,6 +2,11 @@ package preponderous.ponder;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
+/*
+    At this time, I'm unsure if this class is necessary. This will depend on whether or not
+    it is required for the API to be installed as a separate plugin. - Daniel
+ */
+
 public class Ponder extends JavaPlugin {
 
     @Override
