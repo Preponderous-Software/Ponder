@@ -17,9 +17,11 @@ public abstract class Command implements ICommand {
      *
      * @author Daniel Stephenson
      * @since 10/12/2021
-     * @param args to modify.
-     * @return Modified Array of Strings.
-     * @throws IllegalArgumentException if the arguments given are invalid.
+     * @param message to send.
+     * @param args to check.
+     * @param sender to send message to.
+     * @param color of the message.
+     * @return Whether or not there were no arguments.
      */
     public boolean sendMessageIfNoArguments(String message, String[] args, CommandSender sender, ChatColor color) {
         if (args.length == 0) {
