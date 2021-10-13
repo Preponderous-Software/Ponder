@@ -12,7 +12,7 @@ public class ConfigService implements IConfigService {
 
     private PonderAPI ponderAPI;
 
-    private HashMap<String, Object> optionsToValues = new HashMap<>();
+    private HashMap<String, Object> optionsToValues;
 
     private boolean altered = false;
 
@@ -31,7 +31,7 @@ public class ConfigService implements IConfigService {
     }
 
     /**
-     * Method to add a config option if it doesn't already exist.
+     * Method to add a config option if it doesn't already exist. This should only be used if the class has been initialized.
      *
      * @param option to alter.
      * @param value to set the option to.
@@ -39,6 +39,9 @@ public class ConfigService implements IConfigService {
      */
     @Override
     public boolean addConfigOption(String option, Object value) {
+        if (optionsToValues == null) {
+            return false;
+        }
         if (optionsToValues.containsKey(option)) {
             return false;
         }
@@ -47,7 +50,7 @@ public class ConfigService implements IConfigService {
     }
 
     /**
-     * Method to remove a config option if it doesn't already exist.
+     * Method to remove a config option if it doesn't already exist. This should only be used if the class has been initialized.
      *
      * @param option to remove.
      * @return Whether or not the config option was removed.
@@ -58,11 +61,14 @@ public class ConfigService implements IConfigService {
     }
 
     /**
-     * Method to save the config defaults if they aren't present.
+     * Method to save the config defaults if they aren't present. This should only be used if the class has been initialized.
      *
      */
     @Override
     public void saveMissingConfigDefaultsIfNotPresent() {
+        if (optionsToValues == null) {
+            return;
+        }
         for (String key : optionsToValues.keySet()) {
             if (!getConfig().isSet(key)) {
                 getConfig().set(key, optionsToValues.get(key));
@@ -91,12 +97,15 @@ public class ConfigService implements IConfigService {
     }
 
     /**
-     * Method to send a list of config options and their associated values to a command sender.
+     * Method to send a list of config options and their associated values to a command sender. This should only be used if the class has been initialized.
      *
      * @param sender to send an error message to.
      */
     @Override
     public void sendConfigList(CommandSender sender) {
+        if (optionsToValues == null) {
+            return;
+        }
         sender.sendMessage(ChatColor.AQUA + "=== Config List ===");
         String toSend = "";
         for (String key : optionsToValues.keySet()) {
