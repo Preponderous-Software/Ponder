@@ -12,7 +12,7 @@ public class PonderAPI_Integrator implements IPonderAPI_Integrator {
     private PonderAPI ponderAPI = null;
 
     /**
-     * Constructor to initialize the API without services.
+     * Constructor to initialize the API without every service.
      *
      */
     public PonderAPI_Integrator(JavaPlugin plugin) {
@@ -26,13 +26,13 @@ public class PonderAPI_Integrator implements IPonderAPI_Integrator {
     }
 
     /**
-     * Constructor to initialize the API with services.
+     * Constructor to initialize the API with every service.
      *
      */
-    public PonderAPI_Integrator(JavaPlugin plugin, ICommandService commandInterpreter, IStorageService storageService) {
+    public PonderAPI_Integrator(JavaPlugin plugin, ICommandService commandInterpreter) {
         if (isPonderPresent()) {
             System.out.println("Ponder was found successfully!");
-            ponderAPI = new PonderAPI(plugin, commandInterpreter, storageService);
+            ponderAPI = new PonderAPI(plugin, commandInterpreter);
         }
         else {
             System.out.println("Ponder was not found!");
