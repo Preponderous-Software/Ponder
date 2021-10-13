@@ -29,10 +29,10 @@ public class PonderAPI_Integrator implements IPonderAPI_Integrator {
      * Constructor to initialize the API with services.
      *
      */
-    public PonderAPI_Integrator(JavaPlugin plugin, ICommandService commandInterpreter, IConfigService configService, IStorageService storageService) {
+    public PonderAPI_Integrator(JavaPlugin plugin, ICommandService commandInterpreter, IStorageService storageService) {
         if (isPonderPresent()) {
             System.out.println("Ponder was found successfully!");
-            ponderAPI = new PonderAPI(plugin, commandInterpreter, configService, storageService);
+            ponderAPI = new PonderAPI(plugin, commandInterpreter, storageService);
         }
         else {
             System.out.println("Ponder was not found!");

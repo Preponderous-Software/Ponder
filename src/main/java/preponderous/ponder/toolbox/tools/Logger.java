@@ -7,8 +7,8 @@ public class Logger implements ILogger {
 
     private PonderAPI ponderAPI;
 
-    public Logger(PonderAPI dansAPI) {
-        this.ponderAPI = dansAPI;
+    public Logger(PonderAPI ponderAPI) {
+        this.ponderAPI = ponderAPI;
     }
 
     /**
