@@ -46,6 +46,10 @@ public class ArgumentParser implements IArgumentParser {
      * @param args of the program.
      */
     public static void main(String[] args) {
+        if (args.length == 0) {
+            String input = "/test fly \"one\" \"two\" banana";
+            args = input.split(" ");
+        }
         System.out.println("Argument Parser - Test Harness");
         System.out.println("To utilise the Argument Parser Test Harness, provide some Program Arguments!");
         System.out.println(new ArgumentParser().getArgumentsInsideDoubleQuotes(args));
