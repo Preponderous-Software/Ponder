@@ -6,7 +6,7 @@ import preponderous.ponder.commands.specification.ICommand;
 
 import java.util.Arrays;
 
-public abstract class Command implements ICommand {
+public abstract class AbstractCommand implements ICommand {
 
     public abstract boolean execute(CommandSender sender);
 
