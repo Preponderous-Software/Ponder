@@ -1,7 +1,7 @@
 # Ponder
 
 ## Description
-Built on top of Spigot, the Ponder API is intended to facilitate the creation and expansion of Spigot plugins. Essentially what I’m doing here is abstracting out the core functionality of my plugins into a reusable API. It is my hope that this will greatly simplify the process of creating and updating plugins.
+Built on top of Spigot, the Ponder API is intended to facilitate the creation and expansion of Spigot plugins. The functionality that can be used in many plugins has been abstracted out into a reusable API. This will greatly simplify the process of creating and updating plugins.
 
 ## Server Software
 This API was developed on top of the Spigot API. Users may run into trouble using it with other available server softwares like Paper.
