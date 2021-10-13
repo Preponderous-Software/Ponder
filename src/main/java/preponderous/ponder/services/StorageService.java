@@ -26,13 +26,25 @@ public class StorageService implements IStorageService {
         LIST_MAP_TYPE = new TypeToken<ArrayList<HashMap<String, String>>>(){}.getType();
     }
 
+    /**
+     * Method to initialize the file path.
+     *
+     * @param filePath to initialize with.
+     */
     @Override
     public void initialize(String filePath) {
         FILE_PATH = filePath;
     }
 
+    /**
+     * Method to write out some data to a file.
+     *
+     * @param saveData to save.
+     * @param fileName to save to.
+     * @return Whether or not the operation was successful.
+     */
     @Override
-    public void writeOutFiles(List<Map<String, String>> saveData, String fileName) {
+    public boolean writeOutFiles(List<Map<String, String>> saveData, String fileName) {
         try {
             File parentFolder = new File(FILE_PATH);
             parentFolder.mkdir();
@@ -41,11 +53,18 @@ public class StorageService implements IStorageService {
             OutputStreamWriter outputStreamWriter = new OutputStreamWriter(new FileOutputStream(file), StandardCharsets.UTF_8);
             outputStreamWriter.write(gson.toJson(saveData));
             outputStreamWriter.close();
+            return true;
         } catch(IOException e) {
-            System.out.println("ERROR: " + e.toString());
+            return false;
         }
     }
 
+    /**
+     * Method to load data from a filename.
+     *
+     * @param filename to specify which file to load from.
+     * @return The data from the file.
+     */
     @Override
     public ArrayList<HashMap<String, String>> loadDataFromFilename(String filename) {
         try{

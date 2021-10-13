@@ -7,6 +7,6 @@ import java.util.Map;
 
 public interface IStorageService {
     void initialize(String filePath);
-    void writeOutFiles(List<Map<String, String>> saveData, String fileName);
+    boolean writeOutFiles(List<Map<String, String>> saveData, String fileName);
     ArrayList<HashMap<String, String>> loadDataFromFilename(String filename);
 }
