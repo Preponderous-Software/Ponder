@@ -12,6 +12,15 @@ public abstract class Command implements ICommand {
 
     public abstract boolean execute(CommandSender sender, String[] args);
 
+    /**
+     * Method to drop the first argument from an Array of Strings.
+     *
+     * @author Daniel Stephenson
+     * @since 10/12/2021
+     * @param args to modify.
+     * @return Modified Array of Strings.
+     * @throws IllegalArgumentException if the arguments given are invalid.
+     */
     public boolean sendMessageIfNoArguments(String message, String[] args, CommandSender sender, ChatColor color) {
         if (args.length == 0) {
             sender.sendMessage(ChatColor.RED + message);
@@ -22,6 +31,7 @@ public abstract class Command implements ICommand {
 
     /**
      * Method to get an Integer from a String.
+     *
      * @author Callum Johnson
      * @since 05/05/2021 - 12:18
      * @param line to convert into an Integer.
@@ -38,6 +48,7 @@ public abstract class Command implements ICommand {
 
     /**
      * Method to test if something matches any goal string.
+     *
      * @author Callum Johnson
      * @since 05/05/2021 - 12:18
      * @param what to test
