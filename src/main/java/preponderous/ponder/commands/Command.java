@@ -4,6 +4,8 @@ import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import preponderous.ponder.commands.specification.ICommand;
 
+import java.util.Arrays;
+
 public abstract class Command implements ICommand {
 
     public abstract boolean execute(CommandSender sender);
@@ -16,6 +18,37 @@ public abstract class Command implements ICommand {
             return true;
         }
         return false;
+    }
+
+    /**
+     * Method to get an Integer from a String.
+     * @author Callum Johnson
+     * @since 05/05/2021 - 12:18
+     * @param line to convert into an Integer.
+     * @param orElse if the conversion fails.
+     * @return {@link Integer} numeric.
+     */
+    public int getIntSafe(String line, int orElse) {
+        try {
+            return Integer.parseInt(line);
+        } catch (Exception ex) {
+            return orElse;
+        }
+    }
+
+    /**
+     * Method to test if something matches any goal string.
+     * @author Callum Johnson
+     * @since 05/05/2021 - 12:18
+     * @param what to test
+     * @param goals to compare with
+     * @param matchCase for the comparison (or not)
+     * @return {@code true} if something in goals matches what.
+     */
+    public boolean safeEquals(boolean matchCase, String what, String... goals) {
+        return Arrays.stream(goals).anyMatch(goal ->
+                matchCase && goal.equals(what) || !matchCase && goal.equalsIgnoreCase(what)
+        );
     }
 
 }

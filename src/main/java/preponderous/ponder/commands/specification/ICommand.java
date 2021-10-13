@@ -7,4 +7,6 @@ public interface ICommand {
     boolean execute(CommandSender sender);
     boolean execute(CommandSender sender, String[] args);
     boolean sendMessageIfNoArguments(String message, String[] args, CommandSender sender, ChatColor color);
+    int getIntSafe(String line, int orElse);
+    boolean safeEquals(boolean matchCase, String what, String... goals);
 }
