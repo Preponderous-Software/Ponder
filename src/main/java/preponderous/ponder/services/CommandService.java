@@ -2,7 +2,7 @@ package preponderous.ponder.services;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
-import preponderous.ponder.PonderAPI;
+import preponderous.ponder.Ponder;
 import preponderous.ponder.misc.specification.ICommand;
 import preponderous.ponder.services.specification.ICommandService;
 
@@ -10,15 +10,15 @@ import java.util.ArrayList;
 
 public class CommandService implements ICommandService {
 
-    private PonderAPI ponderAPI;
+    private Ponder ponder;
 
     private ArrayList<ICommand> commands = new ArrayList<>();
     private String coreCommand;
     private String noArgsMessage;
     private String notFoundMessage;
 
-    public CommandService(PonderAPI ponderAPI) {
-        this.ponderAPI = ponderAPI;
+    public CommandService(Ponder ponder) {
+        this.ponder = ponder;
     }
 
     /**
@@ -49,11 +49,11 @@ public class CommandService implements ICommandService {
         }
 
         String subCommand = args[0];
-        String[] arguments = ponderAPI.getToolbox().getArgumentParser().dropFirstArgument(args);
+        String[] arguments = ponder.getToolbox().getArgumentParser().dropFirstArgument(args);
 
         for  (ICommand command : commands) {
             if (command.getNames().contains(subCommand)) {
-                if (!ponderAPI.getToolbox().getPermissionChecker().checkPermission(sender, command.getPermissions())) {
+                if (!ponder.getToolbox().getPermissionChecker().checkPermission(sender, command.getPermissions())) {
                     return false;
                 }
                 if (arguments.length == 0) {

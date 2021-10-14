@@ -3,21 +3,21 @@ package preponderous.ponder.services;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
-import preponderous.ponder.PonderAPI;
+import preponderous.ponder.Ponder;
 import preponderous.ponder.services.specification.IConfigService;
 
 import java.util.HashMap;
 
 public class ConfigService implements IConfigService {
 
-    private PonderAPI ponderAPI;
+    private Ponder ponder;
 
     private HashMap<String, Object> optionsToValues;
 
     private boolean altered = false;
 
-    public ConfigService(PonderAPI ponderAPI) {
-        this.ponderAPI = ponderAPI;
+    public ConfigService(Ponder ponder) {
+        this.ponder = ponder;
     }
 
     /**
@@ -75,7 +75,7 @@ public class ConfigService implements IConfigService {
             }
         }
         getConfig().options().copyDefaults(true);
-        ponderAPI.getPlugin().saveConfig();
+        ponder.getPlugin().saveConfig();
     }
 
     /**
@@ -89,7 +89,7 @@ public class ConfigService implements IConfigService {
     public void setConfigOption(String option, Object value, CommandSender sender) {
         if (getConfig().isSet(option)) {
             getConfig().set(option, value);
-            ponderAPI.getPlugin().saveConfig();
+            ponder.getPlugin().saveConfig();
             altered = true;
         } else {
             sender.sendMessage(ChatColor.RED + "That config option wasn't found.");
@@ -131,7 +131,7 @@ public class ConfigService implements IConfigService {
      */
     @Override
     public FileConfiguration getConfig() {
-        return ponderAPI.getPlugin().getConfig();
+        return ponder.getPlugin().getConfig();
     }
 
     /**

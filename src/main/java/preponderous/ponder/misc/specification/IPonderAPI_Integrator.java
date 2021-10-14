@@ -1,7 +1,7 @@
 package preponderous.ponder.misc.specification;
 
-import preponderous.ponder.PonderAPI;
+import preponderous.ponder.Ponder;
 
 public interface IPonderAPI_Integrator {
-    PonderAPI getAPI();
+    Ponder getAPI();
 }

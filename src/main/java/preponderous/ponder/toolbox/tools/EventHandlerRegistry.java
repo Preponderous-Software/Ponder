@@ -4,7 +4,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginManager;
-import preponderous.ponder.PonderAPI;
+import preponderous.ponder.Ponder;
 import preponderous.ponder.toolbox.tools.specification.IEventHandlerRegistry;
 
 import java.util.ArrayList;
@@ -12,10 +12,10 @@ import java.util.ArrayList;
 public class EventHandlerRegistry implements IEventHandlerRegistry {
 
     private final PluginManager manager;
-    private PonderAPI ponderAPI;
+    private Ponder ponder;
 
-    public EventHandlerRegistry(PonderAPI ponderAPI) {
-        this.ponderAPI = ponderAPI;
+    public EventHandlerRegistry(Ponder ponder) {
+        this.ponder = ponder;
         this.manager = Bukkit.getPluginManager();
     }
 

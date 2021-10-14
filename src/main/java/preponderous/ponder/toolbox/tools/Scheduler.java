@@ -1,16 +1,16 @@
 package preponderous.ponder.toolbox.tools;
 
 import org.bukkit.Bukkit;
-import preponderous.ponder.PonderAPI;
+import preponderous.ponder.Ponder;
 import preponderous.ponder.services.specification.IExpandedStorageService;
 import preponderous.ponder.toolbox.tools.specification.IScheduler;
 
 public class Scheduler implements IScheduler {
 
-    private PonderAPI ponderAPI;
+    private Ponder ponder;
 
-    public Scheduler(PonderAPI ponderAPI) {
-        this.ponderAPI = ponderAPI;
+    public Scheduler(Ponder ponder) {
+        this.ponder = ponder;
     }
 
     /**
@@ -21,7 +21,7 @@ public class Scheduler implements IScheduler {
     public void scheduleAutosave(IExpandedStorageService storageService) {
         int delay = 60 * 60; // 1 hour
         int secondsUntilRepeat = 60 * 60; // 1 hour
-        Bukkit.getScheduler().scheduleSyncRepeatingTask(ponderAPI.getPlugin(), new Runnable() {
+        Bukkit.getScheduler().scheduleSyncRepeatingTask(ponder.getPlugin(), new Runnable() {
             @Override
             public void run() {
                 storageService.save();

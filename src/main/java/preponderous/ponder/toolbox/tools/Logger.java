@@ -1,14 +1,14 @@
 package preponderous.ponder.toolbox.tools;
 
-import preponderous.ponder.PonderAPI;
+import preponderous.ponder.Ponder;
 import preponderous.ponder.toolbox.tools.specification.ILogger;
 
 public class Logger implements ILogger {
 
-    private PonderAPI ponderAPI;
+    private Ponder ponder;
 
-    public Logger(PonderAPI ponderAPI) {
-        this.ponderAPI = ponderAPI;
+    public Logger(Ponder ponder) {
+        this.ponder = ponder;
     }
 
     /**
@@ -20,12 +20,12 @@ public class Logger implements ILogger {
      */
     @Override
     public boolean log(boolean debug, String message) {
-        if (ponderAPI.getPlugin() == null) {
+        if (ponder.getPlugin() == null) {
             System.out.println("Error: Plugin was null.");
             return false;
         }
         if (debug) {
-            System.out.println("[" + ponderAPI.getPlugin().getName() + "] " + message);
+            System.out.println("[" + ponder.getPlugin().getName() + "] " + message);
             return true;
         }
         return false;
@@ -38,10 +38,10 @@ public class Logger implements ILogger {
      */
     @Override
     public void print(String message) {
-        if (ponderAPI.getPlugin() == null) {
+        if (ponder.getPlugin() == null) {
             System.out.println("Error: Plugin was null.");
             return;
         }
-        System.out.println("[" + ponderAPI.getPlugin().getName() + "] " + message);
+        System.out.println("[" + ponder.getPlugin().getName() + "] " + message);
     }
 }

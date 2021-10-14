@@ -13,7 +13,7 @@ import preponderous.ponder.specification.IPonderAPI;
 import preponderous.ponder.toolbox.Toolbox;
 import preponderous.ponder.toolbox.specification.IToolbox;
 
-public class PonderAPI implements IPonderAPI {
+public class Ponder implements IPonderAPI {
 
     private boolean debug = true;
 
@@ -34,7 +34,7 @@ public class PonderAPI implements IPonderAPI {
      * Constructor to initialize the API.
      *
      */
-    public PonderAPI(JavaPlugin plugin) {
+    public Ponder(JavaPlugin plugin) {
         numInstances++;
         this.plugin = plugin;
         toolbox = new Toolbox(this);

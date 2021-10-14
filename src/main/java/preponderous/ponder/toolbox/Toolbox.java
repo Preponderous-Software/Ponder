@@ -1,6 +1,6 @@
 package preponderous.ponder.toolbox;
 
-import preponderous.ponder.PonderAPI;
+import preponderous.ponder.Ponder;
 import preponderous.ponder.toolbox.specification.IToolbox;
 import preponderous.ponder.toolbox.tools.*;
 import preponderous.ponder.toolbox.tools.specification.*;
@@ -22,16 +22,16 @@ public class Toolbox implements IToolbox {
      * Constructor to initialize the tools of the toolbox.
      *
      */
-    public Toolbox(PonderAPI ponderAPI) {
+    public Toolbox(Ponder ponder) {
         argumentParser = new ArgumentParser();
         blockChecker = new BlockChecker();
         colorChecker = new ColorChecker();
         colorConverter = new ColorConverter();
-        eventHandlerRegistry = new EventHandlerRegistry(ponderAPI);
-        logger = new Logger(ponderAPI);
+        eventHandlerRegistry = new EventHandlerRegistry(ponder);
+        logger = new Logger(ponder);
         messenger = new Messenger();
         permissionChecker = new PermissionChecker();
-        scheduler = new Scheduler(ponderAPI);
+        scheduler = new Scheduler(ponder);
         uuidChecker = new UUIDChecker();
     }
 
