@@ -53,6 +53,9 @@ public class CommandService implements ICommandService {
 
         for  (ICommand command : commands) {
             if (command.getNames().contains(subCommand)) {
+                if (!ponderAPI.getToolbox().getPermissionChecker().checkPermission(sender, command.getPermissions())) {
+                    return false;
+                }
                 if (arguments.length == 0) {
                     return command.execute(sender);
                 }
