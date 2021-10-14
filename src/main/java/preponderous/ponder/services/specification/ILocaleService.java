@@ -4,9 +4,10 @@ import preponderous.ponder.misc.Pair;
 
 import java.io.File;
 import java.io.InputStream;
+import java.util.ArrayList;
 
 public interface ILocaleService {
-    void initializePaths();
+    void initialize(ArrayList<String> supportedLanguageIDs, String pluginFolderPath, String pluginName, String defaultLanguageID);
     String getText(String key);
     void loadStrings();
     void reloadStrings();
