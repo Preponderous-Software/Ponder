@@ -9,11 +9,11 @@ import preponderous.ponder.services.specification.ICommandService;
 import preponderous.ponder.services.specification.IConfigService;
 import preponderous.ponder.services.specification.ILocaleService;
 import preponderous.ponder.services.specification.IStorageService;
-import preponderous.ponder.specification.IPonderAPI;
+import preponderous.ponder.specification.IPonder;
 import preponderous.ponder.toolbox.Toolbox;
 import preponderous.ponder.toolbox.specification.IToolbox;
 
-public class Ponder implements IPonderAPI {
+public class Ponder implements IPonder {
 
     private boolean debug = true;
 
