@@ -3,9 +3,11 @@ package preponderous.ponder;
 import org.bukkit.plugin.java.JavaPlugin;
 import preponderous.ponder.services.CommandService;
 import preponderous.ponder.services.ConfigService;
+import preponderous.ponder.services.LocaleService;
 import preponderous.ponder.services.StorageService;
 import preponderous.ponder.services.specification.ICommandService;
 import preponderous.ponder.services.specification.IConfigService;
+import preponderous.ponder.services.specification.ILocaleService;
 import preponderous.ponder.services.specification.IStorageService;
 import preponderous.ponder.specification.IPonderAPI;
 import preponderous.ponder.toolbox.Toolbox;
@@ -22,6 +24,7 @@ public class PonderAPI implements IPonderAPI {
     private ICommandService commandService;
     private IConfigService configService;
     private IStorageService storageService;
+    private ILocaleService localeService;
 
     private Toolbox toolbox;
 
@@ -38,6 +41,7 @@ public class PonderAPI implements IPonderAPI {
         configService = new ConfigService(this);
         storageService = new StorageService();
         commandService = new CommandService(this);
+        localeService = new LocaleService(this);
 
         System.out.println("There are now " + numInstances + " instances of Ponder running.");
     }
@@ -79,6 +83,16 @@ public class PonderAPI implements IPonderAPI {
     @Override
     public IStorageService getStorageService() {
         return storageService;
+    }
+
+    /**
+     * Method to get the Locale Service
+     *
+     * @return {@link LocaleService}
+     */
+    @Override
+    public ILocaleService getLocaleService() {
+        return localeService;
     }
 
     /**
