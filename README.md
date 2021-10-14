@@ -38,7 +38,7 @@ Name | Main Contributions
 ------------ | -------------
 Daniel Stephenson | Creator
 Callum | Wrote the Color Converter that is used in this project and condensed the code of several tools.
-Pasarus | Wrote code that is used in the Storage Manager and the UUID Checker.
+Pasarus | Wrote code that is used in the Storage Service and the UUID Checker.
 Caibinus | Wrote code that is used in the Block Checker.
 
 
