@@ -25,7 +25,7 @@ public class PonderAPI implements IPonderAPI {
 
     private Toolbox toolbox;
 
-    private String version = "v0.4-alpha-1";
+    private String version = "v0.4";
 
     /**
      * Constructor to initialize the API.
