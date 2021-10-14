@@ -1,6 +1,7 @@
 package preponderous.ponder;
 
 import org.bukkit.plugin.java.JavaPlugin;
+import preponderous.ponder.services.CommandService;
 import preponderous.ponder.services.ConfigService;
 import preponderous.ponder.services.StorageService;
 import preponderous.ponder.services.specification.ICommandService;
@@ -18,7 +19,7 @@ public class PonderAPI implements IPonderAPI {
 
     private JavaPlugin plugin;
 
-    private ICommandService commandInterpreter;
+    private ICommandService commandService;
     private IConfigService configService;
     private IStorageService storageService;
 
@@ -27,7 +28,7 @@ public class PonderAPI implements IPonderAPI {
     private String version = "v0.4-alpha-1";
 
     /**
-     * Constructor to initialize the API with a plugin.
+     * Constructor to initialize the API.
      *
      */
     public PonderAPI(JavaPlugin plugin) {
@@ -36,17 +37,7 @@ public class PonderAPI implements IPonderAPI {
         toolbox = new Toolbox(this);
         configService = new ConfigService(this);
         storageService = new StorageService();
-
-        System.out.println("There are now " + numInstances + " instances of Ponder running.");
-    }
-
-    /**
-     * Constructor to initialize the API with a plugin as well as unimplemented service classes.
-     *
-     */
-    public PonderAPI(JavaPlugin plugin, ICommandService commandInterpreter) {
-        this(plugin);
-        this.commandInterpreter = commandInterpreter;
+        commandService = new CommandService(this);
 
         System.out.println("There are now " + numInstances + " instances of Ponder running.");
     }
@@ -66,8 +57,8 @@ public class PonderAPI implements IPonderAPI {
      * @return Command Service
      */
     @Override
-    public ICommandService getCommandInterpreter() {
-        return commandInterpreter;
+    public ICommandService getCommandService() {
+        return commandService;
     }
 
     /**
