@@ -7,7 +7,7 @@ import preponderous.ponder.services.specification.IStorageService;
 import preponderous.ponder.toolbox.specification.IToolbox;
 
 public interface IPonderAPI {
-    ICommandService getCommandInterpreter();
+    ICommandService getCommandService();
     IConfigService getConfigService();
     IStorageService getStorageService();
     IToolbox getToolbox();
