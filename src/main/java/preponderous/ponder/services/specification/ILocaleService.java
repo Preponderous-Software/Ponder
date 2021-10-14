@@ -8,6 +8,8 @@ import java.util.ArrayList;
 
 public interface ILocaleService {
     void initialize(ArrayList<String> supportedLanguageIDs, String pluginFolderPath, String pluginName, String defaultLanguageID);
+    String getCurrentLanguageID();
+    void setCurrentLanguageID(String ID);
     String getText(String key);
     void loadStrings();
     void reloadStrings();

@@ -11,8 +11,6 @@ import java.util.*;
 
 public class LocaleService implements ILocaleService {
 
-    private boolean debug = false;
-
     private PonderAPI ponderAPI;
 
     private ArrayList<String> supportedLanguageIDs;
@@ -32,20 +30,23 @@ public class LocaleService implements ILocaleService {
         strings = new HashMap<>();
     }
 
-    public boolean isDebugEnabled() {
-        return debug;
-    }
-
-    public void setDebug(boolean b) {
-        debug = b;
-    }
-
     @Override
     public void initialize(ArrayList<String> supportedLanguageIDs, String pluginFolderPath, String pluginName, String defaultLanguageID) {
         this.supportedLanguageIDs = supportedLanguageIDs;
         languageFolderPath = pluginFolderPath + pluginName + "/";
         localizationFileName = defaultLanguageID + ".tsv";
         localizationFilePath = languageFolderPath + localizationFileName;
+        currentLanguageID = defaultLanguageID;
+    }
+
+    @Override
+    public String getCurrentLanguageID() {
+        return currentLanguageID;
+    }
+
+    @Override
+    public void setCurrentLanguageID(String ID) {
+        currentLanguageID = ID;
     }
 
     @Override
@@ -58,13 +59,13 @@ public class LocaleService implements ILocaleService {
     public void loadStrings() {
         if (isFilePresent(localizationFilePath)) {
             loadFromPluginFolder();
-            if (debug) { System.out.println("DEBUG: Loaded from plugin folder!"); }
+            if (ponderAPI.isDebugEnabled()) { System.out.println("DEBUG: Loaded from plugin folder!"); }
         }
         else {
             loadFromResource();
-            if (debug) { System.out.println("DEBUG: Loaded from resource!"); }
+            if (ponderAPI.isDebugEnabled()) { System.out.println("DEBUG: Loaded from resource!"); }
         }
-        if (debug) { System.out.println(String.format(getText("KeysLoaded"), keys.size())); }
+        if (ponderAPI.isDebugEnabled()) { System.out.println(String.format(getText("KeysLoaded"), keys.size())); }
     }
 
     @Override
@@ -112,7 +113,7 @@ public class LocaleService implements ILocaleService {
             saveToPluginFolder();
 
         } catch (Exception e) {
-            if (debug) { System.out.println("DEBUG: Something went wrong loading from the plugin folder."); }
+            if (ponderAPI.isDebugEnabled()) { System.out.println("DEBUG: Something went wrong loading from the plugin folder."); }
             e.printStackTrace();
         }
     }
@@ -131,14 +132,14 @@ public class LocaleService implements ILocaleService {
             }
 
         } catch (Exception e) {
-            if (debug) { System.out.println("DEBUG: Something went wrong loading from file!"); }
+            if (ponderAPI.isDebugEnabled()) { System.out.println("DEBUG: Something went wrong loading from file!"); }
             e.printStackTrace();
         }
     }
 
     @Override
     public void updateCurrentLocalLanguageFile() {
-        if (debug) { System.out.println("DEBUG: LocaleManager is updating supported local language files."); }
+        if (ponderAPI.isDebugEnabled()) { System.out.println("DEBUG: LocaleManager is updating supported local language files."); }
         if (isLanguageIDSupported(currentLanguageID)) {
             InputStream inputStream;
             inputStream = getResourceAsInputStream(currentLanguageID + ".tsv");
@@ -164,7 +165,7 @@ public class LocaleService implements ILocaleService {
             loadMissingKeysFromInputStream(inputStream);
             saveToPluginFolder();
         } catch (Exception e) {
-            if (debug) { System.out.println("DEBUG: Error loading from resource!"); }
+            if (ponderAPI.isDebugEnabled()) { System.out.println("DEBUG: Error loading from resource!"); }
             e.printStackTrace();
         }
     }
@@ -217,14 +218,14 @@ public class LocaleService implements ILocaleService {
             File folder = new File(languageFolderPath);
             if (!folder.exists()) {
                 if (!folder.mkdir()) {
-                    if (debug) { System.out.println("DEBUG: Failed to create directory."); }
+                    if (ponderAPI.isDebugEnabled()) { System.out.println("DEBUG: Failed to create directory."); }
                     return;
                 }
             }
             File file = new File(localizationFilePath);
             if (!file.exists()) {
                 if (!file.createNewFile()) {
-                    if (debug) { System.out.println("DEBUG: Failed to create file."); }
+                    if (ponderAPI.isDebugEnabled()) { System.out.println("DEBUG: Failed to create file."); }
                     return;
                 }
             }
@@ -234,10 +235,10 @@ public class LocaleService implements ILocaleService {
                     output.write(key + "\t" + strings.get(key) + "\n");
                 }
             } catch (Exception ex) {
-                if (debug) { System.out.println("DEBUG: Failed to write to file."); }
+                if (ponderAPI.isDebugEnabled()) { System.out.println("DEBUG: Failed to write to file."); }
             }
         } catch (Exception e) {
-            if (debug) { System.out.println("DEBUG: There was a problem saving the strings."); }
+            if (ponderAPI.isDebugEnabled()) { System.out.println("DEBUG: There was a problem saving the strings."); }
             e.printStackTrace();
         }
     }

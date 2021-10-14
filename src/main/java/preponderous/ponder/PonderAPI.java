@@ -110,6 +110,7 @@ public class PonderAPI implements IPonderAPI {
      *
      * @return Whether or not the debug flag is enabled.
      */
+    @Override
     public boolean isDebugEnabled() {
         return debug;
     }
@@ -119,6 +120,7 @@ public class PonderAPI implements IPonderAPI {
      *
      * @param b to set.
      */
+    @Override
     public void setDebug(boolean b) {
         debug = b;
     }
