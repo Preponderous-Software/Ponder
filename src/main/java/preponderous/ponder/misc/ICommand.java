@@ -1,4 +1,4 @@
-package preponderous.ponder.commands.specification;
+package preponderous.ponder.misc;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
