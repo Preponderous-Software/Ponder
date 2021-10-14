@@ -35,7 +35,7 @@ public class ConfigService implements IConfigService {
      *
      * @param option to alter.
      * @param value to set the option to.
-     * @return Whether or not the config option was added.
+     * @return {@link boolean} signifying whether or not the config option was added.
      */
     @Override
     public boolean addConfigOption(String option, Object value) {
@@ -53,7 +53,7 @@ public class ConfigService implements IConfigService {
      * Method to remove a config option if it doesn't already exist. This should only be used if the class has been initialized.
      *
      * @param option to remove.
-     * @return Whether or not the config option was removed.
+     * @return {@link boolean} signifying whether or not the config option was removed.
      */
     @Override
     public boolean removeConfigOption(String option) {
@@ -117,7 +117,7 @@ public class ConfigService implements IConfigService {
     /**
      * Method to find out whether or not the config options have been locally altered.
      *
-     * @return whether or not the config options have been locally altered.
+     * @return {@link boolean} signifying whether or not the config options have been locally altered.
      */
     @Override
     public boolean hasBeenAltered() {
@@ -127,7 +127,7 @@ public class ConfigService implements IConfigService {
     /**
      * Method to get the file configuration.
      *
-     * @return File Configuration
+     * @return {@link FileConfiguration}
      */
     @Override
     public FileConfiguration getConfig() {
@@ -137,7 +137,7 @@ public class ConfigService implements IConfigService {
     /**
      * Method to get the value of a config option which is an integer.
      *
-     * @return int
+     * @return {@link int}
      */
     @Override
     public int getInt(String option) {
@@ -147,7 +147,7 @@ public class ConfigService implements IConfigService {
     /**
      * Method to get the value of a config option which is a boolean.
      *
-     * @return boolean
+     * @return {@link boolean}
      */
     @Override
     public boolean getBoolean(String option) {
@@ -157,7 +157,7 @@ public class ConfigService implements IConfigService {
     /**
      * Method to get the value of a config option which is a double.
      *
-     * @return double
+     * @return {@link double}
      */
     @Override
     public double getDouble(String option) {
@@ -167,7 +167,7 @@ public class ConfigService implements IConfigService {
     /**
      * Method to get the value of a config option which is a string.
      *
-     * @return String
+     * @return {@link String}
      */
     @Override
     public String getString(String option) {

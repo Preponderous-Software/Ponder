@@ -41,7 +41,7 @@ public class StorageService implements IStorageService {
      *
      * @param saveData to save.
      * @param fileName to save to.
-     * @return Whether or not the operation was successful.
+     * @return {@link boolean} signifying whether or not the operation was successful.
      */
     @Override
     public boolean writeOutFiles(List<Map<String, String>> saveData, String fileName) {
@@ -63,7 +63,7 @@ public class StorageService implements IStorageService {
      * Method to load data from a filename.
      *
      * @param filename to specify which file to load from.
-     * @return The data from the file.
+     * @return {@link ArrayList<HashMap<String, String>>} containing the data from the file.
      */
     @Override
     public ArrayList<HashMap<String, String>> loadDataFromFilename(String filename) {

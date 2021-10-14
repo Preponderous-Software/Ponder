@@ -16,7 +16,7 @@ public class Logger implements ILogger {
      *
      * @param debug to check.
      * @param message to print.
-     * @return Whether or not the method was successful.
+     * @return {@link boolean} signifying whether or not the method was successful.
      */
     @Override
     public boolean log(boolean debug, String message) {

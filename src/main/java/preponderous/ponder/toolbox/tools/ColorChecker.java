@@ -9,7 +9,7 @@ public class ColorChecker implements IColorChecker {
      * Method to get a chat color by name.
      *
      * @param color to get.
-     * @return Chat Color
+     * @return {@link ChatColor}
      */
     @Override
     public ChatColor getColorByName(String color) {
