@@ -23,4 +23,7 @@ public interface ILocaleService {
     void loadFromResource();
     void loadMissingKeysFromInputStream(InputStream inputStream);
     Pair<String, String> getPairFromLine(String line);
+    int getIndexOfTab(String line);
+    void saveToPluginFolder();
+    void sortKeys();
 }

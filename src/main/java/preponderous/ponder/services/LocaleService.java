@@ -30,6 +30,10 @@ public class LocaleService implements ILocaleService {
         strings = new HashMap<>();
     }
 
+    /**
+     * Method to initialize the Locale Service.
+     *
+     */
     @Override
     public void initialize(ArrayList<String> supportedLanguageIDs, String pluginFolderPath, String pluginName, String defaultLanguageID) {
         this.supportedLanguageIDs = supportedLanguageIDs;
@@ -39,22 +43,38 @@ public class LocaleService implements ILocaleService {
         currentLanguageID = defaultLanguageID;
     }
 
+    /**
+     * Method to get the current language ID.
+     *
+     */
     @Override
     public String getCurrentLanguageID() {
         return currentLanguageID;
     }
 
+    /**
+     * Method to set the current language ID.
+     *
+     */
     @Override
     public void setCurrentLanguageID(String ID) {
         currentLanguageID = ID;
     }
 
+    /**
+     * Method to get a value associated with a translation key.
+     *
+     */
     @Override
     public String getText(String key) {
         if (!keys.contains(key)) return String.format("[key '%s' not found]", key);
         return strings.get(key);
     }
 
+    /**
+     * Method to load the translation keys and associated strings.
+     *
+     */
     @Override
     public void loadStrings() {
         if (isFilePresent(localizationFilePath)) {
@@ -68,6 +88,10 @@ public class LocaleService implements ILocaleService {
         if (ponder.isDebugEnabled()) { System.out.println(String.format(getText("KeysLoaded"), keys.size())); }
     }
 
+    /**
+     * Method to reload the translation keys and associated strings.
+     *
+     */
     @Override
     public void reloadStrings() {
         keys.clear();
@@ -75,6 +99,10 @@ public class LocaleService implements ILocaleService {
         loadStrings();
     }
 
+    /**
+     * Method to check whether or not a language ID is supported.
+     *
+     */
     @Override
     public boolean isLanguageIDSupported(String ID) {
         return supportedLanguageIDs.contains(ID);
@@ -92,12 +120,20 @@ public class LocaleService implements ILocaleService {
         return IDs;
     }
 
+    /**
+     * Method to check if a file is present.
+     *
+     */
     @Override
     public boolean isFilePresent(String path) {
         File file = new File(path);
         return file.exists();
     }
 
+    /**
+     * Method to load from the plugin folder.
+     *
+     */
     @Override
     public void loadFromPluginFolder() {
         File file = new File(localizationFilePath);
@@ -118,6 +154,10 @@ public class LocaleService implements ILocaleService {
         }
     }
 
+    /**
+     * Helper method to load from a file.
+     *
+     */
     @Override
     public void loadFromFile(File file) {
         try {
@@ -137,6 +177,10 @@ public class LocaleService implements ILocaleService {
         }
     }
 
+    /**
+     * Method to updated the current language file.
+     *
+     */
     @Override
     public void updateCurrentLocalLanguageFile() {
         if (ponder.isDebugEnabled()) { System.out.println("DEBUG: LocaleManager is updating supported local language files."); }
@@ -152,11 +196,19 @@ public class LocaleService implements ILocaleService {
         }
     }
 
+    /**
+     * Method to get a resource as an input stream.
+     *
+     */
     @Override
     public InputStream getResourceAsInputStream(String fileName) {
         return ponder.getPlugin().getResource(fileName);
     }
 
+    /**
+     * Method to load from a resource associated with the current language ID.
+     *
+     */
     @Override
     public void loadFromResource() {
         try {
@@ -170,6 +222,10 @@ public class LocaleService implements ILocaleService {
         }
     }
 
+    /**
+     * Method to load the missing keys from the input stream.
+     *
+     */
     @Override
     public void loadMissingKeysFromInputStream(InputStream inputStream) {
         InputStreamReader reader = new InputStreamReader(inputStream, StandardCharsets.UTF_8);
@@ -184,6 +240,10 @@ public class LocaleService implements ILocaleService {
         });
     }
 
+    /**
+     * Method to get a pair from a line.
+     *
+     */
     @Override
     public Pair<String, String> getPairFromLine(String line) {
         String key = "";
@@ -201,7 +261,12 @@ public class LocaleService implements ILocaleService {
         }
     }
 
-    private int getIndexOfTab(String line) {
+    /**
+     * Method to get the index of the first tab character.
+     *
+     */
+    @Override
+    public int getIndexOfTab(String line) {
         for (int i = 0; i < line.length(); i++) {
             if (line.charAt(i) == '\t') {
                 return i;
@@ -210,7 +275,12 @@ public class LocaleService implements ILocaleService {
         return -1;
     }
 
-    private void saveToPluginFolder() {
+    /**
+     * Method to save to the plugin folder.
+     *
+     */
+    @Override
+    public void saveToPluginFolder() {
 
         sortKeys();
 
@@ -243,7 +313,12 @@ public class LocaleService implements ILocaleService {
         }
     }
 
-    private void sortKeys() {
+    /**
+     * Method to sort the keys.
+     *
+     */
+    @Override
+    public void sortKeys() {
         Collections.sort(keys);
     }
 }
