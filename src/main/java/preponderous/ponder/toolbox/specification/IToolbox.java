@@ -6,6 +6,7 @@ public interface IToolbox {
     IArgumentParser getArgumentParser();
     IBlockChecker getBlockChecker();
     IColorChecker getColorChecker();
+    IColorConverter getColorConverter();
     IEventHandlerRegistry getEventHandlerRegistry();
     ILogger getLogger();
     IMessenger getMessenger();

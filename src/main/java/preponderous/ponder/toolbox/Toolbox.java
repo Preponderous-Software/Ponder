@@ -10,6 +10,7 @@ public class Toolbox implements IToolbox {
     private ArgumentParser argumentParser;
     private BlockChecker blockChecker;
     private ColorChecker colorChecker;
+    private ColorConverter colorConverter;
     private EventHandlerRegistry eventHandlerRegistry;
     private Logger logger;
     private Messenger messenger;
@@ -25,6 +26,7 @@ public class Toolbox implements IToolbox {
         argumentParser = new ArgumentParser();
         blockChecker = new BlockChecker();
         colorChecker = new ColorChecker();
+        colorConverter = new ColorConverter();
         eventHandlerRegistry = new EventHandlerRegistry(ponderAPI);
         logger = new Logger(ponderAPI);
         messenger = new Messenger();
@@ -56,6 +58,11 @@ public class Toolbox implements IToolbox {
     @Override
     public IColorChecker getColorChecker() {
         return colorChecker;
+    }
+
+    @Override
+    public IColorConverter getColorConverter() {
+        return colorConverter;
     }
 
     /**
