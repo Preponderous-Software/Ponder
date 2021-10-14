@@ -10,8 +10,8 @@ import preponderous.ponder.toolbox.specification.IToolbox;
 public interface IPonderAPI {
     ICommandService getCommandService();
     IConfigService getConfigService();
-    IStorageService getStorageService();
     ILocaleService getLocaleService();
+    IStorageService getStorageService();
     IToolbox getToolbox();
     boolean isDebugEnabled();
     void setDebug(boolean b);

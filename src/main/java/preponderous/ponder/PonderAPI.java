@@ -23,8 +23,8 @@ public class PonderAPI implements IPonderAPI {
 
     private ICommandService commandService;
     private IConfigService configService;
-    private IStorageService storageService;
     private ILocaleService localeService;
+    private IStorageService storageService;
 
     private Toolbox toolbox;
 
@@ -76,16 +76,6 @@ public class PonderAPI implements IPonderAPI {
     }
 
     /**
-     * Method to get the Storage Service
-     *
-     * @return {@link StorageService}
-     */
-    @Override
-    public IStorageService getStorageService() {
-        return storageService;
-    }
-
-    /**
      * Method to get the Locale Service
      *
      * @return {@link LocaleService}
@@ -93,6 +83,16 @@ public class PonderAPI implements IPonderAPI {
     @Override
     public ILocaleService getLocaleService() {
         return localeService;
+    }
+
+    /**
+     * Method to get the Storage Service
+     *
+     * @return {@link StorageService}
+     */
+    @Override
+    public IStorageService getStorageService() {
+        return storageService;
     }
 
     /**
