@@ -36,7 +36,7 @@ Please fill out a bug report [here](https://github.com/Preponderous-Software/Pon
 ## Authors and acknowledgement
 Name | Main Contributions
 ------------ | -------------
-Daniel Stephenson | Creator
+[Daniel Stephenson](https://github.com/dmccoystephenson) | Creator
 Callum | Wrote the Color Converter that is used in this project and condensed the code of several tools.
 [Pasarus](https://github.com/Pasarus) | Wrote code that is used in the Storage Service and the UUID Checker.
 Caibinus | Wrote code that is used in the Block Checker.
