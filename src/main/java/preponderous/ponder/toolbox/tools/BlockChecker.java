@@ -9,11 +9,21 @@ import static org.bukkit.Bukkit.getLogger;
 
 public class BlockChecker implements IBlockChecker {
 
+    /**
+     * Method to check whether or not the block is a chest.
+     *
+     * @return A {@link boolean} signifying whether or not the block is a chest.
+     */
     @Override
     public boolean isChest(Block block) {
         return block.getType() == Material.CHEST && block.getState() instanceof Chest;
     }
 
+    /**
+     * Method to check whether or not the block is a door.
+     *
+     * @return A {@link boolean} signifying whether or not the block is a door.
+     */
     @Override
     public boolean isDoor(Block block) {
         if (block.getType() == Material.ACACIA_DOOR ||
@@ -32,6 +42,11 @@ public class BlockChecker implements IBlockChecker {
         return false;
     }
 
+    /**
+     * Method to check whether or not the block is a trapdoor.
+     *
+     * @return A {@link boolean} signifying whether or not the block is a trapdoor.
+     */
     @Override
     public boolean isTrapdoor(Block block) {
         if (block.getType() == Material.IRON_TRAPDOOR ||
@@ -48,6 +63,11 @@ public class BlockChecker implements IBlockChecker {
         return false;
     }
 
+    /**
+     * Method to check whether or not the block is a furnace.
+     *
+     * @return A {@link boolean} signifying whether or not the block is a furnace.
+     */
     @Override
     public boolean isFurnace(Block block) {
         if (block.getType() == Material.FURNACE ||
@@ -57,6 +77,11 @@ public class BlockChecker implements IBlockChecker {
         return false;
     }
 
+    /**
+     * Method to check whether or not the block is an anvil.
+     *
+     * @return A {@link boolean} signifying whether or not the block is an anvil.
+     */
     @Override
     public boolean isAnvil(Block block) {
         if (block.getType() == Material.ANVIL ||
@@ -67,6 +92,11 @@ public class BlockChecker implements IBlockChecker {
         return false;
     }
 
+    /**
+     * Method to check whether or not the block is a gate.
+     *
+     * @return A {@link boolean} signifying whether or not the block is a gate.
+     */
     @Override
     public boolean isGate(Block block) {
         if (block.getType() == Material.OAK_FENCE_GATE ||
@@ -82,6 +112,11 @@ public class BlockChecker implements IBlockChecker {
         return false;
     }
 
+    /**
+     * Method to check whether or not the block is an anvil.
+     *
+     * @return A {@link boolean} signifying whether or not the block is an anvil.
+     */
     @Override
     public boolean isBarrel(Block block) {
         if (block.getType() == Material.BARREL) {
@@ -90,6 +125,11 @@ public class BlockChecker implements IBlockChecker {
         return false;
     }
 
+    /**
+     * Method to get a Material by name.
+     *
+     * @return A {@link Material} matching the name.
+     */
     @Override
     public Material compatMaterial(String materialName) {
         Material mat = Material.getMaterial(materialName);
