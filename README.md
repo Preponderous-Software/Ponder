@@ -3,6 +3,8 @@
 ## Description
 Built on top of Spigot, the Ponder API is intended to facilitate the creation and expansion of Minecraft plugins through the use of provided tools, services and specifications. Functionality that can be used in many plugins has been abstracted out into a reusable API. This will greatly simplify the process of creating and updating plugins.
 
+A list of features can be found [here](https://github.com/Preponderous-Software/Ponder/wiki/Features).
+
 ## Server Software
 This API was developed on top of the Spigot API. Users may run into trouble using it with other available server softwares like Paper.
 
