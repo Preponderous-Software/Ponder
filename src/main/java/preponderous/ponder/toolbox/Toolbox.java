@@ -8,6 +8,7 @@ import preponderous.ponder.toolbox.tools.specification.*;
 public class Toolbox implements IToolbox {
 
     private ArgumentParser argumentParser;
+    private BlockChecker blockChecker;
     private ColorChecker colorChecker;
     private EventHandlerRegistry eventHandlerRegistry;
     private Logger logger;
@@ -22,6 +23,7 @@ public class Toolbox implements IToolbox {
      */
     public Toolbox(PonderAPI ponderAPI) {
         argumentParser = new ArgumentParser();
+        blockChecker = new BlockChecker();
         colorChecker = new ColorChecker();
         eventHandlerRegistry = new EventHandlerRegistry(ponderAPI);
         logger = new Logger(ponderAPI);
@@ -39,6 +41,11 @@ public class Toolbox implements IToolbox {
     @Override
     public IArgumentParser getArgumentParser() {
         return argumentParser;
+    }
+
+    @Override
+    public IBlockChecker getBlockChecker() {
+        return blockChecker;
     }
 
     /**
