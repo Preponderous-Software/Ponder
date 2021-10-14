@@ -37,7 +37,10 @@ Please fill out a bug report [here](https://github.com/Preponderous-Software/Pon
 Name | Main Contributions
 ------------ | -------------
 Daniel Stephenson | Creator
-Callum | Condensed the code of several tools.
+Callum | Wrote the Color Converter that is used in this project and condensed the code of several tools.
+Pasarus | Wrote code that is used in the Storage Manager and the UUID Checker.
+Caibinus | Wrote code that is used in the Block Checker.
+
 
 ## License
 GPL3
