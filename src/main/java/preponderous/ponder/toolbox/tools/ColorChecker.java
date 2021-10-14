@@ -3,8 +3,6 @@ package preponderous.ponder.toolbox.tools;
 import org.bukkit.ChatColor;
 import preponderous.ponder.toolbox.tools.specification.IColorChecker;
 
-import java.util.ArrayList;
-
 public class ColorChecker implements IColorChecker {
 
     /**
