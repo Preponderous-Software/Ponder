@@ -36,7 +36,7 @@ public class Toolbox implements IToolbox {
     }
 
     /**
-     * Method to drop the get the argument parser tool.
+     * Method to get the argument parser tool.
      *
      * @return Argument Parser
      */
@@ -45,13 +45,18 @@ public class Toolbox implements IToolbox {
         return argumentParser;
     }
 
+    /**
+     * Method to drop the get the block checker.
+     *
+     * @return Block Checker
+     */
     @Override
     public IBlockChecker getBlockChecker() {
         return blockChecker;
     }
 
     /**
-     * Method to drop the get the color checker tool.
+     * Method to get the color checker tool.
      *
      * @return Color Checker
      */
@@ -60,13 +65,18 @@ public class Toolbox implements IToolbox {
         return colorChecker;
     }
 
+    /**
+     * Method to drop the get the color converter.
+     *
+     * @return Event Handler Registry
+     */
     @Override
     public IColorConverter getColorConverter() {
         return colorConverter;
     }
 
     /**
-     * Method to drop the get the event handler registry tool.
+     * Method to get the event handler registry tool.
      *
      * @return Event Handler Registry
      */
@@ -76,7 +86,7 @@ public class Toolbox implements IToolbox {
     }
 
     /**
-     * Method to drop the get the logger tool.
+     * Method to get the logger tool.
      *
      * @return Logger
      */
@@ -86,7 +96,7 @@ public class Toolbox implements IToolbox {
     }
 
     /**
-     * Method to drop the get the messenger tool.
+     * Method to get the messenger tool.
      *
      * @return Messenger
      */
@@ -96,7 +106,7 @@ public class Toolbox implements IToolbox {
     }
 
     /**
-     * Method to drop the get the permission checker tool.
+     * Method to get the permission checker tool.
      *
      * @return Permission Checker
      */
@@ -106,7 +116,7 @@ public class Toolbox implements IToolbox {
     }
 
     /**
-     * Method to drop the get the scheduler tool.
+     * Method to get the scheduler tool.
      *
      * @return Scheduler
      */
@@ -116,7 +126,7 @@ public class Toolbox implements IToolbox {
     }
 
     /**
-     * Method to drop the UUID Checker tool.
+     * Method to get the UUID Checker tool.
      *
      * @return UUID Checker
      */
