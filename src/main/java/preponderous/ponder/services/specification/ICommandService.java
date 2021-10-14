@@ -1,7 +1,7 @@
 package preponderous.ponder.services.specification;
 
 import org.bukkit.command.CommandSender;
-import preponderous.ponder.misc.ICommand;
+import preponderous.ponder.misc.specification.ICommand;
 
 import java.util.ArrayList;
 

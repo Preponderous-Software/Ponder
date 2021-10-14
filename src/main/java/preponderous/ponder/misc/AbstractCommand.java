@@ -2,6 +2,7 @@ package preponderous.ponder.misc;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
+import preponderous.ponder.misc.specification.ICommand;
 
 import java.util.Arrays;
 

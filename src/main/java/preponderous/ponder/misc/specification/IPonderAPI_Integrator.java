@@ -1,4 +1,4 @@
-package preponderous.ponder.specification;
+package preponderous.ponder.misc.specification;
 
 import preponderous.ponder.PonderAPI;
 

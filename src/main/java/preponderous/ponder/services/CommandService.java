@@ -3,7 +3,7 @@ package preponderous.ponder.services;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import preponderous.ponder.PonderAPI;
-import preponderous.ponder.misc.ICommand;
+import preponderous.ponder.misc.specification.ICommand;
 import preponderous.ponder.services.specification.ICommandService;
 
 import java.util.ArrayList;

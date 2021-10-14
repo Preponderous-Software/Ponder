@@ -1,4 +1,4 @@
-package preponderous.ponder.misc;
+package preponderous.ponder.misc.specification;
 
 import java.util.Map;
 

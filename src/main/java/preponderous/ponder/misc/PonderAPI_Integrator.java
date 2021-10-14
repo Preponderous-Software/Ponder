@@ -1,12 +1,8 @@
 package preponderous.ponder.misc;
 
-import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 import preponderous.ponder.PonderAPI;
-import preponderous.ponder.services.specification.ICommandService;
-import preponderous.ponder.services.specification.IConfigService;
-import preponderous.ponder.services.specification.IStorageService;
-import preponderous.ponder.specification.IPonderAPI_Integrator;
+import preponderous.ponder.misc.specification.IPonderAPI_Integrator;
 
 public class PonderAPI_Integrator implements IPonderAPI_Integrator {
 
