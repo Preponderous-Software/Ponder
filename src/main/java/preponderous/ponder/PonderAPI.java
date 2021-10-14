@@ -45,7 +45,7 @@ public class PonderAPI implements IPonderAPI {
     /**
      * Method to get the plugin that the API has been instantiated with.
      *
-     * @return JavaPlugin
+     * @return {@link JavaPlugin}
      */
     public JavaPlugin getPlugin() {
         return plugin;
@@ -54,7 +54,7 @@ public class PonderAPI implements IPonderAPI {
     /**
      * Method to get the Command Service
      *
-     * @return Command Service
+     * @return {@link CommandService}
      */
     @Override
     public ICommandService getCommandService() {
@@ -64,7 +64,7 @@ public class PonderAPI implements IPonderAPI {
     /**
      * Method to get the Config Service
      *
-     * @return Config Service
+     * @return {@link ConfigService}
      */
     @Override
     public IConfigService getConfigService() {
@@ -74,7 +74,7 @@ public class PonderAPI implements IPonderAPI {
     /**
      * Method to get the Storage Service
      *
-     * @return Storage Service
+     * @return {@link StorageService}
      */
     @Override
     public IStorageService getStorageService() {
@@ -84,7 +84,7 @@ public class PonderAPI implements IPonderAPI {
     /**
      * Method to get the Toolbox
      *
-     * @return Toolbox
+     * @return {@link Toolbox}
      */
     @Override
     public IToolbox getToolbox() {
@@ -112,7 +112,7 @@ public class PonderAPI implements IPonderAPI {
     /**
      * Method to get the version of the API.
      *
-     * @return The version of the API.
+     * @return The version of the API as a {@link String}.
      */
     public String getVersion() {
         return version;

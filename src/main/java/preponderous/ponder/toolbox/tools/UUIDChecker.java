@@ -18,7 +18,7 @@ public class UUIDChecker implements IUUIDChecker {
      * </p>
      *
      * @param playerUUID used to find the name.
-     * @return String name of the Player.
+     * @return Name of the player as a {@link String}
      * @throws IllegalArgumentException if the UUID provided is null.
      */
     @Override
@@ -42,7 +42,7 @@ public class UUIDChecker implements IUUIDChecker {
      * </p>
      *
      * @param playerName used to find the UUID.
-     * @return UUID (Unique ID) of the Player.
+     * @return {@link UUID} (Unique ID) of the Player.
      * @throws IllegalArgumentException if the name is null.
      */
     @SuppressWarnings("deprecation")

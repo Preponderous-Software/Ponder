@@ -38,7 +38,7 @@ public class Toolbox implements IToolbox {
     /**
      * Method to get the argument parser tool.
      *
-     * @return Argument Parser
+     * @return {@link ArgumentParser}
      */
     @Override
     public IArgumentParser getArgumentParser() {
@@ -48,7 +48,7 @@ public class Toolbox implements IToolbox {
     /**
      * Method to drop the get the block checker.
      *
-     * @return Block Checker
+     * @return {@link BlockChecker}
      */
     @Override
     public IBlockChecker getBlockChecker() {
@@ -58,7 +58,7 @@ public class Toolbox implements IToolbox {
     /**
      * Method to get the color checker tool.
      *
-     * @return Color Checker
+     * @return {@link ColorChecker}
      */
     @Override
     public IColorChecker getColorChecker() {
@@ -68,7 +68,7 @@ public class Toolbox implements IToolbox {
     /**
      * Method to drop the get the color converter.
      *
-     * @return Event Handler Registry
+     * @return {@link EventHandlerRegistry}
      */
     @Override
     public IColorConverter getColorConverter() {
@@ -78,7 +78,7 @@ public class Toolbox implements IToolbox {
     /**
      * Method to get the event handler registry tool.
      *
-     * @return Event Handler Registry
+     * @return {@link EventHandlerRegistry}
      */
     @Override
     public IEventHandlerRegistry getEventHandlerRegistry() {
@@ -88,7 +88,7 @@ public class Toolbox implements IToolbox {
     /**
      * Method to get the logger tool.
      *
-     * @return Logger
+     * @return {@link Logger}
      */
     @Override
     public ILogger getLogger() {
@@ -98,7 +98,7 @@ public class Toolbox implements IToolbox {
     /**
      * Method to get the messenger tool.
      *
-     * @return Messenger
+     * @return {@link Messenger}
      */
     @Override
     public IMessenger getMessenger() {
@@ -108,7 +108,7 @@ public class Toolbox implements IToolbox {
     /**
      * Method to get the permission checker tool.
      *
-     * @return Permission Checker
+     * @return {@link PermissionChecker}
      */
     @Override
     public IPermissionChecker getPermissionChecker() {
@@ -118,7 +118,7 @@ public class Toolbox implements IToolbox {
     /**
      * Method to get the scheduler tool.
      *
-     * @return Scheduler
+     * @return {@link Scheduler}
      */
     @Override
     public IScheduler getScheduler() {
@@ -128,7 +128,7 @@ public class Toolbox implements IToolbox {
     /**
      * Method to get the UUID Checker tool.
      *
-     * @return UUID Checker
+     * @return {@link UUIDChecker}
      */
     @Override
     public IUUIDChecker getUUIDChecker() {
