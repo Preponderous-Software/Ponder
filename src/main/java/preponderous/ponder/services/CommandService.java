@@ -14,6 +14,7 @@ public class CommandService implements ICommandService {
 
     private ArrayList<ICommand> commands = new ArrayList<>();
     private String coreCommand;
+    private String noArgsMessage;
     private String notFoundMessage;
 
     public CommandService(PonderAPI ponderAPI) {
@@ -21,21 +22,21 @@ public class CommandService implements ICommandService {
     }
 
     @Override
-    public void initialize(ArrayList<ICommand> commands, String coreCommand, String notFoundMessage) {
+    public void initialize(ArrayList<ICommand> commands, String coreCommand, String noArgsMessage, String notFoundMessage) {
         this.commands = commands;
         this.coreCommand = coreCommand;
+        this.noArgsMessage = noArgsMessage;
         this.notFoundMessage = notFoundMessage;
     }
 
     @Override
     public boolean interpretCommand(CommandSender sender, String label, String[] args) {
-
         if (!label.equalsIgnoreCase(coreCommand)) {
             return false;
         }
 
         if (args.length == 0) {
-            // TODO: add message
+            sender.sendMessage(ChatColor.AQUA + noArgsMessage);
             return true;
         }
 
@@ -43,7 +44,14 @@ public class CommandService implements ICommandService {
         String[] arguments = ponderAPI.getToolbox().getArgumentParser().dropFirstArgument(args);
 
         for  (ICommand command : commands) {
-            // TODO: if command is a match, execute the command's method and return true (need to edit command class for this)
+            if (command.getNames().contains(subCommand)) {
+                if (arguments.length == 0) {
+                    return command.execute(sender);
+                }
+                else {
+                    return command.execute(sender, arguments);
+                }
+            }
         }
 
         sender.sendMessage(ChatColor.RED + notFoundMessage);
