@@ -1,6 +1,6 @@
 package preponderous.ponder.misc;
 
-import preponderous.ponder.misc.specification.modifiers.Cacheable;
+import preponderous.ponder.misc.modifiers.Cacheable;
 import preponderous.ponder.misc.specification.ICache;
 
 import java.util.ArrayList;
