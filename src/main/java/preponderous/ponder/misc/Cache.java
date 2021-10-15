@@ -10,11 +10,19 @@ public class Cache implements ICache {
 
     private HashSet<Cacheable> cache = new HashSet<>();
     private ArrayList<Cacheable> storage;
-    
+
+    /**
+     * Constructor to initialize the Cache.
+     *
+     */
     public Cache(ArrayList<Cacheable> storage) {
         this.storage = storage;
     }
 
+    /**
+     * Method to look up an cacheable object and cache it if it isn't in the cache.
+     *
+     */
     @Override
     public Cacheable lookup(Object key) {
         Cacheable object = checkCache(key);
@@ -24,6 +32,11 @@ public class Cache implements ICache {
         return object;
     }
 
+
+    /**
+     * Method to check if a cacheable object is in the cache.
+     *
+     */
     private Cacheable checkCache(Object key) {
         for (Cacheable object : cache) {
             if (object.getKey().equals(key)) {
@@ -33,6 +46,10 @@ public class Cache implements ICache {
         return null;
     }
 
+    /**
+     * Method to check if a cacheable object is in storage.
+     *
+     */
     private Cacheable checkStorage(Object key) {
         Cacheable object = null;
         for (Cacheable o : storage) {
