@@ -8,10 +8,6 @@ import java.util.Arrays;
 
 public abstract class AbstractCommand implements ICommand {
 
-    public abstract boolean execute(CommandSender sender);
-
-    public abstract boolean execute(CommandSender sender, String[] args);
-
     /**
      * Method to drop the first argument from an Array of Strings.
      *
