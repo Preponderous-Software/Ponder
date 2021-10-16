@@ -31,7 +31,7 @@ Please fill out a bug report [here](https://github.com/Preponderous-Software/Pon
 - [Planned Improvements](https://github.com/Preponderous-Software/Ponder/issues?q=is%3Aopen+is%3Aissue+label%3Aimprovement)
 
 ## Contributing
-- [Notes for Developers](https://github.com/Preponderous-Software/Ponder/wiki/Developer-Notes) (coming soon)
+- [Notes on Contributing](https://github.com/Preponderous-Software/Ponder/wiki/Contributing)
 
 ## Authors and acknowledgement
 Name | Main Contributions
