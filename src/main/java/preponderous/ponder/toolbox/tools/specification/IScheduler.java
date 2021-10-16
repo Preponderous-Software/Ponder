@@ -1,7 +1,7 @@
 package preponderous.ponder.toolbox.tools.specification;
 
-import preponderous.ponder.services.specification.IExpandedStorageService;
+import preponderous.ponder.misc.AbstractExpandedStorageService;
 
 public interface IScheduler {
-    void scheduleAutosave(IExpandedStorageService storageService);
+    void scheduleAutosave(AbstractExpandedStorageService storageService);
 }
