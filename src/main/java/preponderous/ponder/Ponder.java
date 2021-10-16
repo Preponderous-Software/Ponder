@@ -28,7 +28,7 @@ public class Ponder implements IPonder {
 
     private Toolbox toolbox;
 
-    private String version = "v0.5";
+    private String version = "v0.6-alpha-1";
 
     /**
      * Constructor to initialize the API.
