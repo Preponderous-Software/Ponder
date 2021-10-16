@@ -15,13 +15,8 @@ public class Messenger implements IMessenger {
      */
     @Override
     public void sendAllPlayersOnServerMessage(String message) {
-        try {
-            for (Player player : Bukkit.getOnlinePlayers()) {
-                player.sendMessage(message);
-            }
-        }
-        catch(Exception ignored) {
-
+        for (Player player : Bukkit.getOnlinePlayers()) {
+            player.sendMessage(message);
         }
     }
 
