@@ -1,4 +1,4 @@
-package preponderous.ponder.misc.modifiers;
+package preponderous.ponder.modifiers;
 
 public interface Territory {
     void setHolder(String newHolder);
