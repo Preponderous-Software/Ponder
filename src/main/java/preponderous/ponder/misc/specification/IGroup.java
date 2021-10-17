@@ -1,9 +1,9 @@
-package preponderous.ponder.modifiers;
+package preponderous.ponder.misc.specification;
 
 import java.util.ArrayList;
 import java.util.UUID;
 
-public interface Group {
+public interface IGroup {
     void setName(String newName);
     String getName();
     void setDescription(String newDesc);
