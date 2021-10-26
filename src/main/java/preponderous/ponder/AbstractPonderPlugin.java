@@ -5,6 +5,9 @@ import preponderous.ponder.Ponder;
 import preponderous.ponder.misc.PonderAPI_Integrator;
 import preponderous.ponder.toolbox.Toolbox;
 
+/**
+ * @author Daniel Stephenson
+ */
 public abstract class AbstractPonderPlugin extends JavaPlugin {
 
     protected PonderAPI_Integrator ponderAPI_integrator;

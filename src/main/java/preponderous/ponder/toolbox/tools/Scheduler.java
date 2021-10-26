@@ -4,6 +4,9 @@ import org.bukkit.Bukkit;
 import preponderous.ponder.Ponder;
 import preponderous.ponder.misc.AbstractExpandedStorageService;
 
+/**
+ * @author Daniel Stephenson
+ */
 public class Scheduler {
 
     private Ponder ponder;

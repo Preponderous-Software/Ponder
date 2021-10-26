@@ -6,6 +6,9 @@ import preponderous.ponder.misc.specification.ICommand;
 
 import java.util.Arrays;
 
+/**
+ * @author Daniel Stephenson
+ */
 public abstract class AbstractCommand implements ICommand {
 
     /**

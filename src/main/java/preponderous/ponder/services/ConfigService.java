@@ -7,6 +7,9 @@ import preponderous.ponder.Ponder;
 
 import java.util.HashMap;
 
+/**
+ * @author Daniel Stephenson
+ */
 public class ConfigService {
 
     private Ponder ponder;

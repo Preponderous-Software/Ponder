@@ -5,6 +5,9 @@ import preponderous.ponder.modifiers.Cacheable;
 import java.util.ArrayList;
 import java.util.HashSet;
 
+/**
+ * @author Daniel Stephenson
+ */
 public class Cache {
 
     private HashSet<Cacheable> cache = new HashSet<>();

@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * @author Daniel Stephenson
+ */
 public class ArgumentParser {
 
     /**

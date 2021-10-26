@@ -7,6 +7,9 @@ import preponderous.ponder.services.LocaleService;
 import preponderous.ponder.services.StorageService;
 import preponderous.ponder.toolbox.Toolbox;
 
+/**
+ * @author Daniel Stephenson
+ */
 public class Ponder {
 
     private boolean debug = true;
@@ -27,6 +30,7 @@ public class Ponder {
     /**
      * Constructor to initialize the API.
      *
+     * @param plugin    JavaPlugin to initialize the API with.
      */
     public Ponder(JavaPlugin plugin) {
         numInstances++;
@@ -97,7 +101,7 @@ public class Ponder {
     /**
      * Method to check whether the internal debug flag for the API is enabled.
      *
-     * @return Whether or not the debug flag is enabled.
+     * @return Boolean signifying whether the debug flag is enabled.
      */
     public boolean isDebugEnabled() {
         return debug;
@@ -106,7 +110,7 @@ public class Ponder {
     /**
      * Method to set the internal debug flag for the API.
      *
-     * @param b to set.
+     * @param b boolean to set.
      */
     public void setDebug(boolean b) {
         debug = b;

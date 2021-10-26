@@ -2,6 +2,9 @@ package preponderous.ponder.modifiers;
 
 import java.util.ArrayList;
 
+/**
+ * @author Daniel Stephenson
+ */
 public interface Diplomatic {
 
     // allies

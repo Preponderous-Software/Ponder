@@ -3,6 +3,9 @@ package preponderous.ponder.modifiers;
 import java.util.ArrayList;
 import java.util.UUID;
 
+/**
+ * @author Daniel Stephenson
+ */
 public interface Lockable {
     void setOwner(UUID s);
     UUID getOwner();

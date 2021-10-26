@@ -7,6 +7,9 @@ import preponderous.ponder.misc.specification.ICommand;
 
 import java.util.ArrayList;
 
+/**
+ * @author Daniel Stephenson
+ */
 public class CommandService {
 
     private Ponder ponder;

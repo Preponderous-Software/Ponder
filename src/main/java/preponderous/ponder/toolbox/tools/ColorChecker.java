@@ -2,6 +2,9 @@ package preponderous.ponder.toolbox.tools;
 
 import org.bukkit.ChatColor;
 
+/**
+ * @author Daniel Stephenson
+ */
 public class ColorChecker {
 
     /**

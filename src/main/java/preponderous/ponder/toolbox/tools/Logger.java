@@ -2,6 +2,9 @@ package preponderous.ponder.toolbox.tools;
 
 import preponderous.ponder.Ponder;
 
+/**
+ * @author Daniel Stephenson
+ */
 public class Logger {
 
     private Ponder ponder;

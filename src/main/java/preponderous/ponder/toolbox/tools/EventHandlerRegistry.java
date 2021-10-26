@@ -8,6 +8,9 @@ import preponderous.ponder.Ponder;
 
 import java.util.ArrayList;
 
+/**
+ * @author Daniel Stephenson
+ */
 public class EventHandlerRegistry {
 
     private final PluginManager manager;

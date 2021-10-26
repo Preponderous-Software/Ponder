@@ -3,6 +3,9 @@ package preponderous.ponder.misc;
 import org.bukkit.plugin.java.JavaPlugin;
 import preponderous.ponder.Ponder;
 
+/**
+ * @author Daniel Stephenson
+ */
 public class PonderAPI_Integrator {
 
     private Ponder ponder = null;

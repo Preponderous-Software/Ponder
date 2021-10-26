@@ -8,6 +8,9 @@ import java.util.UUID;
 
 import static org.bukkit.Bukkit.getServer;
 
+/**
+ * @author Daniel Stephenson
+ */
 public class Group {
 
     protected String name = "defaultName";
