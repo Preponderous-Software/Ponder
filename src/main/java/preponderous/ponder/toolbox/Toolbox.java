@@ -2,7 +2,6 @@ package preponderous.ponder.toolbox;
 
 import preponderous.ponder.Ponder;
 import preponderous.ponder.toolbox.tools.*;
-import preponderous.ponder.toolbox.tools.specification.*;
 
 public class Toolbox {
 
@@ -39,7 +38,7 @@ public class Toolbox {
      *
      * @return {@link ArgumentParser}
      */
-    public IArgumentParser getArgumentParser() {
+    public ArgumentParser getArgumentParser() {
         return argumentParser;
     }
 
@@ -48,7 +47,7 @@ public class Toolbox {
      *
      * @return {@link BlockChecker}
      */
-    public IBlockChecker getBlockChecker() {
+    public BlockChecker getBlockChecker() {
         return blockChecker;
     }
 
@@ -57,7 +56,7 @@ public class Toolbox {
      *
      * @return {@link ColorChecker}
      */
-    public IColorChecker getColorChecker() {
+    public ColorChecker getColorChecker() {
         return colorChecker;
     }
 
@@ -66,7 +65,7 @@ public class Toolbox {
      *
      * @return {@link EventHandlerRegistry}
      */
-    public IColorConverter getColorConverter() {
+    public ColorConverter getColorConverter() {
         return colorConverter;
     }
 
@@ -75,7 +74,7 @@ public class Toolbox {
      *
      * @return {@link EventHandlerRegistry}
      */
-    public IEventHandlerRegistry getEventHandlerRegistry() {
+    public EventHandlerRegistry getEventHandlerRegistry() {
         return eventHandlerRegistry;
     }
 
@@ -84,7 +83,7 @@ public class Toolbox {
      *
      * @return {@link Logger}
      */
-    public ILogger getLogger() {
+    public Logger getLogger() {
         return logger;
     }
 
@@ -93,7 +92,7 @@ public class Toolbox {
      *
      * @return {@link Messenger}
      */
-    public IMessenger getMessenger() {
+    public Messenger getMessenger() {
         return messenger;
     }
 
@@ -102,7 +101,7 @@ public class Toolbox {
      *
      * @return {@link PermissionChecker}
      */
-    public IPermissionChecker getPermissionChecker() {
+    public PermissionChecker getPermissionChecker() {
         return permissionChecker;
     }
 
@@ -111,7 +110,7 @@ public class Toolbox {
      *
      * @return {@link Scheduler}
      */
-    public IScheduler getScheduler() {
+    public Scheduler getScheduler() {
         return scheduler;
     }
 
@@ -120,7 +119,7 @@ public class Toolbox {
      *
      * @return {@link UUIDChecker}
      */
-    public IUUIDChecker getUUIDChecker() {
+    public UUIDChecker getUUIDChecker() {
         return uuidChecker;
     }
 }
