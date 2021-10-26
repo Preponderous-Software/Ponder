@@ -1,9 +1,8 @@
 package preponderous.ponder.toolbox.tools;
 
 import preponderous.ponder.Ponder;
-import preponderous.ponder.toolbox.tools.specification.ILogger;
 
-public class Logger implements ILogger {
+public class Logger {
 
     private Ponder ponder;
 
@@ -18,7 +17,6 @@ public class Logger implements ILogger {
      * @param message to print.
      * @return {@link boolean} signifying whether or not the method was successful.
      */
-    @Override
     public boolean log(boolean debug, String message) {
         if (ponder.getPlugin() == null) {
             System.out.println("Error: Plugin was null.");
@@ -36,7 +34,6 @@ public class Logger implements ILogger {
      *
      * @param message to print.
      */
-    @Override
     public void print(String message) {
         if (ponder.getPlugin() == null) {
             System.out.println("Error: Plugin was null.");

@@ -3,7 +3,6 @@ package preponderous.ponder.toolbox.tools;
 import org.bukkit.Color;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import preponderous.ponder.toolbox.tools.specification.IColorConverter;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -12,7 +11,7 @@ import java.lang.reflect.Method;
  * @author Callum Johnson
  * @since 23/09/2021 - 22:39
  */
-public class ColorConverter implements IColorConverter {
+public class ColorConverter {
 
     /**
      * The attemptDecode method uses multiple parsing methodologies to
@@ -30,7 +29,6 @@ public class ColorConverter implements IColorConverter {
      * @see Color
      * @see java.awt.Color
      */
-    @Override
     @Nullable
     public String attemptDecode(@NotNull String input, boolean ideTest) {
         final DefaultColor of = DefaultColor.of(input.trim()); // Medieval Factions List.

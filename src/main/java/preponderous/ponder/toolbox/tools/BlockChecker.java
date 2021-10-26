@@ -3,18 +3,16 @@ package preponderous.ponder.toolbox.tools;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.block.Chest;
-import preponderous.ponder.toolbox.tools.specification.IBlockChecker;
 
 import static org.bukkit.Bukkit.getLogger;
 
-public class BlockChecker implements IBlockChecker {
+public class BlockChecker {
 
     /**
      * Method to check whether or not the block is a chest.
      *
      * @return A {@link boolean} signifying whether or not the block is a chest.
      */
-    @Override
     public boolean isChest(Block block) {
         return block.getType() == Material.CHEST && block.getState() instanceof Chest;
     }
@@ -24,7 +22,6 @@ public class BlockChecker implements IBlockChecker {
      *
      * @return A {@link boolean} signifying whether or not the block is a door.
      */
-    @Override
     public boolean isDoor(Block block) {
         if (block.getType() == Material.ACACIA_DOOR ||
                 block.getType() == Material.BIRCH_DOOR ||
@@ -47,7 +44,6 @@ public class BlockChecker implements IBlockChecker {
      *
      * @return A {@link boolean} signifying whether or not the block is a trapdoor.
      */
-    @Override
     public boolean isTrapdoor(Block block) {
         if (block.getType() == Material.IRON_TRAPDOOR ||
                 block.getType() == Material.OAK_TRAPDOOR ||
@@ -68,7 +64,6 @@ public class BlockChecker implements IBlockChecker {
      *
      * @return A {@link boolean} signifying whether or not the block is a furnace.
      */
-    @Override
     public boolean isFurnace(Block block) {
         if (block.getType() == Material.FURNACE ||
                 block.getType() == Material.BLAST_FURNACE) {
@@ -82,7 +77,6 @@ public class BlockChecker implements IBlockChecker {
      *
      * @return A {@link boolean} signifying whether or not the block is an anvil.
      */
-    @Override
     public boolean isAnvil(Block block) {
         if (block.getType() == Material.ANVIL ||
                 block.getType() == Material.CHIPPED_ANVIL ||
@@ -97,7 +91,6 @@ public class BlockChecker implements IBlockChecker {
      *
      * @return A {@link boolean} signifying whether or not the block is a gate.
      */
-    @Override
     public boolean isGate(Block block) {
         if (block.getType() == Material.OAK_FENCE_GATE ||
                 block.getType() == Material.SPRUCE_FENCE_GATE ||
@@ -117,7 +110,6 @@ public class BlockChecker implements IBlockChecker {
      *
      * @return A {@link boolean} signifying whether or not the block is an anvil.
      */
-    @Override
     public boolean isBarrel(Block block) {
         if (block.getType() == Material.BARREL) {
             return true;
@@ -130,7 +122,6 @@ public class BlockChecker implements IBlockChecker {
      *
      * @return A {@link Material} matching the name.
      */
-    @Override
     public Material compatMaterial(String materialName) {
         Material mat = Material.getMaterial(materialName);
         if (mat == null) {

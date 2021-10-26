@@ -3,11 +3,10 @@ package preponderous.ponder.toolbox.tools;
 import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
-import preponderous.ponder.toolbox.tools.specification.IUUIDChecker;
 
 import java.util.UUID;
 
-public class UUIDChecker implements IUUIDChecker {
+public class UUIDChecker {
 
     /**
      * Method to obtain the Name of a Player based on their UUID.
@@ -21,7 +20,6 @@ public class UUIDChecker implements IUUIDChecker {
      * @return Name of the player as a {@link String}
      * @throws IllegalArgumentException if the UUID provided is null.
      */
-    @Override
     public String findPlayerNameBasedOnUUID(UUID playerUUID) {
         if (playerUUID == null) throw new IllegalArgumentException("Player UUID cannot be null!");
         final Player player = Bukkit.getPlayer(playerUUID);
@@ -46,7 +44,6 @@ public class UUIDChecker implements IUUIDChecker {
      * @throws IllegalArgumentException if the name is null.
      */
     @SuppressWarnings("deprecation")
-    @Override
     public UUID findUUIDBasedOnPlayerName(String playerName) {
         if (playerName == null) throw new IllegalArgumentException("Player Name cannot be null!");
         final Player player = Bukkit.getPlayer(playerName);

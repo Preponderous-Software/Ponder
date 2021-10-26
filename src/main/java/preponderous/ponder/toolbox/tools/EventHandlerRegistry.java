@@ -5,11 +5,10 @@ import org.bukkit.event.Listener;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginManager;
 import preponderous.ponder.Ponder;
-import preponderous.ponder.toolbox.tools.specification.IEventHandlerRegistry;
 
 import java.util.ArrayList;
 
-public class EventHandlerRegistry implements IEventHandlerRegistry {
+public class EventHandlerRegistry {
 
     private final PluginManager manager;
     private Ponder ponder;
@@ -26,7 +25,6 @@ public class EventHandlerRegistry implements IEventHandlerRegistry {
      * @param plugin to register it for.
      * @throws IllegalArgumentException if the arguments are invalid.
      */
-    @Override
     public void registerEventHandlers(ArrayList<Listener> listeners, Plugin plugin) {
         if (listeners == null || listeners.isEmpty()) throw new IllegalArgumentException("Listeners cannot be null or empty!");
         if (plugin == null) throw new IllegalArgumentException("Plugin cannot be null!");
