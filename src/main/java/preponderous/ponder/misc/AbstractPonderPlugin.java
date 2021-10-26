@@ -2,10 +2,9 @@ package preponderous.ponder.misc;
 
 import org.bukkit.plugin.java.JavaPlugin;
 import preponderous.ponder.Ponder;
-import preponderous.ponder.misc.specification.IPonderPlugin;
 import preponderous.ponder.toolbox.Toolbox;
 
-public abstract class AbstractPonderPlugin extends JavaPlugin implements IPonderPlugin {
+public abstract class AbstractPonderPlugin extends JavaPlugin {
 
     protected PonderAPI_Integrator ponderAPI_integrator;
     protected Toolbox toolbox;
