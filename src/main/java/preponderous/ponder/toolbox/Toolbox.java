@@ -1,11 +1,10 @@
 package preponderous.ponder.toolbox;
 
 import preponderous.ponder.Ponder;
-import preponderous.ponder.toolbox.specification.IToolbox;
 import preponderous.ponder.toolbox.tools.*;
 import preponderous.ponder.toolbox.tools.specification.*;
 
-public class Toolbox implements IToolbox {
+public class Toolbox {
 
     private ArgumentParser argumentParser;
     private BlockChecker blockChecker;
@@ -40,7 +39,6 @@ public class Toolbox implements IToolbox {
      *
      * @return {@link ArgumentParser}
      */
-    @Override
     public IArgumentParser getArgumentParser() {
         return argumentParser;
     }
@@ -50,7 +48,6 @@ public class Toolbox implements IToolbox {
      *
      * @return {@link BlockChecker}
      */
-    @Override
     public IBlockChecker getBlockChecker() {
         return blockChecker;
     }
@@ -60,7 +57,6 @@ public class Toolbox implements IToolbox {
      *
      * @return {@link ColorChecker}
      */
-    @Override
     public IColorChecker getColorChecker() {
         return colorChecker;
     }
@@ -70,7 +66,6 @@ public class Toolbox implements IToolbox {
      *
      * @return {@link EventHandlerRegistry}
      */
-    @Override
     public IColorConverter getColorConverter() {
         return colorConverter;
     }
@@ -80,7 +75,6 @@ public class Toolbox implements IToolbox {
      *
      * @return {@link EventHandlerRegistry}
      */
-    @Override
     public IEventHandlerRegistry getEventHandlerRegistry() {
         return eventHandlerRegistry;
     }
@@ -90,7 +84,6 @@ public class Toolbox implements IToolbox {
      *
      * @return {@link Logger}
      */
-    @Override
     public ILogger getLogger() {
         return logger;
     }
@@ -100,7 +93,6 @@ public class Toolbox implements IToolbox {
      *
      * @return {@link Messenger}
      */
-    @Override
     public IMessenger getMessenger() {
         return messenger;
     }
@@ -110,7 +102,6 @@ public class Toolbox implements IToolbox {
      *
      * @return {@link PermissionChecker}
      */
-    @Override
     public IPermissionChecker getPermissionChecker() {
         return permissionChecker;
     }
@@ -120,7 +111,6 @@ public class Toolbox implements IToolbox {
      *
      * @return {@link Scheduler}
      */
-    @Override
     public IScheduler getScheduler() {
         return scheduler;
     }
@@ -130,7 +120,6 @@ public class Toolbox implements IToolbox {
      *
      * @return {@link UUIDChecker}
      */
-    @Override
     public IUUIDChecker getUUIDChecker() {
         return uuidChecker;
     }

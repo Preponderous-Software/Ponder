@@ -1,19 +1,14 @@
 package preponderous.ponder.misc;
 
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandSender;
-import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 import preponderous.ponder.Ponder;
 import preponderous.ponder.misc.specification.IPonderPlugin;
-import preponderous.ponder.toolbox.specification.IToolbox;
-
-import java.util.ArrayList;
+import preponderous.ponder.toolbox.Toolbox;
 
 public abstract class AbstractPonderPlugin extends JavaPlugin implements IPonderPlugin {
 
     protected PonderAPI_Integrator ponderAPI_integrator;
-    protected IToolbox toolbox;
+    protected Toolbox toolbox;
     protected String version = "v0.1-alpha-1";
 
     public boolean isDebugEnabled() {
@@ -28,7 +23,7 @@ public abstract class AbstractPonderPlugin extends JavaPlugin implements IPonder
         return ponderAPI_integrator.getAPI();
     }
 
-    public IToolbox getToolbox() {
+    public Toolbox getToolbox() {
         return toolbox;
     }
 

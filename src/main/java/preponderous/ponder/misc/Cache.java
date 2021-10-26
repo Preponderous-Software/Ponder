@@ -1,12 +1,11 @@
 package preponderous.ponder.misc;
 
 import preponderous.ponder.modifiers.Cacheable;
-import preponderous.ponder.misc.specification.ICache;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 
-public class Cache implements ICache {
+public class Cache {
 
     private HashSet<Cacheable> cache = new HashSet<>();
     private ArrayList<Cacheable> storage;
@@ -23,7 +22,6 @@ public class Cache implements ICache {
      * Method to look up an cacheable object and cache it if it isn't in the cache.
      *
      */
-    @Override
     public Cacheable lookup(Object key) {
         Cacheable object = checkCache(key);
         if (object == null) {

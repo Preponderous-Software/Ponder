@@ -4,7 +4,6 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
-import preponderous.ponder.services.specification.IStorageService;
 
 import java.io.*;
 import java.lang.reflect.Type;
@@ -14,7 +13,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class StorageService implements IStorageService {
+public class StorageService {
 
     private static String FILE_PATH;
 
@@ -31,7 +30,6 @@ public class StorageService implements IStorageService {
      *
      * @param filePath to initialize with.
      */
-    @Override
     public void initialize(String filePath) {
         FILE_PATH = filePath;
     }
@@ -43,7 +41,6 @@ public class StorageService implements IStorageService {
      * @param fileName to save to.
      * @return {@link boolean} signifying whether or not the operation was successful.
      */
-    @Override
     public boolean writeOutFiles(List<Map<String, String>> saveData, String fileName) {
         try {
             File parentFolder = new File(FILE_PATH);
@@ -65,7 +62,6 @@ public class StorageService implements IStorageService {
      * @param filename to specify which file to load from.
      * @return {@link ArrayList<HashMap<String, String>>} containing the data from the file.
      */
-    @Override
     public ArrayList<HashMap<String, String>> loadDataFromFilename(String filename) {
         try{
             Gson gson = new GsonBuilder().setPrettyPrinting().create();
