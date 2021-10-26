@@ -20,7 +20,7 @@ public abstract class AbstractCommand implements ICommand {
      * @param args to check.
      * @param sender to send message to.
      * @param color of the message.
-     * @return Whether or not there were no arguments.
+     * @return Boolean signifying whether there were no arguments.
      */
     public boolean sendMessageIfNoArguments(String message, String[] args, CommandSender sender, ChatColor color) {
         if (args.length == 0) {

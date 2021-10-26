@@ -16,14 +16,16 @@ public class Cache {
     /**
      * Constructor to initialize the Cache.
      *
+     * @param storage   {@link ArrayList} of {@link Cacheable} objects.
      */
     public Cache(ArrayList<Cacheable> storage) {
         this.storage = storage;
     }
 
     /**
-     * Method to look up an cacheable object and cache it if it isn't in the cache.
+     * Method to look up a cacheable object and cache it if it isn't in the cache.
      *
+     * @param key   Object to use as a key when searching.
      */
     public Cacheable lookup(Object key) {
         Cacheable object = checkCache(key);
@@ -37,6 +39,7 @@ public class Cache {
     /**
      * Method to check if a cacheable object is in the cache.
      *
+     * @param key   Object to use as a key when searching.
      */
     private Cacheable checkCache(Object key) {
         for (Cacheable object : cache) {
@@ -50,6 +53,7 @@ public class Cache {
     /**
      * Method to check if a cacheable object is in storage.
      *
+     * @param key   Object to use as a key when searching.
      */
     private Cacheable checkStorage(Object key) {
         Cacheable object = null;
