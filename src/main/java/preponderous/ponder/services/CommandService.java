@@ -41,6 +41,7 @@ public class CommandService {
     public boolean interpretCommand(CommandSender sender, String label, String[] args) {
         ponder.log("Attempting to interpret command with label: " + label);
         if (!label.equalsIgnoreCase(coreCommand)) {
+            ponder.log("Command didn't match core command '" + coreCommand + "'. Aborting.");
             return false;
         }
 
