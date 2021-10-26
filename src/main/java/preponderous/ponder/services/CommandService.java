@@ -39,6 +39,7 @@ public class CommandService {
      *
      */
     public boolean interpretCommand(CommandSender sender, String label, String[] args) {
+        ponder.log("Attempting to interpret command with label: " + label);
         if (!label.equalsIgnoreCase(coreCommand)) {
             return false;
         }
@@ -49,6 +50,8 @@ public class CommandService {
         }
 
         String subCommand = args[0];
+        ponder.log("Sub-command: " + subCommand);
+
         String[] arguments = ponder.getToolbox().getArgumentParser().dropFirstArgument(args);
 
         for  (ICommand command : commands) {

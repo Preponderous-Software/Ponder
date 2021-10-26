@@ -10,7 +10,7 @@ import preponderous.ponder.toolbox.Toolbox;
 /**
  * @author Daniel Stephenson
  */
-public class Ponder {
+public class Ponder implements InternalLogger {
 
     private boolean debug = true;
 
@@ -108,20 +108,21 @@ public class Ponder {
     }
 
     /**
-     * Method to set the internal debug flag for the API.
-     *
-     * @param b boolean to set.
-     */
-    public void setDebug(boolean b) {
-        debug = b;
-    }
-
-    /**
      * Method to get the version of the API.
      *
      * @return The version of the API as a {@link String}.
      */
     public String getVersion() {
         return version;
+    }
+
+    /**
+     * Method to set the internal debug flag for the class.
+     *
+     * @param b boolean to set.
+     */
+    @Override
+    public void setDebug(boolean b) {
+        debug = b;
     }
 }
