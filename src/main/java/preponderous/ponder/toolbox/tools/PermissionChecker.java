@@ -2,11 +2,10 @@ package preponderous.ponder.toolbox.tools;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
-import preponderous.ponder.toolbox.tools.specification.IPermissionChecker;
 
 import java.util.ArrayList;
 
-public class PermissionChecker implements IPermissionChecker {
+public class PermissionChecker {
 
     /**
      * Method to check whether or not a player has a permission.
@@ -15,7 +14,6 @@ public class PermissionChecker implements IPermissionChecker {
      * @param permission to check.
      * @return A {@link boolean} signifying whether or not the player has the specified permission.
      */
-    @Override
     public boolean checkPermission(CommandSender sender, String permission) {
         if (!sender.hasPermission(permission)) {
             sender.sendMessage(ChatColor.RED + "In order to use this command, you need the following permission: '" + permission + "'");
@@ -31,7 +29,6 @@ public class PermissionChecker implements IPermissionChecker {
      * @param permissions to check.
      * @return A {@link boolean} signifying whether or not the player has the specified permission.
      */
-    @Override
     public boolean checkPermission(CommandSender sender, ArrayList<String> permissions) {
         for (String permission : permissions) {
             if (sender.hasPermission(permission)) {

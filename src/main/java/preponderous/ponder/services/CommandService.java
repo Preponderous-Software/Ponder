@@ -4,11 +4,10 @@ import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import preponderous.ponder.Ponder;
 import preponderous.ponder.misc.specification.ICommand;
-import preponderous.ponder.services.specification.ICommandService;
 
 import java.util.ArrayList;
 
-public class CommandService implements ICommandService {
+public class CommandService {
 
     private Ponder ponder;
 
@@ -25,7 +24,6 @@ public class CommandService implements ICommandService {
      * Method to initialize the command service.
      *
      */
-    @Override
     public void initialize(ArrayList<ICommand> commands, String coreCommand, String noArgsMessage, String notFoundMessage) {
         this.commands = commands;
         this.coreCommand = coreCommand;
@@ -37,7 +35,6 @@ public class CommandService implements ICommandService {
      * Method to interpret and execute a command.
      *
      */
-    @Override
     public boolean interpretCommand(CommandSender sender, String label, String[] args) {
         if (!label.equalsIgnoreCase(coreCommand)) {
             return false;

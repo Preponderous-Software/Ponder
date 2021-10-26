@@ -3,17 +3,15 @@ package preponderous.ponder.toolbox.tools;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
-import preponderous.ponder.toolbox.tools.specification.IMessenger;
 
 import static org.bukkit.Bukkit.getServer;
 
-public class Messenger implements IMessenger {
+public class Messenger {
 
     /**
      * Method to message every online player.
      *
      */
-    @Override
     public void sendAllPlayersOnServerMessage(String message) {
         for (Player player : Bukkit.getOnlinePlayers()) {
             player.sendMessage(message);
@@ -24,7 +22,6 @@ public class Messenger implements IMessenger {
      * Method to send a message to players within a certain number of blocks from a player.
      *
      */
-    @Override
     public int sendMessageToPlayersWithinDistance(Player player, String message, int distance) {
         Location playerLocation = player.getLocation();
 

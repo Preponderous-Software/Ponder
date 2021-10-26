@@ -5,15 +5,9 @@ import preponderous.ponder.services.CommandService;
 import preponderous.ponder.services.ConfigService;
 import preponderous.ponder.services.LocaleService;
 import preponderous.ponder.services.StorageService;
-import preponderous.ponder.services.specification.ICommandService;
-import preponderous.ponder.services.specification.IConfigService;
-import preponderous.ponder.services.specification.ILocaleService;
-import preponderous.ponder.services.specification.IStorageService;
-import preponderous.ponder.specification.IPonder;
 import preponderous.ponder.toolbox.Toolbox;
-import preponderous.ponder.toolbox.specification.IToolbox;
 
-public class Ponder implements IPonder {
+public class Ponder {
 
     private boolean debug = true;
 
@@ -21,10 +15,10 @@ public class Ponder implements IPonder {
 
     private JavaPlugin plugin;
 
-    private ICommandService commandService;
-    private IConfigService configService;
-    private ILocaleService localeService;
-    private IStorageService storageService;
+    private CommandService commandService;
+    private ConfigService configService;
+    private LocaleService localeService;
+    private StorageService storageService;
 
     private Toolbox toolbox;
 
@@ -60,8 +54,7 @@ public class Ponder implements IPonder {
      *
      * @return {@link CommandService}
      */
-    @Override
-    public ICommandService getCommandService() {
+    public CommandService getCommandService() {
         return commandService;
     }
 
@@ -70,8 +63,7 @@ public class Ponder implements IPonder {
      *
      * @return {@link ConfigService}
      */
-    @Override
-    public IConfigService getConfigService() {
+    public ConfigService getConfigService() {
         return configService;
     }
 
@@ -80,8 +72,7 @@ public class Ponder implements IPonder {
      *
      * @return {@link LocaleService}
      */
-    @Override
-    public ILocaleService getLocaleService() {
+    public LocaleService getLocaleService() {
         return localeService;
     }
 
@@ -90,8 +81,7 @@ public class Ponder implements IPonder {
      *
      * @return {@link StorageService}
      */
-    @Override
-    public IStorageService getStorageService() {
+    public StorageService getStorageService() {
         return storageService;
     }
 
@@ -100,8 +90,7 @@ public class Ponder implements IPonder {
      *
      * @return {@link Toolbox}
      */
-    @Override
-    public IToolbox getToolbox() {
+    public Toolbox getToolbox() {
         return toolbox;
     }
 
@@ -110,7 +99,6 @@ public class Ponder implements IPonder {
      *
      * @return Whether or not the debug flag is enabled.
      */
-    @Override
     public boolean isDebugEnabled() {
         return debug;
     }
@@ -120,7 +108,6 @@ public class Ponder implements IPonder {
      *
      * @param b to set.
      */
-    @Override
     public void setDebug(boolean b) {
         debug = b;
     }

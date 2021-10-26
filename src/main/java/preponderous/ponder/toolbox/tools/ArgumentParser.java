@@ -1,12 +1,10 @@
 package preponderous.ponder.toolbox.tools;
 
-import preponderous.ponder.toolbox.tools.specification.IArgumentParser;
-
 import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class ArgumentParser implements IArgumentParser {
+public class ArgumentParser {
 
     /**
      * Method to drop the first argument from an Array of Strings.
@@ -15,7 +13,6 @@ public class ArgumentParser implements IArgumentParser {
      * @return Modified Array of Strings.
      * @throws IllegalArgumentException if the arguments given are invalid.
      */
-    @Override
     public String[] dropFirstArgument(String[] args) {
         if (args == null || args.length < 2) throw new IllegalArgumentException("Arguments not valid.");
         String[] toReturn = new String[args.length - 1];
@@ -30,7 +27,6 @@ public class ArgumentParser implements IArgumentParser {
      * @return {@link ArrayList} of {@link String} which were surrounded by " or Double-Quotes.
      * @throws IllegalArgumentException if the arguments given are invalid.
      */
-    @Override
     public ArrayList<String> getArgumentsInsideDoubleQuotes(String[] args) {
         if (args == null || args.length == 0) throw new IllegalArgumentException("Arguments not valid.");
         final ArrayList<String> toReturn = new ArrayList<>();

@@ -3,9 +3,8 @@ package preponderous.ponder.toolbox.tools;
 import org.bukkit.Bukkit;
 import preponderous.ponder.Ponder;
 import preponderous.ponder.misc.AbstractExpandedStorageService;
-import preponderous.ponder.toolbox.tools.specification.IScheduler;
 
-public class Scheduler implements IScheduler {
+public class Scheduler {
 
     private Ponder ponder;
 
@@ -17,7 +16,6 @@ public class Scheduler implements IScheduler {
      * Method to schedule an hourly autosave. This requires an expanded storage service.
      *
      */
-    @Override
     public void scheduleAutosave(AbstractExpandedStorageService storageService) {
         int delay = 60 * 60; // 1 hour
         int secondsUntilRepeat = 60 * 60; // 1 hour

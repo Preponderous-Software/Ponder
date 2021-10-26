@@ -4,11 +4,10 @@ import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import preponderous.ponder.Ponder;
-import preponderous.ponder.services.specification.IConfigService;
 
 import java.util.HashMap;
 
-public class ConfigService implements IConfigService {
+public class ConfigService {
 
     private Ponder ponder;
 
@@ -25,7 +24,6 @@ public class ConfigService implements IConfigService {
      *
      * @param optionsToValues to initialize with.
      */
-    @Override
     public void initialize(HashMap<String, Object> optionsToValues) {
         this.optionsToValues = optionsToValues;
     }
@@ -37,7 +35,6 @@ public class ConfigService implements IConfigService {
      * @param value to set the option to.
      * @return {@link boolean} signifying whether or not the config option was added.
      */
-    @Override
     public boolean addConfigOption(String option, Object value) {
         if (optionsToValues == null) {
             return false;
@@ -55,7 +52,6 @@ public class ConfigService implements IConfigService {
      * @param option to remove.
      * @return {@link boolean} signifying whether or not the config option was removed.
      */
-    @Override
     public boolean removeConfigOption(String option) {
         return optionsToValues.remove(option) != null;
     }
@@ -64,7 +60,6 @@ public class ConfigService implements IConfigService {
      * Method to save the config defaults if they aren't present. This should only be used if the class has been initialized.
      *
      */
-    @Override
     public void saveMissingConfigDefaultsIfNotPresent() {
         if (optionsToValues == null) {
             return;
@@ -85,7 +80,6 @@ public class ConfigService implements IConfigService {
      * @param value to set the option to.
      * @param sender to send an error message to.
      */
-    @Override
     public void setConfigOption(String option, Object value, CommandSender sender) {
         if (getConfig().isSet(option)) {
             getConfig().set(option, value);
@@ -101,7 +95,6 @@ public class ConfigService implements IConfigService {
      *
      * @param sender to send an error message to.
      */
-    @Override
     public void sendConfigList(CommandSender sender) {
         if (optionsToValues == null) {
             return;
@@ -119,7 +112,6 @@ public class ConfigService implements IConfigService {
      *
      * @return {@link boolean} signifying whether or not the config options have been locally altered.
      */
-    @Override
     public boolean hasBeenAltered() {
         return altered;
     }
@@ -129,7 +121,6 @@ public class ConfigService implements IConfigService {
      *
      * @return {@link FileConfiguration}
      */
-    @Override
     public FileConfiguration getConfig() {
         return ponder.getPlugin().getConfig();
     }
@@ -139,7 +130,6 @@ public class ConfigService implements IConfigService {
      *
      * @return {@link int}
      */
-    @Override
     public int getInt(String option) {
         return getConfig().getInt(option);
     }
@@ -149,7 +139,6 @@ public class ConfigService implements IConfigService {
      *
      * @return {@link boolean}
      */
-    @Override
     public boolean getBoolean(String option) {
         return getConfig().getBoolean(option);
     }
@@ -159,7 +148,6 @@ public class ConfigService implements IConfigService {
      *
      * @return {@link double}
      */
-    @Override
     public double getDouble(String option) {
         return getConfig().getDouble(option);
     }
@@ -169,7 +157,6 @@ public class ConfigService implements IConfigService {
      *
      * @return {@link String}
      */
-    @Override
     public String getString(String option) {
         return getConfig().getString(option);
     }

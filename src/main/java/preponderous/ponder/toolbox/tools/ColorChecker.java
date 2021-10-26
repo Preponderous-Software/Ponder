@@ -1,9 +1,8 @@
 package preponderous.ponder.toolbox.tools;
 
 import org.bukkit.ChatColor;
-import preponderous.ponder.toolbox.tools.specification.IColorChecker;
 
-public class ColorChecker implements IColorChecker {
+public class ColorChecker {
 
     /**
      * Method to get a chat color by name.
@@ -11,7 +10,6 @@ public class ColorChecker implements IColorChecker {
      * @param color to get.
      * @return {@link ChatColor}
      */
-    @Override
     public ChatColor getColorByName(String color) {
         for (ChatColor value : ChatColor.values()) {
             if (value.name().equalsIgnoreCase(color)) {
