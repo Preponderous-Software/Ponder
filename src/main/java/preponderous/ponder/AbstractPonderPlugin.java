@@ -1,7 +1,6 @@
 package preponderous.ponder;
 
 import org.bukkit.plugin.java.JavaPlugin;
-import preponderous.ponder.Ponder;
 import preponderous.ponder.misc.PonderAPI_Integrator;
 import preponderous.ponder.toolbox.Toolbox;
 

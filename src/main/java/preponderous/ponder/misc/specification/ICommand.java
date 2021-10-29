@@ -4,7 +4,6 @@ import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 public interface ICommand {
 

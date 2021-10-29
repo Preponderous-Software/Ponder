@@ -1,7 +1,6 @@
 package preponderous.ponder.misc;
 
 import org.bukkit.entity.Player;
-import preponderous.ponder.toolbox.tools.UUIDChecker;
 
 import java.util.ArrayList;
 import java.util.UUID;
