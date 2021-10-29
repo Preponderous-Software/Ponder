@@ -6,6 +6,7 @@ import preponderous.ponder.Ponder;
 import preponderous.ponder.misc.specification.ICommand;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * @author Daniel Stephenson
@@ -46,6 +47,7 @@ public class CommandService {
         }
 
         if (args.length == 0) {
+            ponder.log("No arguments were given.");
             sender.sendMessage(ChatColor.AQUA + noArgsMessage);
             return true;
         }
@@ -54,21 +56,26 @@ public class CommandService {
         ponder.log("Sub-command: " + subCommand);
 
         String[] arguments = ponder.getToolbox().getArgumentParser().dropFirstArgument(args);
+        ponder.log("Arguments: " + Arrays.toString(arguments));
 
         for  (ICommand command : commands) {
+            ponder.log("Checking command " + command.getNames().get(0));
             if (command.getNames().contains(subCommand)) {
                 if (!ponder.getToolbox().getPermissionChecker().checkPermission(sender, command.getPermissions())) {
+                    ponder.log("The sender doesn't have permission to run this command.");
                     return false;
                 }
                 if (arguments.length == 0) {
+                    ponder.log("Executing with no additional arguments.");
                     return command.execute(sender);
                 }
                 else {
+                    ponder.log("Executing with additional arguments.");
                     return command.execute(sender, arguments);
                 }
             }
         }
-
+        ponder.log("The sub-command wasn't recognized.");
         sender.sendMessage(ChatColor.RED + notFoundMessage);
         return false;
     }
