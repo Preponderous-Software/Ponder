@@ -18,7 +18,11 @@ public abstract class AbstractPonderPlugin extends JavaPlugin {
     }
 
     public boolean isVersionMismatched() {
-        return !getConfig().getString("version").equalsIgnoreCase(getVersion());
+        String configVersion = getConfig().getString("version");
+        if (configVersion == null) {
+            return false;
+        }
+        return !configVersion.equalsIgnoreCase(getVersion());
     }
 
     public Ponder getPonderAPI() {
