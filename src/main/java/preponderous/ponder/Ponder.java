@@ -13,7 +13,7 @@ import preponderous.ponder.toolbox.Toolbox;
  */
 public class Ponder implements InternalLogger {
 
-    private boolean debug = true;
+    private boolean debug = false;
 
     private static int numInstances = 0;
 
