@@ -17,9 +17,11 @@ public class ArgumentParser {
      * @throws IllegalArgumentException if the arguments given are invalid.
      */
     public String[] dropFirstArgument(String[] args) {
-        if (args == null || args.length == 0) throw new IllegalArgumentException("Arguments not valid.");
+        if (args == null || args.length == 0) {
+            throw new IllegalArgumentException("Arguments not valid.");
+        }
         String[] toReturn = new String[args.length - 1];
-        System.arraycopy(args, 1, toReturn, 0, args.length-1);
+        System.arraycopy(args, 1, toReturn, 0, args.length - 1);
         return toReturn;
     }
 

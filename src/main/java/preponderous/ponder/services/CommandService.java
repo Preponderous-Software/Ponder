@@ -59,7 +59,9 @@ public class CommandService {
         String[] arguments = ponder.getToolbox().getArgumentParser().dropFirstArgument(args);
         ponder.log("Arguments: " + Arrays.toString(arguments));
 
-        for  (ICommand command : commands) {
+        ponder.log("Number of commands: " + commands.size());
+
+        for (ICommand command : commands) {
             ponder.log("Checking command " + command.getNames().get(0));
             if (command.getNames().contains(subCommand)) {
                 if (!ponder.getToolbox().getPermissionChecker().checkPermission(sender, command.getPermissions())) {
