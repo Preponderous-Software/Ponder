@@ -16,7 +16,6 @@ public class Toolbox {
     private Logger logger;
     private Messenger messenger;
     private PermissionChecker permissionChecker;
-    private Scheduler scheduler;
     private UUIDChecker uuidChecker;
 
     /**
@@ -32,7 +31,6 @@ public class Toolbox {
         logger = new Logger(ponder);
         messenger = new Messenger();
         permissionChecker = new PermissionChecker();
-        scheduler = new Scheduler(ponder);
         uuidChecker = new UUIDChecker();
     }
 
@@ -106,15 +104,6 @@ public class Toolbox {
      */
     public PermissionChecker getPermissionChecker() {
         return permissionChecker;
-    }
-
-    /**
-     * Method to get the scheduler tool.
-     *
-     * @return {@link Scheduler}
-     */
-    public Scheduler getScheduler() {
-        return scheduler;
     }
 
     /**

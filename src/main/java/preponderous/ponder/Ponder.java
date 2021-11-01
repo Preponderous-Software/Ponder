@@ -4,7 +4,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import preponderous.ponder.services.CommandService;
 import preponderous.ponder.services.ConfigService;
 import preponderous.ponder.services.LocaleService;
-import preponderous.ponder.services.StorageService;
+import preponderous.ponder.misc.JsonWriterReader;
 import preponderous.ponder.toolbox.Toolbox;
 
 /**
@@ -22,7 +22,6 @@ public class Ponder implements InternalLogger {
     private CommandService commandService;
     private ConfigService configService;
     private LocaleService localeService;
-    private StorageService storageService;
 
     private Toolbox toolbox;
 
@@ -38,7 +37,6 @@ public class Ponder implements InternalLogger {
         this.plugin = plugin;
         toolbox = new Toolbox(this);
         configService = new ConfigService(this);
-        storageService = new StorageService();
         commandService = new CommandService(this);
         localeService = new LocaleService(this);
 
@@ -79,15 +77,6 @@ public class Ponder implements InternalLogger {
      */
     public LocaleService getLocaleService() {
         return localeService;
-    }
-
-    /**
-     * Method to get the Storage Service
-     *
-     * @return {@link StorageService}
-     */
-    public StorageService getStorageService() {
-        return storageService;
     }
 
     /**
