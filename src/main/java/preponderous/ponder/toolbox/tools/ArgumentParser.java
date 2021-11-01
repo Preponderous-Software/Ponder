@@ -10,14 +10,14 @@ import java.util.regex.Pattern;
 public class ArgumentParser {
 
     /**
-     * Method to drop the first argument from an Array of Strings.
+     * Method to drop the first argument from an Array of Strings. This may return an empty array.
      *
      * @param args to modify.
      * @return Modified Array of Strings.
      * @throws IllegalArgumentException if the arguments given are invalid.
      */
     public String[] dropFirstArgument(String[] args) {
-        if (args == null || args.length < 2) throw new IllegalArgumentException("Arguments not valid.");
+        if (args == null || args.length == 0) throw new IllegalArgumentException("Arguments not valid.");
         String[] toReturn = new String[args.length - 1];
         System.arraycopy(args, 1, toReturn, 0, args.length-1);
         return toReturn;
