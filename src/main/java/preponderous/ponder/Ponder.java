@@ -25,7 +25,7 @@ public class Ponder implements InternalLogger {
 
     private Toolbox toolbox;
 
-    private String version = "v0.7-alpha-4";
+    private String version = "v0.7";
 
     /**
      * Constructor to initialize the API.
