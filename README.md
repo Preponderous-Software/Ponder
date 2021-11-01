@@ -18,6 +18,7 @@ For help with installation, check out [this page](https://github.com/Preponderou
 - [Configuration w/ Maven & IntelliJ](https://github.com/Preponderous-Software/Ponder/wiki/Configuring-the-API-with-Maven-&-IntelliJ)
 - [User Guide](https://github.com/Preponderous-Software/Ponder/wiki/Guide) (coming soon)
 - [FAQ](https://github.com/Preponderous-Software/Ponder/wiki/FAQ) (coming soon)
+- [Tutorials](https://github.com/Preponderous-Software/Ponder/wiki/Tutorials]
 
 ## Projects
 - [List of Projects](https://github.com/Preponderous-Software/Ponder/wiki/Projects)
