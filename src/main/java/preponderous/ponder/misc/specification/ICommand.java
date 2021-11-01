@@ -18,19 +18,10 @@ public interface ICommand {
         return permissions;
     }
 
-    default boolean execute(CommandSender sender) {
-        sender.sendMessage(ChatColor.RED + "This command isn't implemented yet.");
-        return false;
-    }
-
-    default boolean execute(CommandSender sender, String[] args) {
-        return execute(sender);
-    }
-
+    boolean execute(CommandSender sender);
+    boolean execute(CommandSender sender, String[] args);
     boolean sendMessageIfNoArguments(String message, String[] args, CommandSender sender, ChatColor color);
-
     int getIntSafe(String line, int orElse);
-
     boolean safeEquals(boolean matchCase, String what, String... goals);
 
 }
