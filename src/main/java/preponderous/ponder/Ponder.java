@@ -1,10 +1,10 @@
 package preponderous.ponder;
 
 import org.bukkit.plugin.java.JavaPlugin;
+import preponderous.ponder.modifiers.InternalLogger;
 import preponderous.ponder.services.CommandService;
 import preponderous.ponder.services.ConfigService;
 import preponderous.ponder.services.LocaleService;
-import preponderous.ponder.misc.JsonWriterReader;
 import preponderous.ponder.toolbox.Toolbox;
 
 /**

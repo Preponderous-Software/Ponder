@@ -1,4 +1,4 @@
-package preponderous.ponder;
+package preponderous.ponder.modifiers;
 
 /**
  * @author Daniel Stephenson
