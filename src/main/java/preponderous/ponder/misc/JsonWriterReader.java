@@ -1,4 +1,4 @@
-package preponderous.ponder.services;
+package preponderous.ponder.misc;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -13,7 +13,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class StorageService {
+public class JsonWriterReader {
 
     private static String FILE_PATH;
 
@@ -21,7 +21,7 @@ public class StorageService {
 
     private final Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
-    public StorageService() {
+    public JsonWriterReader() {
         LIST_MAP_TYPE = new TypeToken<ArrayList<HashMap<String, String>>>(){}.getType();
     }
 
