@@ -18,7 +18,6 @@ public class CommandService {
 
     private ArrayList<ICommand> commands = new ArrayList<>();
     private Set<String> coreCommands;
-    private String noArgsMessage;
     private String notFoundMessage;
 
     public CommandService(Ponder ponder) {
@@ -30,9 +29,8 @@ public class CommandService {
      * Method to initialize the command service.
      *
      */
-    public void initialize(ArrayList<ICommand> commands, String noArgsMessage, String notFoundMessage) {
+    public void initialize(ArrayList<ICommand> commands, String notFoundMessage) {
         this.commands = commands;
-        this.noArgsMessage = noArgsMessage;
         this.notFoundMessage = notFoundMessage;
     }
 
@@ -49,8 +47,7 @@ public class CommandService {
 
         if (args.length == 0) {
             ponder.log("No arguments were given.");
-            sender.sendMessage(ChatColor.AQUA + noArgsMessage);
-            return true;
+            return false;
         }
 
         String subCommand = args[0];
