@@ -9,10 +9,7 @@ A list of features can be found [here](https://github.com/Preponderous-Software/
 Ponder was developed on top of the Spigot API. Users may run into trouble using it with other available server softwares like Paper.
 
 ## Installation
-This API can be used, but is unstable and likely to change. You can download the most recent version here:
-https://github.com/Preponderous-Software/Ponder/releases
-
-For help with installation, check out [this page](https://github.com/Preponderous-Software/Ponder/wiki/Configuring-the-API-with-Maven-&-IntelliJ).
+For help with installation/configuration, check out [this page](https://github.com/Preponderous-Software/Ponder/wiki/Tutorial-0-(Setup)). Please keep in mind that while this API can be used, it is unstable and likely to change.
 
 ## Usage
 - [Tutorials](https://github.com/Preponderous-Software/Ponder/wiki/List-of-Tutorials)
