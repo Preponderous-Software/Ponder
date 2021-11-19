@@ -39,8 +39,6 @@ public class Ponder implements InternalLogger {
         configService = new ConfigService(this);
         commandService = new CommandService(this);
         localeService = new LocaleService(this);
-
-        System.out.println("There are now " + numInstances + " instances of Ponder running.");
     }
 
     /**

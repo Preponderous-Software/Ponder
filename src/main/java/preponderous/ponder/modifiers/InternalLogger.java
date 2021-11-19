@@ -5,7 +5,7 @@ package preponderous.ponder.modifiers;
  */
 public interface InternalLogger {
 
-    boolean debug = true;
+    boolean debug = false;
 
     /**
      * Method to set the internal debug flag for the class.
