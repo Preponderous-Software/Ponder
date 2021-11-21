@@ -16,6 +16,9 @@ For help with installation/configuration, check out [this page](https://github.c
 - [User Guide](https://github.com/Preponderous-Software/Ponder/wiki/Guide) (coming soon)
 - [FAQ](https://github.com/Preponderous-Software/Ponder/wiki/FAQ) (coming soon)
 
+## Example Ponder Plugin
+An example of a ponder plugin can be found [here](https://github.com/Preponderous-Software/ExamplePonderPlugin).
+
 ## Projects
 - [List of Projects](https://github.com/Preponderous-Software/Ponder/wiki/Projects)
 
