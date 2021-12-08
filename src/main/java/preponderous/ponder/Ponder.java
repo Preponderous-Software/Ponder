@@ -2,7 +2,6 @@ package preponderous.ponder;
 
 import org.bukkit.plugin.java.JavaPlugin;
 import preponderous.ponder.services.CommandService;
-import preponderous.ponder.services.ConfigService;
 import preponderous.ponder.services.LocaleService;
 import preponderous.ponder.toolbox.Toolbox;
 
@@ -19,7 +18,6 @@ public class Ponder {
     private JavaPlugin plugin;
 
     private CommandService commandService;
-    private ConfigService configService;
     private LocaleService localeService;
 
     private Toolbox toolbox;
@@ -35,7 +33,6 @@ public class Ponder {
         numInstances++;
         this.plugin = plugin;
         toolbox = new Toolbox(this);
-        configService = new ConfigService(this);
         commandService = new CommandService(this);
         localeService = new LocaleService(this);
     }
@@ -56,15 +53,6 @@ public class Ponder {
      */
     public CommandService getCommandService() {
         return commandService;
-    }
-
-    /**
-     * Method to get the Config Service
-     *
-     * @return {@link ConfigService}
-     */
-    public ConfigService getConfigService() {
-        return configService;
     }
 
     /**
