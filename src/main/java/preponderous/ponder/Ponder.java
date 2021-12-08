@@ -13,8 +13,6 @@ public class Ponder {
 
     private boolean debug = false;
 
-    private static int numInstances = 0;
-
     private JavaPlugin plugin;
 
     private CommandService commandService;
@@ -27,10 +25,9 @@ public class Ponder {
     /**
      * Constructor to initialize the API.
      *
-     * @param plugin    JavaPlugin to initialize the API with.
+     * @param plugin JavaPlugin to initialize the API with.
      */
     public Ponder(JavaPlugin plugin) {
-        numInstances++;
         this.plugin = plugin;
         toolbox = new Toolbox(this);
         commandService = new CommandService(this);
