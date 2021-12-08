@@ -22,7 +22,7 @@ public class Ponder {
 
     private Toolbox toolbox;
 
-    private String version = "v0.8-beta-2";
+    private String version = "v0.8";
 
     /**
      * Constructor to initialize the API.
