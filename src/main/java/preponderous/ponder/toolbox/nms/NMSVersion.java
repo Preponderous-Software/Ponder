@@ -1,4 +1,4 @@
-package dansplugins.ponder.implementation.toolbox.nms;
+package preponderous.ponder.toolbox.nms;
 
 import org.bukkit.Bukkit;
 
