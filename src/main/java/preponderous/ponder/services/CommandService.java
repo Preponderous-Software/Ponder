@@ -6,7 +6,6 @@ import preponderous.ponder.Ponder;
 import preponderous.ponder.misc.specification.ICommand;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Set;
 
 /**
