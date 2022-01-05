@@ -6,7 +6,7 @@ import preponderous.ponder.math.graphics.Point3D;
 /**
  * @author Daniel Stephenson
  */
-public abstract class DistanceCalculator {
+public abstract class AbstractDistanceCalculator {
     public abstract double getDistanceBetweenPoints(Point2D firstPoint, Point2D secondPoint);
     public abstract double getDistanceBetweenPoints(Point3D firstPoint, Point3D secondPoint);
 }
