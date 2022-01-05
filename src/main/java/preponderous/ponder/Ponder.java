@@ -16,10 +16,17 @@ public class Ponder {
     private CommandService commandService;
     private LocaleService localeService;
 
-    private String version = "v0.10-alpha-1";
+    private String version = "v0.10-alpha-2";
 
     /**
-     * Constructor to initialize the API.
+     * Constructor to initialize the API for general purposes.
+     */
+    public Ponder() {
+
+    }
+
+    /**
+     * Constructor to initialize the API with a minecraft plugin.
      *
      * @param plugin JavaPlugin to initialize the API with.
      */
