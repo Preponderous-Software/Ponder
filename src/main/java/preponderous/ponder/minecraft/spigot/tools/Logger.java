@@ -1,6 +1,6 @@
-package preponderous.ponder.minecraft.spigot.toolbox.tools;
+package preponderous.ponder.minecraft.spigot.tools;
 
-import preponderous.ponder.minecraft.spigot.Ponder;
+import preponderous.ponder.Ponder;
 
 /**
  * @author Daniel Stephenson

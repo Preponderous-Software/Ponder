@@ -1,10 +1,10 @@
-package preponderous.ponder.minecraft.spigot.toolbox.tools;
+package preponderous.ponder.minecraft.spigot.tools;
 
 import org.bukkit.Bukkit;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginManager;
-import preponderous.ponder.minecraft.spigot.Ponder;
+import preponderous.ponder.Ponder;
 
 import java.util.ArrayList;
 

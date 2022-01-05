@@ -1,7 +1,7 @@
 package preponderous.ponder.minecraft.spigot.misc;
 
 import org.bukkit.plugin.java.JavaPlugin;
-import preponderous.ponder.minecraft.spigot.Ponder;
+import preponderous.ponder.Ponder;
 
 /**
  * @author Daniel Stephenson

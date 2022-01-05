@@ -1,4 +1,4 @@
-package preponderous.ponder.minecraft.spigot.toolbox.tools;
+package preponderous.ponder.minecraft.spigot.tools;
 
 import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;

@@ -1,6 +1,6 @@
 package preponderous.ponder.minecraft.spigot.services;
 
-import preponderous.ponder.minecraft.spigot.Ponder;
+import preponderous.ponder.Ponder;
 import preponderous.ponder.minecraft.spigot.misc.Pair;
 
 import java.io.*;

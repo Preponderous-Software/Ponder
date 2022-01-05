@@ -1,4 +1,4 @@
-package preponderous.ponder.minecraft.spigot.toolbox.tools;
+package preponderous.ponder.minecraft.spigot.tools;
 
 import java.util.ArrayList;
 import java.util.regex.Matcher;
