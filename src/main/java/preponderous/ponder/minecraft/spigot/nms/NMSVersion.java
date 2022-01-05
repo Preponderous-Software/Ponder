@@ -1,4 +1,4 @@
-package preponderous.ponder.minecraft.spigot.toolbox.nms;
+package preponderous.ponder.minecraft.spigot.nms;
 
 import org.bukkit.Bukkit;
 

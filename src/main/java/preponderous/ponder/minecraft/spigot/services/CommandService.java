@@ -2,8 +2,10 @@ package preponderous.ponder.minecraft.spigot.services;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
-import preponderous.ponder.minecraft.spigot.Ponder;
+import preponderous.ponder.Ponder;
 import preponderous.ponder.minecraft.spigot.misc.specification.ICommand;
+import preponderous.ponder.minecraft.spigot.tools.ArgumentParser;
+import preponderous.ponder.minecraft.spigot.tools.PermissionChecker;
 
 import java.util.ArrayList;
 import java.util.Set;
@@ -18,6 +20,8 @@ public class CommandService {
     private ArrayList<ICommand> commands = new ArrayList<>();
     private Set<String> coreCommands;
     private String notFoundMessage;
+    private ArgumentParser parser = new ArgumentParser();
+    private PermissionChecker permissionChecker = new PermissionChecker();
 
     public CommandService(Ponder ponder) {
         this.ponder = ponder;
@@ -48,11 +52,11 @@ public class CommandService {
 
         String subCommand = args[0];
 
-        String[] arguments = ponder.getToolbox().getArgumentParser().dropFirstArgument(args);
+        String[] arguments = parser.dropFirstArgument(args);
 
         for (ICommand command : commands) {
             if (command.getNames().contains(subCommand)) {
-                if (!ponder.getToolbox().getPermissionChecker().checkPermission(sender, command.getPermissions())) {
+                if (!permissionChecker.checkPermission(sender, command.getPermissions())) {
                     return false;
                 }
                 if (arguments.length == 0) {

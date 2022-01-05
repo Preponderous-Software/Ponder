@@ -1,4 +1,4 @@
-package preponderous.ponder.minecraft.spigot.toolbox.tools;
+package preponderous.ponder.minecraft.spigot.tools;
 
 import org.bukkit.Color;
 import org.jetbrains.annotations.NotNull;
