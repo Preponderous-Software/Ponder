@@ -1,15 +1,15 @@
 package preponderous.ponder.minecraft.spigot.tools;
 
-import preponderous.ponder.Ponder;
+import preponderous.ponder.minecraft.spigot.PonderMC;
 
 /**
  * @author Daniel Stephenson
  */
 public class Logger {
 
-    private Ponder ponder;
+    private PonderMC ponder;
 
-    public Logger(Ponder ponder) {
+    public Logger(PonderMC ponder) {
         this.ponder = ponder;
     }
 
