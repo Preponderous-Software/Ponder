@@ -1,4 +1,4 @@
-package preponderous.ponder.networking.simpleserver.server;
+package preponderous.ponder.networking.abs;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -6,7 +6,7 @@ import java.net.ServerSocket;
 /**
  * @author Daniel Stephenson
  */
-public class MultiServer {
+public abstract class MultiServer {
     private int portNumber = -1;
     private ServerSocket serverSocket = null;
     private boolean listening = false;
@@ -37,23 +37,14 @@ public class MultiServer {
         return listening;
     }
 
+    public abstract boolean createNewServerThread();
+
     private boolean initializeServerSocket() {
         try {
             serverSocket = new ServerSocket(portNumber);
             return true;
         } catch (IOException e) {
             System.out.println("Something went wrong while initializing with port " + getPortNumber() + "!");
-            return false;
-        }
-    }
-
-    private boolean createNewServerThread() {
-        try {
-            new MSThread(serverSocket.accept()).start();
-            System.out.println("A new connection has been made!");
-            return true;
-        } catch(Exception e) {
-            System.out.println("ERROR: Was not able to listen on port " + getPortNumber());
             return false;
         }
     }

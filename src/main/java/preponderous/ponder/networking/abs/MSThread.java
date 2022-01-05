@@ -1,4 +1,4 @@
-package preponderous.ponder.networking.simpleserver.server;
+package preponderous.ponder.networking.abs;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -10,14 +10,12 @@ import java.net.SocketException;
 /**
  * @author Daniel Stephenson
  */
-public class MSThread extends Thread {
+public abstract class MSThread extends Thread {
     private Socket socket = null;
     private PrintWriter out = null;
     private BufferedReader in = null;
     private String inputLine;
     private String outputLine;
-
-    private Protocol protocol;
 
     public MSThread(Socket s) {
         super("MultiServerThread");
@@ -45,6 +43,8 @@ public class MSThread extends Thread {
             e.printStackTrace();
         }
     }
+
+    public abstract void processInput();
 
     private boolean initializeWriter() {
         try {
@@ -76,10 +76,6 @@ public class MSThread extends Thread {
             System.out.println("Could not read next line. IO Exception.");
             return false;
         }
-    }
-
-    private void processInput() {
-        outputLine = protocol.processInput(inputLine);
     }
 
     private void sendResponseToClient() {

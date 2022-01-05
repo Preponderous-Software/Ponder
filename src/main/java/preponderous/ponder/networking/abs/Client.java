@@ -1,4 +1,4 @@
-package preponderous.ponder.networking.simpleserver.client;
+package preponderous.ponder.networking.abs;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -9,16 +9,16 @@ import java.net.Socket;
 /**
  * @author Daniel Stephenson
  */
-public class Client {
-    private String hostName = null;
-    private int portNumber = -1;
+public abstract class Client {
+    private String host;
+    private int port;
     private Socket socket = null;
     private PrintWriter out = null;
     private BufferedReader in = null;
 
     public Client(String host, int port) {
-        hostName = host;
-        portNumber = port;
+        this.host = host;
+        this.port = port;
         initializeSocket();
         initializeReader();
         initializeWriter();
@@ -48,10 +48,10 @@ public class Client {
 
     private boolean initializeSocket() {
         try {
-            socket = new Socket(hostName, portNumber);
+            socket = new Socket(host, port);
             return true;
         } catch (IOException e) {
-            System.out.println("Something went wrong when initializing the socket with port " + portNumber + ".");
+            System.out.println("Something went wrong when initializing the socket with port " + port + ".");
             return false;
         }
     }
