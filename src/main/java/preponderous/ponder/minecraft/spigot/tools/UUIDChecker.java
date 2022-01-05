@@ -6,6 +6,10 @@ import org.bukkit.entity.Player;
 
 import java.util.UUID;
 
+/**
+ * @author Daniel Stephenson
+ * @author Pasarus
+ */
 public class UUIDChecker {
 
     /**

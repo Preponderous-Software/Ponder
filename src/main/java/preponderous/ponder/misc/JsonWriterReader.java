@@ -13,6 +13,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * @author Daniel Stephenson
+ * @author Pasarus
+ */
 public class JsonWriterReader {
 
     private static String FILE_PATH;
