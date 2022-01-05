@@ -16,7 +16,7 @@ public class Ponder {
     private CommandService commandService;
     private LocaleService localeService;
 
-    private String version = "v0.10-alpha-2";
+    private String version = "v0.10";
 
     /**
      * Constructor to initialize the API for general purposes.
