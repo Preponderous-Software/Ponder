@@ -1,7 +1,7 @@
 # Ponder
 
 ## Description
-Built on top of Spigot, Ponder is a library that facilitates the development of Minecraft plugins and other applications through the use of provided tools, services and specifications. Functionality that can be used in many plugins has been abstracted out into a usable framework. This will greatly simplify the process of creating and updating plugins.
+Built on top of Spigot, Ponder is a library that facilitates the development of Minecraft plugins and other applications through the use of provided tools, services and specifications. Functionality that can be used in many areas has been abstracted out into a usable framework. This will greatly simplify the process of creating and updating software.
 
 A list of features can be found [here](https://github.com/Preponderous-Software/Ponder/wiki/Features).
 
