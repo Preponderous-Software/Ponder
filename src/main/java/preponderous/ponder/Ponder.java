@@ -1,24 +1,20 @@
 package preponderous.ponder;
 
 import org.bukkit.plugin.java.JavaPlugin;
-import preponderous.ponder.services.CommandService;
-import preponderous.ponder.services.LocaleService;
-import preponderous.ponder.toolbox.Toolbox;
+import preponderous.ponder.minecraft.spigot.services.CommandService;
+import preponderous.ponder.minecraft.spigot.services.LocaleService;
 
 /**
  * @author Daniel Stephenson
  * @since 10/12/2021
  */
 public class Ponder {
-
     private boolean debug = false;
 
     private JavaPlugin plugin;
 
     private CommandService commandService;
     private LocaleService localeService;
-
-    private Toolbox toolbox;
 
     private String version = "v0.10-alpha-1";
 
@@ -29,7 +25,6 @@ public class Ponder {
      */
     public Ponder(JavaPlugin plugin) {
         this.plugin = plugin;
-        toolbox = new Toolbox(this);
         commandService = new CommandService(this);
         localeService = new LocaleService(this);
     }
@@ -59,15 +54,6 @@ public class Ponder {
      */
     public LocaleService getLocaleService() {
         return localeService;
-    }
-
-    /**
-     * Method to get the Toolbox
-     *
-     * @return {@link Toolbox}
-     */
-    public Toolbox getToolbox() {
-        return toolbox;
     }
 
     /**
