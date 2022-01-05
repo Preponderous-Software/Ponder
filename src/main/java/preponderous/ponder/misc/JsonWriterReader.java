@@ -1,4 +1,4 @@
-package preponderous.ponder.minecraft.spigot.misc;
+package preponderous.ponder.misc;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

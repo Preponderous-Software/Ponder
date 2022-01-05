@@ -1,4 +1,4 @@
-package preponderous.ponder.minecraft.spigot.misc;
+package preponderous.ponder.misc;
 
 // Source: https://stackoverflow.com/a/521235 from user Paul Brinkly and edited by Dave Jarvis
 public class Pair<L,R> {

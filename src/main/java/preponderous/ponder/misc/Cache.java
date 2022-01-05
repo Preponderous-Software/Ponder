@@ -1,6 +1,4 @@
-package preponderous.ponder.minecraft.spigot.misc;
-
-import preponderous.ponder.minecraft.spigot.modifiers.Cacheable;
+package preponderous.ponder.misc;
 
 import java.util.ArrayList;
 import java.util.HashSet;

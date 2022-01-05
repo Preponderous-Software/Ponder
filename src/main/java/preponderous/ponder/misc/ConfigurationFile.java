@@ -1,4 +1,4 @@
-package preponderous.ponder.minecraft.spigot.misc;
+package preponderous.ponder.misc;
 
 import com.google.common.io.Files;
 import org.bukkit.configuration.ConfigurationSection;

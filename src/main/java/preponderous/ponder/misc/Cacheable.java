@@ -1,4 +1,4 @@
-package preponderous.ponder.minecraft.spigot.modifiers;
+package preponderous.ponder.misc;
 
 /**
  * @author Daniel Stephenson

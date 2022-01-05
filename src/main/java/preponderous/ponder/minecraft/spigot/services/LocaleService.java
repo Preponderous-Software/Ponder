@@ -1,7 +1,7 @@
 package preponderous.ponder.minecraft.spigot.services;
 
 import preponderous.ponder.Ponder;
-import preponderous.ponder.minecraft.spigot.misc.Pair;
+import preponderous.ponder.misc.Pair;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
