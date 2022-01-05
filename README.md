@@ -43,7 +43,7 @@ Caibinus | Wrote code that is used in the Block Checker.
 
 
 ## License
-GPL3
+MIT
 
 ## Project Status
 This project is in active development.

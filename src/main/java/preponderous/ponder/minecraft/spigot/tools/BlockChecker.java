@@ -8,6 +8,7 @@ import static org.bukkit.Bukkit.getLogger;
 
 /**
  * @author Daniel Stephenson
+ * @author Caibinus
  */
 public class BlockChecker {
 
