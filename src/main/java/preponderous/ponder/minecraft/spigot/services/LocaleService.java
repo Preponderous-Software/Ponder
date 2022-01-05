@@ -1,6 +1,6 @@
 package preponderous.ponder.minecraft.spigot.services;
 
-import preponderous.ponder.Ponder;
+import preponderous.ponder.minecraft.spigot.PonderMC;
 import preponderous.ponder.misc.Pair;
 
 import java.io.*;
@@ -16,7 +16,7 @@ import java.util.List;
  */
 public class LocaleService {
 
-    private Ponder ponder;
+    private PonderMC ponder;
 
     private ArrayList<String> supportedLanguageIDs;
 
@@ -29,7 +29,7 @@ public class LocaleService {
 
     private String currentLanguageID;
 
-    public LocaleService(Ponder ponder) {
+    public LocaleService(PonderMC ponder) {
         this.ponder = ponder;
         keys = new ArrayList<>();
         strings = new HashMap<>();

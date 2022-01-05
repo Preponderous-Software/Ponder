@@ -4,7 +4,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginManager;
-import preponderous.ponder.Ponder;
+import preponderous.ponder.minecraft.spigot.PonderMC;
 
 import java.util.ArrayList;
 
@@ -14,9 +14,9 @@ import java.util.ArrayList;
 public class EventHandlerRegistry {
 
     private final PluginManager manager;
-    private Ponder ponder;
+    private PonderMC ponder;
 
-    public EventHandlerRegistry(Ponder ponder) {
+    public EventHandlerRegistry(PonderMC ponder) {
         this.ponder = ponder;
         this.manager = Bukkit.getPluginManager();
     }
