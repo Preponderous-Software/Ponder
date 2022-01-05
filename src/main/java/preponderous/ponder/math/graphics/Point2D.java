@@ -1,4 +1,4 @@
-package preponderous.ponder.math;
+package preponderous.ponder.math.graphics;
 
 /**
  * @author Daniel Stephenson

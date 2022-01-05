@@ -1,6 +1,6 @@
-package preponderous.ponder.math.abs;
+package preponderous.ponder.math.graphics.abs;
 
-import preponderous.ponder.math.Point2D;
+import preponderous.ponder.math.graphics.Point2D;
 
 /**
  * @author Daniel Stephenson
