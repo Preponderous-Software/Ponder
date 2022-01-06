@@ -1,5 +1,6 @@
 package preponderous.ponder.system.example;
 
+import preponderous.ponder.system.abs.AbstractCommandSender;
 import preponderous.ponder.system.abs.AbstractPonderApplication;
 
 /**
@@ -23,8 +24,7 @@ public class ExamplePonderApplication extends AbstractPonderApplication {
     }
 
     @Override
-    public boolean onCommand() {
-        // TODO: implement
+    public boolean onCommand(AbstractCommandSender sender, String label, String[] args) {
         return false;
     }
 }
