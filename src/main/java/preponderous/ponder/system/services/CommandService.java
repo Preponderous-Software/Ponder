@@ -18,7 +18,7 @@ public class CommandService {
      * Constructor to initialize the service.
      * @param commands The commands to instantiate the service with.
      */
-    public void CommandService(HashSet<AbstractCommand> commands) {
+    public CommandService(HashSet<AbstractCommand> commands) {
         this.commands = commands;
     }
 
