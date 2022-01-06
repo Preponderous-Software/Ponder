@@ -5,7 +5,6 @@ import preponderous.ponder.system.abs.AbstractCommand;
 import preponderous.ponder.system.abs.AbstractCommandSender;
 
 import java.util.HashSet;
-import java.util.Set;
 
 /**
  * @author Daniel Stephenson
@@ -13,14 +12,13 @@ import java.util.Set;
  */
 public class CommandService {
     private HashSet<AbstractCommand> commands = new HashSet<>();
-    private Set<String> coreCommands;
     private ArgumentParser parser = new ArgumentParser();
 
-    public CommandService(Set<String> coreCommands) {
-        this.coreCommands = coreCommands;
-    }
-
-    public void initialize(HashSet<AbstractCommand> commands) {
+    /**
+     * Constructor to initialize the service.
+     * @param commands The commands to instantiate the service with.
+     */
+    public void CommandService(HashSet<AbstractCommand> commands) {
         this.commands = commands;
     }
 
@@ -29,25 +27,13 @@ public class CommandService {
      *
      */
     public boolean interpretCommand(AbstractCommandSender sender, String label, String[] args) {
-        if (!coreCommands.contains(label)) {
-            return false;
-        }
-
-        if (args.length == 0) {
-            return false;
-        }
-
-        String subCommand = args[0];
-
-        String[] arguments = parser.dropFirstArgument(args);
-
         for (AbstractCommand command : commands) {
-            if (command.getNames().contains(subCommand)) {
-                if (arguments.length == 0) {
+            if (command.getNames().contains(label)) {
+                if (args.length == 0) {
                     return command.execute(sender);
                 }
                 else {
-                    return command.execute(sender, arguments);
+                    return command.execute(sender, args);
                 }
             }
         }
