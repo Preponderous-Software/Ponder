@@ -17,7 +17,7 @@ public abstract class AbstractPonderApplication {
 
     public abstract void onShutdown();
 
-    public abstract boolean onCommand();
+    public abstract boolean onCommand(AbstractCommandSender sender, String label, String[] args);
 
     public String getName() {
         return name;

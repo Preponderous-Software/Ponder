@@ -4,8 +4,8 @@ import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import preponderous.ponder.minecraft.spigot.PonderMC;
 import preponderous.ponder.minecraft.spigot.misc.specification.ICommand;
-import preponderous.ponder.minecraft.spigot.tools.ArgumentParser;
 import preponderous.ponder.minecraft.spigot.tools.PermissionChecker;
+import preponderous.ponder.misc.ArgumentParser;
 
 import java.util.ArrayList;
 import java.util.Set;

@@ -7,7 +7,7 @@ import java.util.Arrays;
  * @author Daniel Stephenson
  * @since January 5th, 2022
  */
-public class AbstractCommand {
+public abstract class AbstractCommand {
     private ArrayList<String> names = null;
     private ArrayList<String> permissions = null;
 
@@ -15,6 +15,10 @@ public class AbstractCommand {
         this.names = names;
         this.permissions = permissions;
     }
+
+    public abstract boolean execute(AbstractCommandSender sender);
+
+    public abstract boolean execute(AbstractCommandSender sender, String[] args);
 
     /**
      * Method to drop the first argument from an Array of Strings.
