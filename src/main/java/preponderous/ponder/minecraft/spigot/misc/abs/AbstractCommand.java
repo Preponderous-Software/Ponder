@@ -10,8 +10,8 @@ import java.util.Arrays;
  * @author Daniel Stephenson
  */
 public abstract class AbstractCommand {
-    private ArrayList<String> names = null;
-    private ArrayList<String> permissions = null;
+    private ArrayList<String> names;
+    private ArrayList<String> permissions;
 
     public AbstractCommand(ArrayList<String> names, ArrayList<String> permissions) {
         this.names = names;
@@ -81,5 +81,4 @@ public abstract class AbstractCommand {
     public ArrayList<String> getPermissions() {
         return permissions;
     }
-
 }
