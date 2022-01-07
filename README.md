@@ -13,11 +13,11 @@ For help with installation/configuration, check out [this page](https://github.c
 - [User Guide](https://github.com/Preponderous-Software/Ponder/wiki/Guide) (coming soon)
 - [FAQ](https://github.com/Preponderous-Software/Ponder/wiki/FAQ) (coming soon)
 
-## Example Spigot Plugin
-An example of a Spigot plugin created with Ponder can be found [here](https://github.com/Preponderous-Software/ExamplePonderPlugin).
-
 ## Example Application
 An example of an application created with Ponder can be found [here](https://github.com/Preponderous-Software/ExamplePonderApplication).
+
+## Example Spigot Plugin
+An example of a Spigot plugin created with Ponder can be found [here](https://github.com/Preponderous-Software/ExamplePonderPlugin).
 
 ## Projects
 - [List of Projects](https://github.com/Preponderous-Software/Ponder/wiki/Projects)
