@@ -10,11 +10,11 @@ import java.net.Socket;
  * @author Daniel Stephenson
  */
 public abstract class Client {
-    private String host;
-    private int port;
-    private Socket socket = null;
-    private PrintWriter out = null;
-    private BufferedReader in = null;
+    private final String host;
+    private final int port;
+    private Socket socket;
+    private PrintWriter out;
+    private BufferedReader in;
 
     public Client(String host, int port) {
         this.host = host;
@@ -30,12 +30,12 @@ public abstract class Client {
     }
 
     public void sendStringToServer(String s) {
-        out.println(s);
+        getOut().println(s);
     }
 
     public String getStringFromServer() {
         try {
-            return in.readLine();
+            return getIn().readLine();
         } catch (IOException e) {
             System.out.println("Something went wrong when getting a string from the server.");
             return null;
@@ -46,39 +46,65 @@ public abstract class Client {
         sendStringToServer("END_OF_CONNECTION");
     }
 
-    private boolean initializeSocket() {
+    public String getHost() {
+        return host;
+    }
+
+    public int getPort() {
+        return port;
+    }
+
+    public Socket getSocket() {
+        return socket;
+    }
+
+    public void setSocket(Socket socket) {
+        this.socket = socket;
+    }
+
+    public PrintWriter getOut() {
+        return out;
+    }
+
+    public void setOut(PrintWriter out) {
+        this.out = out;
+    }
+
+    public BufferedReader getIn() {
+        return in;
+    }
+
+    public void setIn(BufferedReader in) {
+        this.in = in;
+    }
+
+    private void initializeSocket() {
         try {
             socket = new Socket(host, port);
-            return true;
         } catch (IOException e) {
             System.out.println("Something went wrong when initializing the socket with port " + port + ".");
-            return false;
         }
     }
 
-    private boolean initializeWriter() {
+    private void initializeWriter() {
         if (checkIfSocketIsNull()) {
-            return false;
+            return;
         }
         try {
             out = new PrintWriter(socket.getOutputStream(), true);
-            return true;
         } catch (IOException e) {
             System.out.println("Something went wrong when initializing writer.");
-            return false;
         }
     }
 
-    private boolean initializeReader() {
+    private void initializeReader() {
         if (checkIfSocketIsNull()) {
-            return false;
+            return;
         }
         try {
             in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-            return true;
         } catch (IOException e) {
             System.out.println("Something went wrong when initializing reader.");
-            return false;
         }
     }
 

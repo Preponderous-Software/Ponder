@@ -12,12 +12,14 @@ public abstract class MultiServer {
     private boolean listening = false;
 
     public MultiServer(int port) {
-        portNumber = port;
+        setPortNumber(port);
         initializeServerSocket();
     }
 
+    public abstract void createNewServerThread();
+
     public void start() {
-        listening = true;
+        setListening(true);
 
         while (isListening()) {
             System.out.println("Listening for a new connection...");
@@ -26,26 +28,38 @@ public abstract class MultiServer {
     }
 
     public void stop() {
-        listening = false;
+        setListening(false);
     }
 
     public int getPortNumber() {
         return portNumber;
     }
 
+    public void setPortNumber(int portNumber) {
+        this.portNumber = portNumber;
+    }
+
+    public ServerSocket getServerSocket() {
+        return serverSocket;
+    }
+
+    public void setServerSocket(ServerSocket serverSocket) {
+        this.serverSocket = serverSocket;
+    }
+
+    public void setListening(boolean listening) {
+        this.listening = listening;
+    }
+
     public boolean isListening() {
         return listening;
     }
 
-    public abstract boolean createNewServerThread();
-
-    private boolean initializeServerSocket() {
+    private void initializeServerSocket() {
         try {
-            serverSocket = new ServerSocket(portNumber);
-            return true;
+            setServerSocket(new ServerSocket(portNumber));
         } catch (IOException e) {
             System.out.println("Something went wrong while initializing with port " + getPortNumber() + "!");
-            return false;
         }
     }
 }
