@@ -11,9 +11,9 @@ import java.net.SocketException;
  * @author Daniel Stephenson
  */
 public abstract class MSThread extends Thread {
-    private Socket socket = null;
-    private PrintWriter out = null;
-    private BufferedReader in = null;
+    private final Socket socket;
+    private PrintWriter out;
+    private BufferedReader in;
     private String inputLine;
     private String outputLine;
 
@@ -29,7 +29,7 @@ public abstract class MSThread extends Thread {
             processInput();
             sendResponseToClient();
 
-            if (outputLine.equals("END_OF_CONNECTION")) {
+            if (getOutputLine().equals("END_OF_CONNECTION")) {
                 disconnect();
                 break;
             }
@@ -45,6 +45,42 @@ public abstract class MSThread extends Thread {
     }
 
     public abstract void processInput();
+
+    public Socket getSocket() {
+        return socket;
+    }
+
+    public PrintWriter getOut() {
+        return out;
+    }
+
+    public void setOut(PrintWriter out) {
+        this.out = out;
+    }
+
+    public BufferedReader getIn() {
+        return in;
+    }
+
+    public void setIn(BufferedReader in) {
+        this.in = in;
+    }
+
+    public String getInputLine() {
+        return inputLine;
+    }
+
+    public void setInputLine(String inputLine) {
+        this.inputLine = inputLine;
+    }
+
+    public String getOutputLine() {
+        return outputLine;
+    }
+
+    public void setOutputLine(String outputLine) {
+        this.outputLine = outputLine;
+    }
 
     private boolean initializeWriter() {
         try {
