@@ -81,5 +81,4 @@ public abstract class AbstractCommand {
     public ArrayList<String> getPermissions() {
         return permissions;
     }
-
 }
