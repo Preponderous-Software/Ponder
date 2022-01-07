@@ -1,4 +1,4 @@
-package preponderous.ponder.minecraft.spigot.nms;
+package preponderous.ponder.minecraft.nms;
 
 /**
  * @author Callum Johnson
