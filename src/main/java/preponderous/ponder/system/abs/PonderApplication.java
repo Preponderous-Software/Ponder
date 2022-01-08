@@ -4,11 +4,11 @@ package preponderous.ponder.system.abs;
  * @author Daniel Stephenson
  * @since January 5th, 2022
  */
-public abstract class AbstractPonderApplication {
+public abstract class PonderApplication {
     private String name;
     private String description;
 
-    public AbstractPonderApplication(String name, String description) {
+    public PonderApplication(String name, String description) {
         this.name = name;
         this.description = description;
     }
@@ -17,7 +17,7 @@ public abstract class AbstractPonderApplication {
 
     public abstract void onShutdown();
 
-    public abstract boolean onCommand(AbstractCommandSender sender, String label, String[] args);
+    public abstract boolean onCommand(CommandSender sender, String label, String[] args);
 
     public String getName() {
         return name;

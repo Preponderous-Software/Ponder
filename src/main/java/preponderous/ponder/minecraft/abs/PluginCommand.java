@@ -1,4 +1,4 @@
-package preponderous.ponder.minecraft.spigot.misc.abs;
+package preponderous.ponder.minecraft.abs;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
@@ -9,11 +9,11 @@ import java.util.Arrays;
 /**
  * @author Daniel Stephenson
  */
-public abstract class AbstractCommand {
+public abstract class PluginCommand {
     private ArrayList<String> names;
     private ArrayList<String> permissions;
 
-    public AbstractCommand(ArrayList<String> names, ArrayList<String> permissions) {
+    public PluginCommand(ArrayList<String> names, ArrayList<String> permissions) {
         this.names = names;
         this.permissions = permissions;
     }

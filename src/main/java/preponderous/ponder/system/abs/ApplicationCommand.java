@@ -7,18 +7,18 @@ import java.util.Arrays;
  * @author Daniel Stephenson
  * @since January 5th, 2022
  */
-public abstract class AbstractCommand {
+public abstract class ApplicationCommand {
     private ArrayList<String> names = null;
     private ArrayList<String> permissions = null;
 
-    public AbstractCommand(ArrayList<String> names, ArrayList<String> permissions) {
+    public ApplicationCommand(ArrayList<String> names, ArrayList<String> permissions) {
         this.names = names;
         this.permissions = permissions;
     }
 
-    public abstract boolean execute(AbstractCommandSender sender);
+    public abstract boolean execute(CommandSender sender);
 
-    public abstract boolean execute(AbstractCommandSender sender, String[] args);
+    public abstract boolean execute(CommandSender sender, String[] args);
 
     /**
      * Method to drop the first argument from an Array of Strings.
@@ -30,7 +30,7 @@ public abstract class AbstractCommand {
      * @param sender to send message to..
      * @return Boolean signifying whether there were no arguments.
      */
-    public boolean sendMessageIfNoArguments(String message, String[] args, AbstractCommandSender sender) {
+    public boolean sendMessageIfNoArguments(String message, String[] args, CommandSender sender) {
         if (args.length == 0) {
             sender.sendMessage(message);
             return true;
