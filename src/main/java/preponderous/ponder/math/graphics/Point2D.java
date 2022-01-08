@@ -1,7 +1,7 @@
 package preponderous.ponder.math.graphics;
 
 /**
- * @author Daniel Stephenson
+ * @author Daniel McCoy Stephenson
  */
 public class Point2D {
     private double x;

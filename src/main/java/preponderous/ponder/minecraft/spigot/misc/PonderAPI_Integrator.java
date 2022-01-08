@@ -4,7 +4,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import preponderous.ponder.minecraft.spigot.PonderMC;
 
 /**
- * @author Daniel Stephenson
+ * @author Daniel McCoy Stephenson
  */
 public class PonderAPI_Integrator {
 

@@ -7,7 +7,7 @@ import preponderous.ponder.system.abs.CommandSender;
 import java.util.HashSet;
 
 /**
- * @author Daniel Stephenson
+ * @author Daniel McCoy Stephenson
  * @since January 5th, 2022
  */
 public class CommandService {

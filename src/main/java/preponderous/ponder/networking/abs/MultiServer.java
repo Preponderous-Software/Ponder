@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.net.ServerSocket;
 
 /**
- * @author Daniel Stephenson
+ * @author Daniel McCoy Stephenson
  */
 public abstract class MultiServer {
     private int portNumber = -1;

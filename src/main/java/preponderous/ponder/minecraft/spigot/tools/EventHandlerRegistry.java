@@ -9,7 +9,7 @@ import preponderous.ponder.minecraft.spigot.PonderMC;
 import java.util.ArrayList;
 
 /**
- * @author Daniel Stephenson
+ * @author Daniel McCoy Stephenson
  */
 public class EventHandlerRegistry {
 

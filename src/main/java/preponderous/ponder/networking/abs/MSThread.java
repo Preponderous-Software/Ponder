@@ -8,7 +8,7 @@ import java.net.Socket;
 import java.net.SocketException;
 
 /**
- * @author Daniel Stephenson
+ * @author Daniel McCoy Stephenson
  */
 public abstract class MSThread extends Thread {
     private final Socket socket;

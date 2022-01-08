@@ -6,7 +6,7 @@ import org.bukkit.command.CommandSender;
 import java.util.ArrayList;
 
 /**
- * @author Daniel Stephenson
+ * @author Daniel McCoy Stephenson
  */
 public class PermissionChecker {
 

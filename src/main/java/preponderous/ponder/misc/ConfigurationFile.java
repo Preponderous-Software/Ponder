@@ -77,7 +77,7 @@ public class ConfigurationFile {
     /**
      * Constructor to generate a ConfigurationFile and initialize it with a plugin.
      *
-     * @author Daniel Stephenson
+     * @author Daniel McCoy Stephenson
      * @since 10/27/2021
      *
      * @param name of the file.
@@ -500,7 +500,7 @@ public class ConfigurationFile {
     /**
      * Method to initialize the plugin for the configuration file.
      *
-     * @author Daniel Stephenson
+     * @author Daniel McCoy Stephenson
      * @since 10/27/2021
      */
     public void initializePlugin(JavaPlugin plugin) {
@@ -510,7 +510,7 @@ public class ConfigurationFile {
     /**
      * Method to get the plugin associated with the configuration file.
      *
-     * @author Daniel Stephenson
+     * @author Daniel McCoy Stephenson
      * @since 10/27/2021
      */
     public JavaPlugin getPlugin() {

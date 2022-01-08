@@ -7,7 +7,7 @@ import org.bukkit.block.Chest;
 import static org.bukkit.Bukkit.getLogger;
 
 /**
- * @author Daniel Stephenson
+ * @author Daniel McCoy Stephenson
  * @author Caibinus
  */
 public class BlockChecker {

@@ -1,7 +1,7 @@
 package preponderous.ponder.system.abs;
 
 /**
- * @author Daniel Stephenson
+ * @author Daniel McCoy Stephenson
  * @since January 5th, 2022
  */
 public abstract class CommandSender {
