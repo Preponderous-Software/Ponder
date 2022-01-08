@@ -3,7 +3,7 @@ package preponderous.ponder.math.random;
 import java.util.Random;
 
 /**
- * @author Daniel Stephenson
+ * @author Daniel McCoy Stephenson
  * @since January 7th, 2022
  */
 public class RandomNumberGenerator {

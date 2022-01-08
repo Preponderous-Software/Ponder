@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author Daniel Stephenson
+ * @author Daniel McCoy Stephenson
  * @author Pasarus
  */
 public class JsonWriterReader {

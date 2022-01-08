@@ -6,7 +6,7 @@ import preponderous.ponder.minecraft.spigot.services.CommandService;
 import preponderous.ponder.minecraft.spigot.services.LocaleService;
 
 /**
- * @author Daniel Stephenson
+ * @author Daniel McCoy Stephenson
  */
 public class PonderMC extends Ponder {
 

@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
- * @author Daniel Stephenson
+ * @author Daniel McCoy Stephenson
  */
 public abstract class AbstractPluginCommand {
     private ArrayList<String> names;
@@ -25,7 +25,7 @@ public abstract class AbstractPluginCommand {
     /**
      * Method to drop the first argument from an Array of Strings.
      *
-     * @author Daniel Stephenson
+     * @author Daniel McCoy Stephenson
      * @since 10/12/2021
      * @param message to send.
      * @param args to check.

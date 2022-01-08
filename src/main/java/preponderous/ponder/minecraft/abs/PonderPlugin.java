@@ -5,7 +5,7 @@ import preponderous.ponder.minecraft.spigot.PonderMC;
 import preponderous.ponder.minecraft.spigot.misc.PonderAPI_Integrator;
 
 /**
- * @author Daniel Stephenson
+ * @author Daniel McCoy Stephenson
  */
 public abstract class PonderPlugin extends JavaPlugin {
 

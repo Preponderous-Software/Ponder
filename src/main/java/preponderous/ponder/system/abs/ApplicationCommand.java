@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
- * @author Daniel Stephenson
+ * @author Daniel McCoy Stephenson
  * @since January 5th, 2022
  */
 public abstract class ApplicationCommand {
@@ -23,7 +23,7 @@ public abstract class ApplicationCommand {
     /**
      * Method to drop the first argument from an Array of Strings.
      *
-     * @author Daniel Stephenson
+     * @author Daniel McCoy Stephenson
      * @since 10/12/2021
      * @param message to send.
      * @param args to check.

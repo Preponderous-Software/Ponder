@@ -3,7 +3,7 @@ package preponderous.ponder.minecraft.spigot.tools;
 import org.bukkit.ChatColor;
 
 /**
- * @author Daniel Stephenson
+ * @author Daniel McCoy Stephenson
  */
 public class ColorChecker {
 

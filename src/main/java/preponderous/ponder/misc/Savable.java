@@ -3,7 +3,7 @@ package preponderous.ponder.misc;
 import java.util.Map;
 
 /**
- * @author Daniel Stephenson
+ * @author Daniel McCoy Stephenson
  */
 public interface Savable {
     Map<String, String> save();

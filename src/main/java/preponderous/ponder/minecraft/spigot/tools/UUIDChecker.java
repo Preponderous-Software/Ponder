@@ -7,7 +7,7 @@ import org.bukkit.entity.Player;
 import java.util.UUID;
 
 /**
- * @author Daniel Stephenson
+ * @author Daniel McCoy Stephenson
  * @author Pasarus
  */
 public class UUIDChecker {

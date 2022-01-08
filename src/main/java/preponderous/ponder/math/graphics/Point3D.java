@@ -1,5 +1,8 @@
 package preponderous.ponder.math.graphics;
 
+/**
+ * @author Daniel McCoy Stephenson
+ */
 public class Point3D {
     private double x;
     private double y;

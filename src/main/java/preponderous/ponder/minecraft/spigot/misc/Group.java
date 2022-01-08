@@ -8,7 +8,7 @@ import java.util.UUID;
 import static org.bukkit.Bukkit.getServer;
 
 /**
- * @author Daniel Stephenson
+ * @author Daniel McCoy Stephenson
  */
 public class Group {
 

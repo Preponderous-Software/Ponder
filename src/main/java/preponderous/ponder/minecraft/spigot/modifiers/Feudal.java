@@ -3,7 +3,7 @@ package preponderous.ponder.minecraft.spigot.modifiers;
 import java.util.ArrayList;
 
 /**
- * @author Daniel Stephenson
+ * @author Daniel McCoy Stephenson
  */
 public interface Feudal {
 

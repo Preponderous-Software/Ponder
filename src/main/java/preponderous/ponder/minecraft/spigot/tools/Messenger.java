@@ -7,7 +7,7 @@ import org.bukkit.entity.Player;
 import static org.bukkit.Bukkit.getServer;
 
 /**
- * @author Daniel Stephenson
+ * @author Daniel McCoy Stephenson
  */
 public class Messenger {
 

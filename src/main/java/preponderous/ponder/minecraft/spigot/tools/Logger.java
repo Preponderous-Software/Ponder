@@ -3,7 +3,7 @@ package preponderous.ponder.minecraft.spigot.tools;
 import preponderous.ponder.minecraft.spigot.PonderMC;
 
 /**
- * @author Daniel Stephenson
+ * @author Daniel McCoy Stephenson
  */
 public class Logger {
 

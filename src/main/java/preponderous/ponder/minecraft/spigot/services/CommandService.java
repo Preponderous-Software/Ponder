@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.Set;
 
 /**
- * @author Daniel Stephenson
+ * @author Daniel McCoy Stephenson
  */
 public class CommandService {
 

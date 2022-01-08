@@ -1,7 +1,7 @@
 package preponderous.ponder;
 
 /**
- * @author Daniel Stephenson
+ * @author Daniel McCoy Stephenson
  * @since 10/12/2021
  */
 public class Ponder {

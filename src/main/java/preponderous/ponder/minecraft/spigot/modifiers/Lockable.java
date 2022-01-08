@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.UUID;
 
 /**
- * @author Daniel Stephenson
+ * @author Daniel McCoy Stephenson
  */
 public interface Lockable {
     void setOwner(UUID s);
