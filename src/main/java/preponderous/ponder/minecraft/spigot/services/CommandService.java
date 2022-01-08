@@ -3,7 +3,7 @@ package preponderous.ponder.minecraft.spigot.services;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import preponderous.ponder.minecraft.spigot.PonderMC;
-import preponderous.ponder.minecraft.abs.PluginCommand;
+import preponderous.ponder.minecraft.abs.AbstractPluginCommand;
 import preponderous.ponder.minecraft.spigot.tools.PermissionChecker;
 import preponderous.ponder.misc.ArgumentParser;
 
@@ -17,7 +17,7 @@ public class CommandService {
 
     private PonderMC ponder;
 
-    private ArrayList<PluginCommand> commands = new ArrayList<>();
+    private ArrayList<AbstractPluginCommand> commands = new ArrayList<>();
     private Set<String> coreCommands;
     private String notFoundMessage;
     private ArgumentParser parser = new ArgumentParser();
@@ -32,7 +32,7 @@ public class CommandService {
      * Method to initialize the command service.
      *
      */
-    public void initialize(ArrayList<PluginCommand> commands, String notFoundMessage) {
+    public void initialize(ArrayList<AbstractPluginCommand> commands, String notFoundMessage) {
         this.commands = commands;
         this.notFoundMessage = notFoundMessage;
     }
@@ -54,7 +54,7 @@ public class CommandService {
 
         String[] arguments = parser.dropFirstArgument(args);
 
-        for (PluginCommand command : commands) {
+        for (AbstractPluginCommand command : commands) {
             if (command.getNames().contains(subCommand)) {
                 if (!permissionChecker.checkPermission(sender, command.getPermissions())) {
                     return false;

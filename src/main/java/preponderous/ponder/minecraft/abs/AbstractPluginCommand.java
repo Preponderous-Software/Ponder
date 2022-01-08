@@ -9,11 +9,11 @@ import java.util.Arrays;
 /**
  * @author Daniel Stephenson
  */
-public abstract class PluginCommand {
+public abstract class AbstractPluginCommand {
     private ArrayList<String> names;
     private ArrayList<String> permissions;
 
-    public PluginCommand(ArrayList<String> names, ArrayList<String> permissions) {
+    public AbstractPluginCommand(ArrayList<String> names, ArrayList<String> permissions) {
         this.names = names;
         this.permissions = permissions;
     }
