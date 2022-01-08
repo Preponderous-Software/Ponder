@@ -7,7 +7,7 @@ package preponderous.ponder;
 public class Ponder {
     private boolean debug = false;
 
-    private String version = "v0.13-alpha-3";
+    private String version = "v0.13";
 
     /**
      * Constructor to initialize the API for general purposes.
