@@ -1,3 +1,7 @@
+/*
+  Copyright (c) 2022 Preponderous Software
+  MIT License
+ */
 package preponderous.ponder.minecraft.spigot.tools;
 
 import preponderous.ponder.minecraft.spigot.PonderMC;

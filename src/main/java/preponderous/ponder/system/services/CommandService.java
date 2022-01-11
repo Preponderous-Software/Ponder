@@ -2,6 +2,10 @@ package preponderous.ponder.system.services;
 
 import preponderous.ponder.misc.ArgumentParser;
 import preponderous.ponder.system.abs.ApplicationCommand;
+/*
+  Copyright (c) 2022 Preponderous Software
+  MIT License
+ */
 import preponderous.ponder.system.abs.CommandSender;
 
 import java.util.HashSet;
