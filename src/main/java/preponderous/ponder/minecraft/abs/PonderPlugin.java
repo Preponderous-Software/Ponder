@@ -5,9 +5,7 @@
 package preponderous.ponder.minecraft.abs;
 
 import org.bukkit.plugin.java.JavaPlugin;
-import preponderous.ponder.Ponder;
 import preponderous.ponder.minecraft.spigot.PonderMC;
-import preponderous.ponder.minecraft.spigot.misc.PonderAPI_Integrator;
 
 /**
  * @author Daniel McCoy Stephenson

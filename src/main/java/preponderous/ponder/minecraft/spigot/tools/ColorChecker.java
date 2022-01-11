@@ -8,6 +8,7 @@ import org.bukkit.ChatColor;
 
 /**
  * @author Daniel McCoy Stephenson
+ * @author Callum Johnson
  */
 public class ColorChecker {
 
