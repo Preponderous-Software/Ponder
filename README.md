@@ -1,7 +1,7 @@
 # Ponder
 
 ## Description
-Ponder is a library that assists with the development of software applications and plugins through the use of provided tools, services and specifications. Functionality that can be used in many areas has been abstracted out into a usable framework. This greatly simplifies the process of creating and updating software.
+Ponder is a library that assists with the development of software applications and plugins through the use of provided tools, services and specifications. Functionality that can be used in many areas has been abstracted out into usable frameworks. This greatly simplifies the process of creating and updating software.
 
 A list of features can be found [here](https://github.com/Preponderous-Software/Ponder/wiki/Features).
 
