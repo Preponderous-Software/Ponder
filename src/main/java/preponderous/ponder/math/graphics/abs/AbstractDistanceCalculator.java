@@ -1,3 +1,7 @@
+/*
+  Copyright (c) 2022 Preponderous Software
+  MIT License
+ */
 package preponderous.ponder.math.graphics.abs;
 
 import preponderous.ponder.math.graphics.Point2D;

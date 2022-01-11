@@ -1,3 +1,7 @@
+/*
+  Copyright (c) 2022 Preponderous Software
+  MIT License
+ */
 package preponderous.ponder.misc;
 
 // Source: https://stackoverflow.com/a/521235 from user Paul Brinkly and edited by Dave Jarvis
