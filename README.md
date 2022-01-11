@@ -44,6 +44,7 @@ Callum | Wrote the Color Converter that is used in this project and condensed th
 [Pasarus](https://github.com/Pasarus) | Wrote code that is used in the JsonWriterReader and the UUIDChecker classes.
 Caibinus | Wrote code that is used in the BlockChecker class.
 
+Have you made a contribution and don't see yourself above? Please add your name and open a PR!
 
 ## License
 MIT
