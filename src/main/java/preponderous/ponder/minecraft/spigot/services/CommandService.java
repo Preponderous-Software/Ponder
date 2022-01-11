@@ -6,8 +6,8 @@ package preponderous.ponder.minecraft.spigot.services;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
-import preponderous.ponder.minecraft.spigot.PonderMC;
 import preponderous.ponder.minecraft.abs.AbstractPluginCommand;
+import preponderous.ponder.minecraft.spigot.PonderMC;
 import preponderous.ponder.minecraft.spigot.tools.PermissionChecker;
 import preponderous.ponder.misc.ArgumentParser;
 

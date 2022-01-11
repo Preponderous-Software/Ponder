@@ -3,10 +3,6 @@ package preponderous.ponder.networking.abs;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-/*
-  Copyright (c) 2022 Preponderous Software
-  MIT License
- */
 import java.io.PrintWriter;
 import java.net.Socket;
 import java.net.SocketException;
