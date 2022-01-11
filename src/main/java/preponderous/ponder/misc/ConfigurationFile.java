@@ -520,5 +520,4 @@ public class ConfigurationFile {
     public JavaPlugin getPlugin() {
         return plugin;
     }
-
 }

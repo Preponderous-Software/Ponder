@@ -5,6 +5,7 @@
 package preponderous.ponder.minecraft.abs;
 
 import org.bukkit.plugin.java.JavaPlugin;
+import preponderous.ponder.Ponder;
 import preponderous.ponder.minecraft.spigot.PonderMC;
 import preponderous.ponder.minecraft.spigot.misc.PonderAPI_Integrator;
 
@@ -12,10 +13,13 @@ import preponderous.ponder.minecraft.spigot.misc.PonderAPI_Integrator;
  * @author Daniel McCoy Stephenson
  */
 public abstract class PonderPlugin extends JavaPlugin {
+    private PonderMC ponder = new PonderMC(this);
 
-    protected PonderAPI_Integrator ponderAPI_integrator;
-
-    public PonderMC getPonderAPI() {
-        return ponderAPI_integrator.getAPI();
+    /**
+     * This can be used to get the managed instance of Ponder.
+     * @return The managed instance of Ponder.
+     */
+    public PonderMC getPonder() {
+        return ponder;
     }
 }

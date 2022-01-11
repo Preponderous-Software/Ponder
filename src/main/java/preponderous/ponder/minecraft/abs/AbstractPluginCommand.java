@@ -22,8 +22,20 @@ public abstract class AbstractPluginCommand {
         this.permissions = permissions;
     }
 
+    /**
+     * Method to execute the command with no arguments.
+     * @param sender The sender of the command.
+     * @return Whether the execution of the command was successful.
+     */
     public abstract boolean execute(CommandSender sender);
 
+    /**
+     * Method to execute the command with no arguments.
+     * @param sender The sender of the command.
+     * @param args The arguments of the command.
+     * @return Whether the execution of the command was successful.
+
+     */
     public abstract boolean execute(CommandSender sender, String[] args);
 
     /**
@@ -78,10 +90,18 @@ public abstract class AbstractPluginCommand {
         );
     }
 
+    /**
+     * Method to get the names that this command can be invoked with.
+     * @return A list of names of the command.
+     */
     public ArrayList<String> getNames() {
         return names;
     }
 
+    /**
+     * Method to get the permissions associated with this command.
+     * @return A list of permissions of the command.
+     */
     public ArrayList<String> getPermissions() {
         return permissions;
     }

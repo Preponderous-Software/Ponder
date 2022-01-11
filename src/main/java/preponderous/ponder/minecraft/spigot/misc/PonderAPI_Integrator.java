@@ -9,6 +9,7 @@ import preponderous.ponder.minecraft.spigot.PonderMC;
 
 /**
  * @author Daniel McCoy Stephenson
+ * @deprecated
  */
 public class PonderAPI_Integrator {
 
