@@ -7,31 +7,33 @@ package preponderous.ponder.math.graphics;
 /**
  * @author Daniel McCoy Stephenson
  */
-public class Point3D {
-    private double x;
-    private double y;
+public class Point3D extends Point2D {
     private double z;
 
-    public double getX() {
-        return x;
+    /**
+     * This constructor can be utilized to initialize the point.
+     *
+     * @param x The x coordinate of the point.
+     * @param y The y coordinate of the point.
+     * @param z The z coordinate of the point.
+     */
+    public Point3D(int x, int y, int z) {
+        super(x, y);
+        this.z = z;
     }
 
-    public void setX(double x) {
-        this.x = x;
-    }
-
-    public double getY() {
-        return y;
-    }
-
-    public void setY(double y) {
-        this.y = y;
-    }
-
+    /**
+     * This can be utilized to get the z coordinate of the point.
+     * @return The z coordinate of the point.
+     */
     public double getZ() {
         return z;
     }
 
+    /**
+     * Sets the z coordinate of the point.
+     * @param z The new z coordinate of the point.
+     */
     public void setZ(double z) {
         this.z = z;
     }

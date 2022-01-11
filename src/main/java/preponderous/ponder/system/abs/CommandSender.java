@@ -9,5 +9,10 @@ package preponderous.ponder.system.abs;
  * @since January 5th, 2022
  */
 public abstract class CommandSender {
+
+    /**
+     * Sends a message to the command sender.
+     * @param message The message to send.
+     */
     public abstract void sendMessage(String message);
 }

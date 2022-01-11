@@ -22,11 +22,8 @@ import java.util.Map;
  * @author Pasarus
  */
 public class JsonWriterReader {
-
     private static String FILE_PATH;
-
     private static Type LIST_MAP_TYPE;
-
     private final Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
     public JsonWriterReader() {
@@ -80,5 +77,4 @@ public class JsonWriterReader {
         }
         return new ArrayList<>();
     }
-
 }
