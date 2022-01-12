@@ -10,7 +10,7 @@ package preponderous.ponder;
  */
 public class Ponder {
     private boolean debug = false;
-    private final String version = "v0.14-alpha-1";
+    private final String version = "v0.14-alpha-2";
 
     /**
      * Constructor to initialize the library for general purposes.
