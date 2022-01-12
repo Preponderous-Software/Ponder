@@ -37,7 +37,7 @@ public class Messenger {
         int numPlayersWhoHeard = 0;
         for (Player target : getServer().getOnlinePlayers()) {
             if (!playersAreInTheSameWorld(target, player) || !playersAreWithinDistance(target, player, distance)) {
-                return -1;
+                continue;
             }
             numPlayersWhoHeard++;
             target.sendMessage(message);
