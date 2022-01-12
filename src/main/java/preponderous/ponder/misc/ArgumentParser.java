@@ -38,11 +38,15 @@ public class ArgumentParser {
      * @throws IllegalArgumentException if the arguments given are invalid.
      */
     public ArrayList<String> getArgumentsInsideDoubleQuotes(String[] args) {
-        if (args == null || args.length == 0) throw new IllegalArgumentException("Arguments not valid.");
+        if (args == null || args.length == 0) {
+            throw new IllegalArgumentException("Arguments not valid.");
+        }
         final ArrayList<String> toReturn = new ArrayList<>();
         final String argumentString = String.join(" ", args);
         final Matcher matcher = Pattern.compile("\"[^\"]*\"").matcher(argumentString);
-        while (matcher.find()) toReturn.add(matcher.group().replace("\"", ""));
+        while (matcher.find()) {
+            toReturn.add(matcher.group().replace("\"", ""));
+        }
         return toReturn;
     }
 

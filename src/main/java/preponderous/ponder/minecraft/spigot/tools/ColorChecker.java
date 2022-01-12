@@ -26,5 +26,4 @@ public class ColorChecker {
         }
         return ChatColor.WHITE;
     }
-
 }

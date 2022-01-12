@@ -48,17 +48,21 @@ public class JsonWriterReader {
      */
     public boolean writeOutFiles(List<Map<String, String>> saveData, String fileName) {
         try {
-            File parentFolder = new File(FILE_PATH);
-            parentFolder.mkdir();
-            File file = new File(FILE_PATH, fileName);
-            file.createNewFile();
-            OutputStreamWriter outputStreamWriter = new OutputStreamWriter(new FileOutputStream(file), StandardCharsets.UTF_8);
-            outputStreamWriter.write(gson.toJson(saveData));
-            outputStreamWriter.close();
+            writeDataToFileUsingStream(fileName, saveData);
             return true;
         } catch(IOException e) {
             return false;
         }
+    }
+
+    private void writeDataToFileUsingStream(String fileName, Object saveData) throws IOException {
+        File parentFolder = new File(FILE_PATH);
+        parentFolder.mkdir();
+        File file = new File(FILE_PATH, fileName);
+        file.createNewFile();
+        OutputStreamWriter outputStreamWriter = new OutputStreamWriter(new FileOutputStream(file), StandardCharsets.UTF_8);
+        outputStreamWriter.write(gson.toJson(saveData));
+        outputStreamWriter.close();
     }
 
     /**
@@ -69,12 +73,15 @@ public class JsonWriterReader {
      */
     public ArrayList<HashMap<String, String>> loadDataFromFilename(String filename) {
         try{
-            Gson gson = new GsonBuilder().setPrettyPrinting().create();
-            JsonReader reader = new JsonReader(new InputStreamReader(new FileInputStream(filename), StandardCharsets.UTF_8));
-            return gson.fromJson(reader, LIST_MAP_TYPE);
+            return loadDataFromFileUsingGson(filename);
         } catch (FileNotFoundException e) {
-            // Fail silently because this can actually happen in normal use
+            return new ArrayList<>();
         }
-        return new ArrayList<>();
+    }
+
+    private ArrayList<HashMap<String, String>> loadDataFromFileUsingGson(String filename) throws FileNotFoundException {
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        JsonReader reader = new JsonReader(new InputStreamReader(new FileInputStream(filename), StandardCharsets.UTF_8));
+        return gson.fromJson(reader, LIST_MAP_TYPE);
     }
 }

@@ -33,8 +33,12 @@ public class EventHandlerRegistry {
      * @throws IllegalArgumentException if the arguments are invalid.
      */
     public void registerEventHandlers(ArrayList<Listener> listeners, Plugin plugin) {
-        if (listeners == null || listeners.isEmpty()) throw new IllegalArgumentException("Listeners cannot be null or empty!");
-        if (plugin == null) throw new IllegalArgumentException("Plugin cannot be null!");
+        if (listeners == null || listeners.isEmpty()) {
+            throw new IllegalArgumentException("Listeners cannot be null or empty!");
+        }
+        if (plugin == null) {
+            throw new IllegalArgumentException("Plugin cannot be null!");
+        }
         listeners.forEach(listener -> manager.registerEvents(listener, plugin));
     }
 
