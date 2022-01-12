@@ -55,25 +55,20 @@ public class LocaleService {
         currentLanguageID = ID;
     }
 
-    /**
-     * Method to get a value associated with a translation key.
-     *
-     */
     public String getText(String key) {
-        if (!keys.contains(key)) return String.format("[key '%s' not found]", key);
-        return strings.get(key);
+        return getValueAssociatedWithTranslationKey(key);
     }
 
     public void loadTranslationKeysAndStrings() {
         if (isFilePresent(localizationFilePath)) {
             loadFromPluginFolder();
-            if (ponder.isDebugEnabled()) { System.out.println("DEBUG: Loaded from plugin folder!"); }
+            ponder.log("Loaded from plugin folder!");
         }
         else {
             loadFromResource();
-            if (ponder.isDebugEnabled()) { System.out.println("DEBUG: Loaded from resource!"); }
+            ponder.log("Loaded from resource!");
         }
-        if (ponder.isDebugEnabled()) { System.out.printf((getText("KeysLoaded")) + "%n", keys.size()); }
+        ponder.log(String.format(getText("KeysLoaded") + "%n", keys.size()));
     }
 
     public void reloadTranslationKeysAndStrings() {
@@ -113,18 +108,12 @@ public class LocaleService {
     public void loadFromPluginFolder() {
         File file = new File(localizationFilePath);
         try {
-
-            // load from local language file
             loadFromFile(file);
-
-            // update local language files
             updateCurrentLocalLanguageFile();
-
-            // save
             saveToPluginFolder();
 
         } catch (Exception e) {
-            if (ponder.isDebugEnabled()) { System.out.println("DEBUG: Something went wrong loading from the plugin folder."); }
+            ponder.log("Something went wrong loading from the plugin folder.");
             e.printStackTrace();
         }
     }
@@ -146,7 +135,7 @@ public class LocaleService {
             }
 
         } catch (Exception e) {
-            if (ponder.isDebugEnabled()) { System.out.println("DEBUG: Something went wrong loading from file!"); }
+            ponder.log("Something went wrong loading from file!");
             e.printStackTrace();
         }
     }
@@ -156,7 +145,7 @@ public class LocaleService {
      *
      */
     public void updateCurrentLocalLanguageFile() {
-        if (ponder.isDebugEnabled()) { System.out.println("DEBUG: LocaleManager is updating supported local language files."); }
+        ponder.log("LocaleManager is updating supported local language files.");
         if (isLanguageIDSupported(currentLanguageID)) {
             InputStream inputStream;
             inputStream = getResourceAsInputStream(currentLanguageID + ".tsv");
@@ -169,10 +158,6 @@ public class LocaleService {
         }
     }
 
-    /**
-     * Method to get a resource as an input stream.
-     *
-     */
     public InputStream getResourceAsInputStream(String fileName) {
         return ponder.getPlugin().getResource(fileName);
     }
@@ -183,42 +168,36 @@ public class LocaleService {
      */
     public void loadFromResource() {
         try {
-            // get resource as input stream
             InputStream inputStream = getResourceAsInputStream(localizationFileName);
             loadMissingKeysFromInputStream(inputStream);
             saveToPluginFolder();
         } catch (Exception e) {
-            if (ponder.isDebugEnabled()) { System.out.println("DEBUG: Error loading from resource!"); }
+            ponder.log("Error loading from resource!");
             e.printStackTrace();
         }
     }
 
-    /**
-     * Method to load the missing keys from the input stream.
-     *
-     */
     public void loadMissingKeysFromInputStream(InputStream inputStream) {
         InputStreamReader reader = new InputStreamReader(inputStream, StandardCharsets.UTF_8);
         BufferedReader br = new BufferedReader(reader);
         br.lines().forEach(line -> {
             Pair<String, String> pair = getPairFromLine(line);
-            if (pair != null && !strings.containsKey(pair.getLeft())) { // if pair found and if key not already loaded
+            if (pairFoundAndKeyNotAlreadyLoaded(pair)) {
                 strings.put(pair.getLeft(), pair.getRight());
                 keys.add(pair.getLeft());
-//                System.out.println(String.format("DEBUG: Loaded missing key %s from resources!", pair.getLeft()));
             }
         });
     }
 
-    /**
-     * Method to get a pair from a line.
-     *
-     */
+    private boolean pairFoundAndKeyNotAlreadyLoaded(Pair<String, String> pair) {
+        return pair != null && !strings.containsKey(pair.getLeft());
+    }
+
     public Pair<String, String> getPairFromLine(String line) {
         String key;
         String value;
 
-        int tabIndex = getIndexOfTab(line);
+        int tabIndex = getIndexOfFirstTab(line);
 
         if (tabIndex != -1) {
             key = line.substring(0, tabIndex);
@@ -231,10 +210,51 @@ public class LocaleService {
     }
 
     /**
-     * Method to get the index of the first tab character.
+     * Method to save to the plugin folder.
      *
      */
-    public int getIndexOfTab(String line) {
+    public void saveToPluginFolder() {
+        sortKeys();
+
+        try {
+            createDirectory();
+            File file = createFile();
+
+            try (BufferedWriter output = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), StandardCharsets.UTF_8))) {
+                for (String key : keys) {
+                    output.write(key + "\t" + strings.get(key) + "\n");
+                }
+            } catch (Exception ex) {
+                ponder.log("Failed to write to file.");
+            }
+        } catch (Exception e) {
+            ponder.log("There was a problem saving the strings.");
+            e.printStackTrace();
+        }
+    }
+
+    private File createFile() throws Exception {
+        File file = new File(localizationFilePath);
+        if (!file.exists() && !file.createNewFile()) {
+            ponder.log("Failed to create file.");
+            throw new Exception();
+        }
+        return file;
+    }
+
+    private void createDirectory() throws Exception {
+        File folder = new File(languageFolderPath);
+        if (!folder.exists() && !folder.mkdir()) {
+            ponder.log("Failed to create directory.");
+            throw new Exception();
+        }
+    }
+
+    public void sortKeys() {
+        Collections.sort(keys);
+    }
+
+    private int getIndexOfFirstTab(String line) {
         for (int i = 0; i < line.length(); i++) {
             if (line.charAt(i) == '\t') {
                 return i;
@@ -243,48 +263,10 @@ public class LocaleService {
         return -1;
     }
 
-    /**
-     * Method to save to the plugin folder.
-     *
-     */
-    public void saveToPluginFolder() {
-
-        sortKeys();
-
-        try {
-            File folder = new File(languageFolderPath);
-            if (!folder.exists()) {
-                if (!folder.mkdir()) {
-                    if (ponder.isDebugEnabled()) { System.out.println("DEBUG: Failed to create directory."); }
-                    return;
-                }
-            }
-            File file = new File(localizationFilePath);
-            if (!file.exists()) {
-                if (!file.createNewFile()) {
-                    if (ponder.isDebugEnabled()) { System.out.println("DEBUG: Failed to create file."); }
-                    return;
-                }
-            }
-            try (BufferedWriter output = new BufferedWriter(new OutputStreamWriter(
-                    new FileOutputStream(file), StandardCharsets.UTF_8))) {
-                for (String key : keys) {
-                    output.write(key + "\t" + strings.get(key) + "\n");
-                }
-            } catch (Exception ex) {
-                if (ponder.isDebugEnabled()) { System.out.println("DEBUG: Failed to write to file."); }
-            }
-        } catch (Exception e) {
-            if (ponder.isDebugEnabled()) { System.out.println("DEBUG: There was a problem saving the strings."); }
-            e.printStackTrace();
+    private String getValueAssociatedWithTranslationKey(String key) {
+        if (!keys.contains(key)) {
+            return String.format("[key '%s' not found]", key);
         }
-    }
-
-    /**
-     * Method to sort the keys.
-     *
-     */
-    public void sortKeys() {
-        Collections.sort(keys);
+        return strings.get(key);
     }
 }
