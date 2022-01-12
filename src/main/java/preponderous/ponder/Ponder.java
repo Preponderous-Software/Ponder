@@ -13,14 +13,14 @@ public class Ponder {
     private final String version = "v0.14-alpha-1";
 
     /**
-     * Constructor to initialize the API for general purposes.
+     * Constructor to initialize the library for general purposes.
      */
     public Ponder() {
 
     }
 
     /**
-     * Method to check whether the internal debug flag for the API is enabled.
+     * Method to check whether the internal debug flag for the library is enabled.
      *
      * @return Boolean signifying whether the debug flag is enabled.
      */
@@ -29,9 +29,9 @@ public class Ponder {
     }
 
     /**
-     * Method to get the version of the API.
+     * Method to get the version of the library.
      *
-     * @return The version of the API as a {@link String}.
+     * @return The version of the library as a {@link String}.
      */
     public String getVersion() {
         return version;
