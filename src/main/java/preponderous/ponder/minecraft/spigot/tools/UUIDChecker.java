@@ -13,6 +13,7 @@ import java.util.UUID;
 /**
  * @author Daniel McCoy Stephenson
  * @author Pasarus
+ * @author Callum Johnson
  */
 public class UUIDChecker {
 
@@ -29,12 +30,16 @@ public class UUIDChecker {
      * @throws IllegalArgumentException if the UUID provided is null.
      */
     public String findPlayerNameBasedOnUUID(UUID playerUUID) {
-        if (playerUUID == null) throw new IllegalArgumentException("Player UUID cannot be null!");
+        if (playerUUID == null) {
+            throw new IllegalArgumentException("Player UUID cannot be null!");
+        }
         final Player player = Bukkit.getPlayer(playerUUID);
-        if (player != null) return player.getName();
+        if (player != null) {
+            return player.getName();
+        }
         final OfflinePlayer offlinePlayer = Bukkit.getOfflinePlayer(playerUUID);
         final String name = offlinePlayer.getName();
-        return name == null||!offlinePlayer.hasPlayedBefore() ? "" : name;
+        return name == null || !offlinePlayer.hasPlayedBefore() ? "" : name;
     }
 
     /**
@@ -53,12 +58,16 @@ public class UUIDChecker {
      */
     @SuppressWarnings("deprecation")
     public UUID findUUIDBasedOnPlayerName(String playerName) {
-        if (playerName == null) throw new IllegalArgumentException("Player Name cannot be null!");
+        if (playerName == null) {
+            throw new IllegalArgumentException("Player Name cannot be null!");
+        }
         final Player player = Bukkit.getPlayer(playerName);
-        if (player != null) return player.getUniqueId();
+        if (player != null) {
+            return player.getUniqueId();
+        }
         final OfflinePlayer offlinePlayer = Bukkit.getOfflinePlayer(playerName);
         final String name = offlinePlayer.getName();
-        return name == null||!offlinePlayer.hasPlayedBefore() ? null : offlinePlayer.getUniqueId();
+        return name == null || !offlinePlayer.hasPlayedBefore() ? null : offlinePlayer.getUniqueId();
     }
 
 }

@@ -24,10 +24,11 @@ public class Pair<L,R> {
 
     public int hashCode() { return left.hashCode() ^ right.hashCode(); }
 
-    public boolean equals(Object o) {
-        if (!(o instanceof Pair)) return false;
-        Pair pairo = (Pair) o;
-        return this.left.equals(pairo.getLeft()) &&
-                this.right.equals(pairo.getRight());
+    public boolean equals(Object object) {
+        if (!(object instanceof Pair)) {
+            return false;
+        }
+        Pair pair = (Pair) object;
+        return this.left.equals(pair.getLeft()) && this.right.equals(pair.getRight());
     }
 }

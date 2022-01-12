@@ -13,9 +13,7 @@ import preponderous.ponder.minecraft.spigot.services.LocaleService;
  * @author Daniel McCoy Stephenson
  */
 public class PonderMC extends Ponder {
-
     private JavaPlugin plugin;
-
     private CommandService commandService;
     private LocaleService localeService;
 
