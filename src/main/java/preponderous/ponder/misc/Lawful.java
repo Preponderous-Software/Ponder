@@ -2,7 +2,7 @@
   Copyright (c) 2022 Preponderous Software
   MIT License
  */
-package preponderous.ponder.minecraft.spigot.modifiers;
+package preponderous.ponder.misc;
 
 import java.util.ArrayList;
 

@@ -2,7 +2,7 @@
   Copyright (c) 2022 Preponderous Software
   MIT License
  */
-package preponderous.ponder.minecraft.spigot.modifiers;
+package preponderous.ponder.misc;
 
 import java.util.ArrayList;
 
@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public interface Diplomatic {
 
     /**
-     * Adds an new ally to the list of allies.
+     * Adds a new ally to the list of allies.
      * @param name The name of the new ally.
      */
     void addAlly(String name);
@@ -24,7 +24,7 @@ public interface Diplomatic {
     void removeAlly(String name);
 
     /**
-     * Checks whether an ally exists.
+     * Checks whether a ally exists.
      * @param name The name of the potential ally.
      * @return Whether the ally exists.
      */
@@ -37,7 +37,7 @@ public interface Diplomatic {
     ArrayList<String> getAllies();
 
     /**
-     * This can be used to get all of the allies separated by comments in a string.
+     * This can be used to get all the allies separated by comments in a string.
      * @return Allies separated by comments.
      */
     String getAlliesSeparatedByCommas();
