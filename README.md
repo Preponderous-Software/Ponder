@@ -3,16 +3,16 @@
 ## Description
 Ponder is a library that assists with the development of software applications and plugins through the use of provided tools, services and specifications. Functionality that can be used in many areas has been abstracted out into usable frameworks. This greatly simplifies the process of creating and updating software.
 
-A list of features can be found [here](https://github.com/Preponderous-Software/Ponder/wiki/Features).
+A [list of features](https://github.com/Preponderous-Software/Ponder/wiki/Features) is available on the wiki.
 
 ## Projects
 A [list of projects](https://github.com/Preponderous-Software/Ponder/wiki/Projects) is available on the wiki.
 
 ## Support
-You can find the support discord server [here](https://discord.gg/G6wQxfcBMt).
+For support, you can join our [support discord server](https://discord.gg/G6wQxfcBMt).
 
 ### Experiencing a bug?
-Please fill out a bug report [here](https://github.com/Preponderous-Software/Ponder/issues?q=is%3Aissue+is%3Aopen+label%3Abug).
+Please [fill out a bug report here](https://github.com/Preponderous-Software/Ponder/issues?q=is%3Aissue+is%3Aopen+label%3Abug).
 
 ## Installation/Configuration
 For help with installation/configuration, check out [this page](https://github.com/Preponderous-Software/Ponder/wiki/Tutorial-0-(Setup)). Please keep in mind that while this library can be used, it is unstable and likely to change.
