@@ -16,7 +16,7 @@ import java.util.HashSet;
  */
 public class CommandService {
     private final HashSet<ApplicationCommand> commands;
-    private final ArgumentParser parser = new ArgumentParser();
+    private final ArgumentParser argumentParser = new ArgumentParser();
 
     /**
      * @param commands The commands to instantiate the service with.

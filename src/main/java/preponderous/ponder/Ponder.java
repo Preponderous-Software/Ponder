@@ -9,17 +9,9 @@ package preponderous.ponder;
  * @since 10/12/2021
  */
 public class Ponder {
-    private boolean debug = false;
+    private boolean debugFlag = false;
 
     /**
-     * Constructor to initialize the library for general purposes.
-     */
-    public Ponder() {
-
-    }
-
-    /**
-     *
      * @return The version of the library as a {@link String}.
      */
     public String getVersion() {
@@ -27,19 +19,17 @@ public class Ponder {
     }
 
     /**
-     *
      * @return Boolean signifying whether the debug flag is enabled.
      */
     public boolean isDebugEnabled() {
-        return debug;
+        return debugFlag;
     }
 
     /**
-     *
      * @param b boolean to set.
      */
-    public void setDebug(boolean b) {
-        debug = b;
+    public void setDebugFlag(boolean b) {
+        debugFlag = b;
     }
 
     /**
@@ -48,7 +38,7 @@ public class Ponder {
      * @return boolean signifying success
      */
     public boolean log(String message) {
-        if (debug) {
+        if (debugFlag) {
             System.out.println("[Ponder] " + message);
             return true;
         }
