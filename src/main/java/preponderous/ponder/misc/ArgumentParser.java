@@ -10,6 +10,7 @@ import java.util.regex.Pattern;
 
 /**
  * @author Daniel McCoy Stephenson
+ * @author Callum Johnson
  */
 public class ArgumentParser {
 
