@@ -14,7 +14,6 @@ public abstract class PonderPlugin extends JavaPlugin {
     private final PonderMC ponder = new PonderMC(this);
 
     /**
-     * This can be used to get the managed instance of Ponder.
      * @return The managed instance of Ponder.
      */
     public PonderMC getPonder() {

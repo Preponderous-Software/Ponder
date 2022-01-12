@@ -45,5 +45,4 @@ public class PermissionChecker {
         sender.sendMessage(ChatColor.RED + "In order to use this command, you need one of the the following permissions: " + permissions + "");
         return false;
     }
-
 }

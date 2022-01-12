@@ -30,7 +30,6 @@ public abstract class AbstractPluginCommand {
     public abstract boolean execute(CommandSender sender);
 
     /**
-     * Method to execute the command with no arguments.
      * @param sender The sender of the command.
      * @param args The arguments of the command.
      * @return Whether the execution of the command was successful.
@@ -39,8 +38,6 @@ public abstract class AbstractPluginCommand {
     public abstract boolean execute(CommandSender sender, String[] args);
 
     /**
-     * Method to drop the first argument from an Array of Strings.
-     *
      * @author Daniel McCoy Stephenson
      * @since 10/12/2021
      * @param message to send.
@@ -58,8 +55,6 @@ public abstract class AbstractPluginCommand {
     }
 
     /**
-     * Method to get an Integer from a String.
-     *
      * @author Callum Johnson
      * @since 05/05/2021 - 12:18
      * @param line to convert into an Integer.
@@ -91,7 +86,6 @@ public abstract class AbstractPluginCommand {
     }
 
     /**
-     * Method to get the names that this command can be invoked with.
      * @return A list of names of the command.
      */
     public ArrayList<String> getNames() {
@@ -99,7 +93,6 @@ public abstract class AbstractPluginCommand {
     }
 
     /**
-     * Method to get the permissions associated with this command.
      * @return A list of permissions of the command.
      */
     public ArrayList<String> getPermissions() {

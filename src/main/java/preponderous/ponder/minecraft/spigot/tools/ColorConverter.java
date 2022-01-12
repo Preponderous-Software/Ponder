@@ -157,6 +157,5 @@ public class ColorConverter {
             for (DefaultColor out : DefaultColor.values()) if (out.equals(in)) return out;
             return DefaultColor.NOT_FOUND;
         }
-
     }
 }

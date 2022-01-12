@@ -39,10 +39,6 @@ public class LocaleService {
         strings = new HashMap<>();
     }
 
-    /**
-     * Method to initialize the Locale Service.
-     *
-     */
     public void initialize(ArrayList<String> supportedLanguageIDs, String pluginFolderPath, String pluginName, String defaultLanguageID) {
         this.supportedLanguageIDs = supportedLanguageIDs;
         languageFolderPath = pluginFolderPath + pluginName + "/";
@@ -51,18 +47,10 @@ public class LocaleService {
         currentLanguageID = defaultLanguageID;
     }
 
-    /**
-     * Method to get the current language ID.
-     *
-     */
     public String getCurrentLanguageID() {
         return currentLanguageID;
     }
 
-    /**
-     * Method to set the current language ID.
-     *
-     */
     public void setCurrentLanguageID(String ID) {
         currentLanguageID = ID;
     }
@@ -76,11 +64,7 @@ public class LocaleService {
         return strings.get(key);
     }
 
-    /**
-     * Method to load the translation keys and associated strings.
-     *
-     */
-    public void loadStrings() {
+    public void loadTranslationKeysAndStrings() {
         if (isFilePresent(localizationFilePath)) {
             loadFromPluginFolder();
             if (ponder.isDebugEnabled()) { System.out.println("DEBUG: Loaded from plugin folder!"); }
@@ -92,20 +76,12 @@ public class LocaleService {
         if (ponder.isDebugEnabled()) { System.out.printf((getText("KeysLoaded")) + "%n", keys.size()); }
     }
 
-    /**
-     * Method to reload the translation keys and associated strings.
-     *
-     */
-    public void reloadStrings() {
+    public void reloadTranslationKeysAndStrings() {
         keys.clear();
         strings.clear();
-        loadStrings();
+        loadTranslationKeysAndStrings();
     }
 
-    /**
-     * Method to check whether or not a language ID is supported.
-     *
-     */
     public boolean isLanguageIDSupported(String ID) {
         return supportedLanguageIDs.contains(ID);
     }

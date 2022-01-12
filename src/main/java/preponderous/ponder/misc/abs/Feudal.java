@@ -25,5 +25,4 @@ public interface Feudal {
     void addAttemptedVassalization(String name);
     boolean hasBeenOfferedVassalization(String name);
     void removeAttemptedVassalization(String name);
-
 }

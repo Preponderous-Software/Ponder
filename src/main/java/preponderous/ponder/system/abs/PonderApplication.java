@@ -13,7 +13,6 @@ public abstract class PonderApplication {
     private String description;
 
     /**
-     * Initializes the application.
      * @param name The name of the application.
      * @param description The description of the application.
      */
@@ -42,7 +41,6 @@ public abstract class PonderApplication {
     public abstract boolean onCommand(CommandSender sender, String label, String[] args);
 
     /**
-     * This can be used to get the name of the application.
      * @return The name of the application.
      */
     public String getName() {
@@ -50,7 +48,6 @@ public abstract class PonderApplication {
     }
 
     /**
-     * Sets the name of the application.
      * @param name The new name of the application.
      */
     public void setName(String name) {
@@ -58,7 +55,6 @@ public abstract class PonderApplication {
     }
 
     /**
-     * This can be used to get the description of the application.
      * @return The description of the application.
      */
     public String getDescription() {
@@ -66,7 +62,6 @@ public abstract class PonderApplication {
     }
 
     /**
-     * Sets the description of the application.
      * @param description The new description of the application.
      */
     public void setDescription(String description) {

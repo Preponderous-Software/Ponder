@@ -19,7 +19,6 @@ public class Ponder {
     }
 
     /**
-     * Method to get the version of the library.
      *
      * @return The version of the library as a {@link String}.
      */
@@ -28,7 +27,6 @@ public class Ponder {
     }
 
     /**
-     * Method to check whether the internal debug flag for the library is enabled.
      *
      * @return Boolean signifying whether the debug flag is enabled.
      */
@@ -37,7 +35,6 @@ public class Ponder {
     }
 
     /**
-     * Method to set the internal debug flag for the class.
      *
      * @param b boolean to set.
      */
