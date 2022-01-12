@@ -10,18 +10,12 @@ import java.util.ArrayList;
  * @author Daniel McCoy Stephenson
  */
 public interface Feudal {
-
-    // type
     boolean isVassal(String name);
     boolean isLiege();
-
-    // liege
     void setLiege(String newLiege);
     String getLiege();
     boolean hasLiege();
     boolean isLiege(String name);
-
-    // vassalage
     void addVassal(String name);
     void removeVassal(String name);
     void clearVassals();
