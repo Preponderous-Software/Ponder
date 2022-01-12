@@ -14,6 +14,8 @@ import java.lang.reflect.Method;
 /**
  * @author Callum Johnson
  * @since 23/09/2021 - 22:39
+ *
+ * @author Daniel McCoy Stephenson
  */
 public class ColorConverter {
 
