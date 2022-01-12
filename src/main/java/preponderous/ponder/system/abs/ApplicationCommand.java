@@ -10,6 +10,8 @@ import java.util.Arrays;
 /**
  * @author Daniel McCoy Stephenson
  * @since January 5th, 2022
+ *
+ * @author Callum Johnson
  */
 public abstract class ApplicationCommand {
     private ArrayList<String> names = null;
@@ -20,18 +22,29 @@ public abstract class ApplicationCommand {
         this.permissions = permissions;
     }
 
+    /**
+     * Method to execute the command with no arguments.
+     * @param sender The sender of the command.
+     * @return Whether the execution of the command was successful.
+     */
     public abstract boolean execute(CommandSender sender);
 
+    /**
+     * Method to execute the command with arguments.
+     * @param sender The sender of the command.
+     * @param args The arguments of the command.
+     * @return Whether the execution of the command was successful.
+     */
     public abstract boolean execute(CommandSender sender, String[] args);
 
     /**
-     * Method to drop the first argument from an Array of Strings.
+     * Method to send a message to a command sender if there are arguments.
      *
      * @author Daniel McCoy Stephenson
      * @since 10/12/2021
-     * @param message to send.
-     * @param args to check.
-     * @param sender to send message to..
+     * @param message The message to send.
+     * @param args The arguments to check.
+     * @param sender The sender of the command that we will be sending the message to.
      * @return Boolean signifying whether there were no arguments.
      */
     public boolean sendMessageIfNoArguments(String message, String[] args, CommandSender sender) {
@@ -75,10 +88,18 @@ public abstract class ApplicationCommand {
         );
     }
 
+    /**
+     * This can be used to access the names of the command.
+     * @return A list of the names of the command.
+     */
     public ArrayList<String> getNames() {
         return names;
     }
 
+    /**
+     *
+     * @return
+     */
     public ArrayList<String> getPermissions() {
         return permissions;
     }
