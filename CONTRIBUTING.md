@@ -1,3 +1,8 @@
+# Annotations & JavaDocs
+- When you alter a class, please add an @author annotation to the class.
+- Adding @author annotations to methods is optional.
+- Adding JavaDocs is optional.
+
 # How can I help?
 
 ## Internal Contributors
