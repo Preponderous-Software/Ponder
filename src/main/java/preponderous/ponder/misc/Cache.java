@@ -4,6 +4,8 @@
  */
 package preponderous.ponder.misc;
 
+import preponderous.ponder.misc.abs.Cacheable;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 
