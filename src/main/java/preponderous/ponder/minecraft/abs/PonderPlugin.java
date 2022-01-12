@@ -11,7 +11,7 @@ import preponderous.ponder.minecraft.spigot.PonderMC;
  * @author Daniel McCoy Stephenson
  */
 public abstract class PonderPlugin extends JavaPlugin {
-    private PonderMC ponder = new PonderMC(this);
+    private final PonderMC ponder = new PonderMC(this);
 
     /**
      * This can be used to get the managed instance of Ponder.

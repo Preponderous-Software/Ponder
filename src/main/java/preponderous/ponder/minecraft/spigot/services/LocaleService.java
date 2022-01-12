@@ -20,12 +20,12 @@ import java.util.List;
  */
 public class LocaleService {
 
-    private PonderMC ponder;
+    private final PonderMC ponder;
 
     private ArrayList<String> supportedLanguageIDs;
 
-    private ArrayList<String> keys;
-    private HashMap<String, String> strings;
+    private final ArrayList<String> keys;
+    private final HashMap<String, String> strings;
 
     private String languageFolderPath;
     private String localizationFileName;
@@ -89,7 +89,7 @@ public class LocaleService {
             loadFromResource();
             if (ponder.isDebugEnabled()) { System.out.println("DEBUG: Loaded from resource!"); }
         }
-        if (ponder.isDebugEnabled()) { System.out.println(String.format(getText("KeysLoaded"), keys.size())); }
+        if (ponder.isDebugEnabled()) { System.out.printf((getText("KeysLoaded")) + "%n", keys.size()); }
     }
 
     /**
@@ -111,14 +111,14 @@ public class LocaleService {
     }
 
     public String getSupportedLanguageIDsSeparatedByCommas() {
-        String IDs = "";
+        StringBuilder IDs = new StringBuilder();
         for (int i = 0; i < supportedLanguageIDs.size(); i++) {
-            IDs = IDs + supportedLanguageIDs.get(i);
+            IDs.append(supportedLanguageIDs.get(i));
             if (i != supportedLanguageIDs.size() - 1) {
-                IDs = IDs + ", ";
+                IDs.append(", ");
             }
         }
-        return IDs;
+        return IDs.toString();
     }
 
     /**
@@ -239,8 +239,8 @@ public class LocaleService {
      *
      */
     public Pair<String, String> getPairFromLine(String line) {
-        String key = "";
-        String value = "";
+        String key;
+        String value;
 
         int tabIndex = getIndexOfTab(line);
 

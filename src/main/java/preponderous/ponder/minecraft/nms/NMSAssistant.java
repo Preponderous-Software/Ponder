@@ -7,6 +7,8 @@ package preponderous.ponder.minecraft.nms;
 /**
  * @author Callum Johnson
  * @since 11/12/2021 - 22:45
+ *
+ * @author Daniel McCoy Stephenson
  */
 public class NMSAssistant {
 
@@ -55,7 +57,7 @@ public class NMSAssistant {
      * @param version to check against.
      * @return {@code true} if it isn't.
      */
-    public boolean isntVersion(int version) {
+    public boolean isNotVersion(int version) {
         return getNMSVersion().getMinor() != version;
     }
 

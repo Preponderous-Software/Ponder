@@ -14,8 +14,8 @@ import java.util.Arrays;
  * @author Daniel McCoy Stephenson
  */
 public abstract class AbstractPluginCommand {
-    private ArrayList<String> names;
-    private ArrayList<String> permissions;
+    private final ArrayList<String> names;
+    private final ArrayList<String> permissions;
 
     public AbstractPluginCommand(ArrayList<String> names, ArrayList<String> permissions) {
         this.names = names;

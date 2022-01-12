@@ -18,7 +18,7 @@ import java.util.UUID;
 public class UUIDChecker {
 
     /**
-     * Method to obtain the Name of a Player based on their UUID.
+     * Method to obtain the name of a player based on their UUID.
      * <p>
      *     This method utilises {@link Bukkit#getOfflinePlayer(UUID)} and {@link Bukkit#getPlayer(UUID)} to obtain the
      *     player object, to then uses {@link OfflinePlayer} and {@link Player} to obtain the <em>known</em> name for
