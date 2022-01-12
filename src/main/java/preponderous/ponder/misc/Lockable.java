@@ -10,10 +10,10 @@ import java.util.ArrayList;
  * @author Daniel McCoy Stephenson
  */
 public interface Lockable<T> {
-    void setOwner(T s);
+    void setOwner(T toSet);
     T getOwner();
-    void addToAccessList(T playerName);
-    void removeFromAccessList(T playerName);
-    boolean hasAccess(T playerName);
+    void addToAccessList(T toAdd);
+    void removeFromAccessList(T toRemove);
+    boolean hasAccess(T toCheck);
     ArrayList<T> getAccessList();
 }
