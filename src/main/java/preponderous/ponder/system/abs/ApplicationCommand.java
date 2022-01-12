@@ -14,8 +14,8 @@ import java.util.Arrays;
  * @author Callum Johnson
  */
 public abstract class ApplicationCommand {
-    private ArrayList<String> names = null;
-    private ArrayList<String> permissions = null;
+    private final ArrayList<String> names;
+    private final ArrayList<String> permissions;
 
     public ApplicationCommand(ArrayList<String> names, ArrayList<String> permissions) {
         this.names = names;

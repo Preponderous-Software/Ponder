@@ -13,8 +13,8 @@ import java.util.HashSet;
  * @author Daniel McCoy Stephenson
  */
 public class Cache {
-    private HashSet<Cacheable> cache = new HashSet<>();
-    private ArrayList<Cacheable> storage;
+    private final HashSet<Cacheable> cache = new HashSet<>();
+    private final ArrayList<Cacheable> storage;
 
     /**
      * Constructor to initialize the Cache.

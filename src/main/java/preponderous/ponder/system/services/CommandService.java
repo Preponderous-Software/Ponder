@@ -15,7 +15,7 @@ import java.util.HashSet;
  * @since January 5th, 2022
  */
 public class CommandService {
-    private HashSet<ApplicationCommand> commands;
+    private final HashSet<ApplicationCommand> commands;
     private final ArgumentParser parser = new ArgumentParser();
 
     /**

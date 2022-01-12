@@ -10,19 +10,18 @@ import java.util.ArrayList;
  * @author Daniel McCoy Stephenson
  */
 public class Group<T> {
-    protected String name = "defaultName";
-    protected String description = "defaultDescription";
+    protected String name;
+    protected String description;
     protected T owner;
     protected ArrayList<T> members = new ArrayList<>();
     protected ArrayList<T> officers = new ArrayList<>();
+    private final ArrayList<T> invited = new ArrayList<>();
 
     public Group(String name, String description, T owner) {
         this.name = name;
         this.description = description;
         this.owner = owner;
     }
-
-    private ArrayList<T> invited = new ArrayList<>();
 
     /**
      * Sets the name of the group.

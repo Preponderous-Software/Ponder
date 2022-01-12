@@ -18,17 +18,13 @@ import java.util.Set;
  * @author Daniel McCoy Stephenson
  */
 public class CommandService {
-
-    private PonderMC ponder;
-
     private ArrayList<AbstractPluginCommand> commands = new ArrayList<>();
-    private Set<String> coreCommands;
+    private final Set<String> coreCommands;
     private String notFoundMessage;
-    private ArgumentParser parser = new ArgumentParser();
-    private PermissionChecker permissionChecker = new PermissionChecker();
+    private final ArgumentParser parser = new ArgumentParser();
+    private final PermissionChecker permissionChecker = new PermissionChecker();
 
     public CommandService(PonderMC ponder) {
-        this.ponder = ponder;
         coreCommands = ponder.getPlugin().getDescription().getCommands().keySet();
     }
 

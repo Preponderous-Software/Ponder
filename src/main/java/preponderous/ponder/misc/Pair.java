@@ -7,7 +7,7 @@ package preponderous.ponder.misc;
 //
 
 /**
- * @source: https://stackoverflow.com/a/521235
+ * @source https://stackoverflow.com/a/521235
  *
  * @author Paul Brinkly
  * @author Dave Jarvis

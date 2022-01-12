@@ -159,15 +159,4 @@ public class ColorConverter {
         }
 
     }
-/*
-    public static void main(String[] args) {
-        System.out.println(attemptDecode("red", true)); // #FF0000 (Default Color)
-        System.out.println(attemptDecode("blue", true)); // #1569C7 (Default Color)
-        System.out.println(attemptDecode("purple", true)); // #FF00FF (Default Color)
-        System.out.println(attemptDecode("teal", true)); // null (Bukkit Color)
-        System.out.println(attemptDecode("black", true)); // #000000 (Default Color)
-        System.out.println(attemptDecode("orange", true)); // #ffc800 (AWT Color)
-        System.out.println(attemptDecode("gray", true)); // #B6B6B4 (Default Color)
-    }
-*/
 }

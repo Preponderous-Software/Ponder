@@ -11,7 +11,7 @@ import preponderous.ponder.minecraft.spigot.PonderMC;
  */
 public class Logger {
 
-    private PonderMC ponder;
+    private final PonderMC ponder;
 
     public Logger(PonderMC ponder) {
         this.ponder = ponder;

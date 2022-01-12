@@ -46,7 +46,6 @@ public class Messenger {
     }
 
     /**
-     * Checks whether a target player is within a certain distance of a player.
      * @param target The target player whose location will be used as the origin.
      * @param player The player whose location will be used as the target.
      * @param distance The distance to check.
@@ -59,7 +58,6 @@ public class Messenger {
     }
 
     /**
-     * Checks whether two locations are within a certain distance of each other.
      * @param targetLocation The location that will be used as the origin.
      * @param playerLocation The location that will be used as the target.
      * @param distance The distance to check.
@@ -70,7 +68,6 @@ public class Messenger {
     }
 
     /**
-     * Checks whether two players are in the same world.
      * @param firstPlayer The first player.
      * @param secondPlayer The second player.
      * @return Whether the two players are in the same world.
@@ -82,7 +79,6 @@ public class Messenger {
     }
 
     /**
-     * Checks whether two worlds are equal.
      * @param firstWorld The first world.
      * @param secondWorld The second world.
      * @return Whether the two world are equal.
