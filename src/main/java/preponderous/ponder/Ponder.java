@@ -11,23 +11,14 @@ package preponderous.ponder;
 public class Ponder {
     private boolean debugFlag = false;
 
-    /**
-     * @return The version of the library as a {@link String}.
-     */
     public String getVersion() {
         return "v0.14-alpha-2";
     }
 
-    /**
-     * @return Boolean signifying whether the debug flag is enabled.
-     */
     public boolean isDebugEnabled() {
         return debugFlag;
     }
 
-    /**
-     * @param b boolean to set.
-     */
     public void setDebugFlag(boolean b) {
         debugFlag = b;
     }

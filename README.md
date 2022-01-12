@@ -5,8 +5,17 @@ Ponder is a library that assists with the development of software applications a
 
 A list of features can be found [here](https://github.com/Preponderous-Software/Ponder/wiki/Features).
 
-## Installation
-For help with installation/configuration, check out [this page](https://github.com/Preponderous-Software/Ponder/wiki/Tutorial-0-(Setup)). Please keep in mind that while this API can be used, it is unstable and likely to change.
+## Projects
+A [list of projects](https://github.com/Preponderous-Software/Ponder/wiki/Projects) is available on the wiki.
+
+## Support
+You can find the support discord server [here](https://discord.gg/G6wQxfcBMt).
+
+### Experiencing a bug?
+Please fill out a bug report [here](https://github.com/Preponderous-Software/Ponder/issues?q=is%3Aissue+is%3Aopen+label%3Abug).
+
+## Installation/Configuration
+For help with installation/configuration, check out [this page](https://github.com/Preponderous-Software/Ponder/wiki/Tutorial-0-(Setup)). Please keep in mind that while this library can be used, it is unstable and likely to change.
 
 ## Usage
 - [Tutorials](https://github.com/Preponderous-Software/Ponder/wiki/List-of-Tutorials)
@@ -17,16 +26,7 @@ For help with installation/configuration, check out [this page](https://github.c
 An example of an application created with Ponder can be found [here](https://github.com/Preponderous-Software/ExamplePonderApplication).
 
 ## Example Spigot Plugin
-An example of a Spigot plugin created with Ponder can be found [here](https://github.com/Preponderous-Software/ExamplePonderPlugin).
-
-## Projects
-- [List of Projects](https://github.com/Preponderous-Software/Ponder/wiki/Projects)
-
-## Support
-You can find the support discord server [here](https://discord.gg/G6wQxfcBMt).
-
-### Experiencing a bug?
-Please fill out a bug report [here](https://github.com/Preponderous-Software/Ponder/issues?q=is%3Aissue+is%3Aopen+label%3Abug).
+An example of a Minecraft plugin created with Ponder can be found [here](https://github.com/Preponderous-Software/ExamplePonderPlugin).
 
 ## Roadmap
 - [Known Bugs](https://github.com/Preponderous-Software/Ponder/issues?q=is%3Aopen+is%3Aissue+label%3Abug)
@@ -40,14 +40,11 @@ Please fill out a bug report [here](https://github.com/Preponderous-Software/Pon
 Name | Main Contributions
 ------------ | -------------
 [Daniel Stephenson](https://github.com/dmccoystephenson) | Creator
-Callum | Wrote the Color Converter that is used in this project and condensed the code of several tools.
-[Pasarus](https://github.com/Pasarus) | Wrote code that is used in the JsonWriterReader and the UUIDChecker classes.
-Caibinus | Wrote code that is used in the BlockChecker class.
+Callum | wrote some methods that are used in AbstractPluginCommand and ApplicationCommand; contributed NMSAssistant and NMSVersion; improved ColorChecker; contributed ColorConverter; improved EventHandlerRegistry; improved UUIDChecker; improved ArgumentParser; contributed ConfigurationFile
+[Pasarus](https://github.com/Pasarus) | wrote code that is used in JsonWriterReader and UUIDChecker; contributed Pair
+Caibinus | wrote code that is used in BlockChecker
 
 Have you made a contribution and don't see yourself above? Please add your name and open a PR!
-
-## License
-MIT
 
 ## Project Status
 This project is in active development.

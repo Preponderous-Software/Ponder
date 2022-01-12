@@ -9,8 +9,7 @@ package preponderous.ponder.misc;
 /**
  * @source https://stackoverflow.com/a/521235
  *
- * @author Paul Brinkly
- * @author Dave Jarvis
+ * @author Pasarus
  * @author Daniel McCoy Stephenson
  *
  * @param <L> The type of the left object of the pair.
