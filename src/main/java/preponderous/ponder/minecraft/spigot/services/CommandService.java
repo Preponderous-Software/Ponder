@@ -28,20 +28,12 @@ public class CommandService {
         coreCommands = ponder.getPlugin().getDescription().getCommands().keySet();
     }
 
-    /**
-     * Method to initialize the command service.
-     *
-     */
     public void initialize(ArrayList<AbstractPluginCommand> commands, String notFoundMessage) {
         this.commands = commands;
         this.notFoundMessage = notFoundMessage;
     }
 
-    /**
-     * Method to interpret and execute a command.
-     *
-     */
-    public boolean interpretCommand(CommandSender sender, String label, String[] args) {
+    public boolean interpretAndExecuteCommand(CommandSender sender, String label, String[] args) {
         if (!coreCommands.contains(label)) {
             return false;
         }
@@ -70,5 +62,4 @@ public class CommandService {
         sender.sendMessage(ChatColor.RED + notFoundMessage);
         return false;
     }
-
 }

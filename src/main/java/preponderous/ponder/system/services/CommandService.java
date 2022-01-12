@@ -19,7 +19,6 @@ public class CommandService {
     private final ArgumentParser parser = new ArgumentParser();
 
     /**
-     * Constructor to initialize the service.
      * @param commands The commands to instantiate the service with.
      */
     public CommandService(HashSet<ApplicationCommand> commands) {
@@ -27,15 +26,14 @@ public class CommandService {
     }
 
     /**
-     * Method to interpret and execute a command.
      * @param sender The sender of the command.
      * @param label The label of the command.
      * @param args The arguments of the command.
      */
-    public boolean interpretCommand(CommandSender sender, String label, String[] args) {
+    public boolean interpretAndExecuteCommand(CommandSender sender, String label, String[] args) {
         for (ApplicationCommand command : commands) {
             if (commandCanBeInvokedWithLabel(command, label)) {
-                return invokeCommand(sender, command, args);
+                return executeCommand(sender, command, args);
             }
         }
         sender.sendMessage("That command wasn't found.");
@@ -43,7 +41,6 @@ public class CommandService {
     }
 
     /**
-     * Checks whether a command can be invoked with a label.
      * @param command The command to check.
      * @param label The label to use to check.
      * @return Whether the command can be invoked with the passed label.
@@ -53,13 +50,12 @@ public class CommandService {
     }
 
     /**
-     * Invokes a passed command.
      * @param sender The sender of the command.
      * @param command The command to invoke.
      * @param args The arguments of the command.
      * @return Whether the invocation of the command was successful.
      */
-    private boolean invokeCommand(CommandSender sender, ApplicationCommand command, String[] args) {
+    private boolean executeCommand(CommandSender sender, ApplicationCommand command, String[] args) {
         if (args.length == 0) {
             return command.execute(sender);
         }

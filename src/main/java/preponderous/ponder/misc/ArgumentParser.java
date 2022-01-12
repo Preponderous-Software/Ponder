@@ -64,5 +64,4 @@ public class ArgumentParser {
         System.out.println("To utilise the Argument Parser Test Harness, provide some Program Arguments!");
         System.out.println(new ArgumentParser().getArgumentsInsideDoubleQuotes(args));
     }
-
 }

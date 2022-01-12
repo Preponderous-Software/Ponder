@@ -69,5 +69,4 @@ public class UUIDChecker {
         final String name = offlinePlayer.getName();
         return name == null || !offlinePlayer.hasPlayedBefore() ? null : offlinePlayer.getUniqueId();
     }
-
 }

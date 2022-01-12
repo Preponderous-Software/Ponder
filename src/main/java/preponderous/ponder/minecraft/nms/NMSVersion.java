@@ -11,6 +11,8 @@ import java.util.Objects;
 /**
  * @author Callum Johnson
  * @since 11/12/2021 - 22:47
+ *
+ * @author Daniel McCoy Stephenson
  */
 public class NMSVersion {
 
@@ -51,8 +53,6 @@ public class NMSVersion {
         revision = Integer.parseInt(versionDetails[2].replace("R", "").trim());
     }
 
-    // Getters
-
     public int getMajor() {
         return major;
     }
@@ -65,11 +65,8 @@ public class NMSVersion {
         return revision;
     }
 
-    // Method Overriding
-
     @Override
     public String toString() {
-        // v1_18_R2
         return "v" + getMajor() + "_" + getMinor() + "_R" + getRevision();
     }
 
@@ -89,5 +86,4 @@ public class NMSVersion {
     public int hashCode() {
         return Objects.hash(major, minor, revision);
     }
-
 }

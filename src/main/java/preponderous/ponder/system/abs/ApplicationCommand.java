@@ -88,18 +88,10 @@ public abstract class ApplicationCommand {
         );
     }
 
-    /**
-     * This can be used to access the names of the command.
-     * @return A list of the names of the command.
-     */
     public ArrayList<String> getNames() {
         return names;
     }
 
-    /**
-     *
-     * @return
-     */
     public ArrayList<String> getPermissions() {
         return permissions;
     }

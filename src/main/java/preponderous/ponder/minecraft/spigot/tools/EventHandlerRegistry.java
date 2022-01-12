@@ -38,5 +38,4 @@ public class EventHandlerRegistry {
         }
         listeners.forEach(listener -> manager.registerEvents(listener, plugin));
     }
-
 }

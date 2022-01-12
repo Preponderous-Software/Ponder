@@ -12,7 +12,6 @@ public class Point2D {
     private double y;
 
     /**
-     * This constructor can be utilized to initialize the point.
      * @param x The x coordinate of the point.
      * @param y The y coordinate of the point.
      */
@@ -22,7 +21,6 @@ public class Point2D {
     }
 
     /**
-     * This can be utilized to get the x coordinate of the point.
      * @return The x coordinate of the point.
      */
     public double getX() {
@@ -30,7 +28,6 @@ public class Point2D {
     }
 
     /**
-     * Sets the x coordinate of the point.
      * @param x The new x coordinate of the point.
      */
     public void setX(double x) {
@@ -38,7 +35,6 @@ public class Point2D {
     }
 
     /**
-     * This can be utilized to get the y coordinate of the point.
      * @return The y coordinate of the point.
      */
     public double getY() {
@@ -46,7 +42,6 @@ public class Point2D {
     }
 
     /**
-     * Sets the y coordinate of the point.
      * @param y The new y coordinate of the point.
      */
     public void setY(double y) {

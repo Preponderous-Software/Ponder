@@ -13,7 +13,6 @@ import preponderous.ponder.math.graphics.Point3D;
 public abstract class AbstractDistanceCalculator {
 
     /**
-     * This can be utilized to get the distance between a pair of two-dimensional points.
      * @param firstPoint The first two-dimensional point.
      * @param secondPoint The second two-dimensional point.
      * @return The distance between the two points as a double.
@@ -21,7 +20,6 @@ public abstract class AbstractDistanceCalculator {
     public abstract double getDistanceBetweenPoints(Point2D firstPoint, Point2D secondPoint);
 
     /**
-     * This can be utilized to get the distance between a pair of three-dimensional points.
      * @param firstPoint The first three-dimensional point.
      * @param secondPoint The second three-dimensional point.
      * @return The distance between the two points as a double.
