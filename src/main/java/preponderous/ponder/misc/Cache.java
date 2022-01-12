@@ -11,7 +11,6 @@ import java.util.HashSet;
  * @author Daniel McCoy Stephenson
  */
 public class Cache {
-
     private HashSet<Cacheable> cache = new HashSet<>();
     private ArrayList<Cacheable> storage;
 
@@ -58,15 +57,19 @@ public class Cache {
      * @param key   Object to use as a key when searching.
      */
     private Cacheable checkStorage(Object key) {
-        Cacheable object = null;
-        for (Cacheable o : storage) {
-            if (o.getKey().equals(key)) {
-                object = o;
+        Cacheable objectToReturn = null;
+        for (Cacheable object : storage) {
+            if (object.getKey().equals(key)) {
+                objectToReturn = object;
             }
         }
+        addToCache(objectToReturn);
+        return objectToReturn;
+    }
+
+    private void addToCache(Cacheable object) {
         if (object != null) {
             cache.add(object);
         }
-        return object;
     }
 }

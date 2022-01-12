@@ -26,6 +26,8 @@ import java.util.List;
  * </p>
  * @author Callum Johnson
  * @since 14/06/2021 - 09:34
+ *
+ * @author Daniel McCoy Stephenson
  */
 public class ConfigurationFile {
 
@@ -75,7 +77,7 @@ public class ConfigurationFile {
     }
 
     /**
-     * Constructor to generate a ConfigurationFile and initialize it with a plugin.
+     * Constructor to generate a ConfigurationFile and initialize it with a java plugin.
      *
      * @author Daniel McCoy Stephenson
      * @since 10/27/2021
@@ -145,34 +147,6 @@ public class ConfigurationFile {
         }
         loadConfiguration();
     }
-
-/*
-
-    /**
-     * Method to load the ConfigurationFile into the {@link #yml} variable.
-     * <p>
-     *     This method attempts to use StableAPI {@link FileUtils#readFileToString(File, Charset)}, if this fails
-     *     the method will then attempt to use UnstableAPI {@link Files#toString(File, Charset)}.
-     *     <br>If both methods fail, both Exceptions are printed to the console window.
-     * </p>
-     */
-/*    @SuppressWarnings("UnstableApiUsage")
-    private void loadConfiguration() {
-        yml = new YamlConfiguration();
-        try {
-            yml.loadFromString(FileUtils.readFileToString(file, StandardCharsets.UTF_8));
-        } catch (InvalidConfigurationException | IOException e) {
-            getPlugin().warn("Failed to load the ConfigurationFile '" + name + "', defaulting to UnstableAPI.");
-            try {
-                yml.loadFromString(Files.toString(file, StandardCharsets.UTF_8));
-            } catch (InvalidConfigurationException | IOException ex) {
-                getPlugin().exception(e, "Failed to load ConfigurationFile with StableAPI.");
-                getPlugin().exception(ex, "Failed to load ConfigurationFile with UnstableAPI.");
-            }
-        }
-    }
-
-*/
 
     /**
      * Method to load the ConfigurationFile into the {@link #yml} variable.

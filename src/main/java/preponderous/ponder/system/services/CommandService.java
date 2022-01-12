@@ -28,7 +28,9 @@ public class CommandService {
 
     /**
      * Method to interpret and execute a command.
-     *
+     * @param sender The sender of the command.
+     * @param label The label of the command.
+     * @param args The arguments of the command.
      */
     public boolean interpretCommand(CommandSender sender, String label, String[] args) {
         for (ApplicationCommand command : commands) {
