@@ -75,8 +75,12 @@ public class NMSVersion {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         NMSVersion that = (NMSVersion) o;
         return major == that.major && minor == that.minor && revision == that.revision;
     }

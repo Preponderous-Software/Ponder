@@ -69,7 +69,7 @@ public abstract class AbstractPluginCommand {
     public int getIntSafe(String line, int orElse) {
         try {
             return Integer.parseInt(line);
-        } catch (Exception ex) {
+        } catch (Exception e) {
             return orElse;
         }
     }

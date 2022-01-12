@@ -11,7 +11,7 @@ import java.util.Random;
  * @since January 7th, 2022
  */
 public class RandomNumberGenerator {
-    Random random = new Random();
+    private Random random = new Random();
 
     /**
      * This can be utilized to generated a random integer up to a bound.

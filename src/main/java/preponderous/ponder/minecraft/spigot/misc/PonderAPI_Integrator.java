@@ -12,7 +12,6 @@ import preponderous.ponder.minecraft.spigot.PonderMC;
  * @deprecated
  */
 public class PonderAPI_Integrator {
-
     private PonderMC ponder = null;
 
     /**
@@ -31,5 +30,4 @@ public class PonderAPI_Integrator {
     public PonderMC getAPI() {
         return ponder;
     }
-
 }
