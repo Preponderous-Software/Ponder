@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>preponderous</groupId>
-    <artifactId>ponder</artifactId>
-    <version>v0.14-alpha-3</version>
+    <artifactId>Ponder</artifactId>
+    <version>v0.14</version>
     <packaging>jar</packaging>
 
     <name>Ponder</name>
