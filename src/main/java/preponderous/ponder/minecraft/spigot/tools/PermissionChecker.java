@@ -15,34 +15,47 @@ import java.util.ArrayList;
 public class PermissionChecker {
 
     /**
-     * Method to check whether or not a player has a permission.
-     *
-     * @param sender to verify.
-     * @param permission to check.
-     * @return A {@link boolean} signifying whether or not the player has the specified permission.
+     * @param sender The sender of the command.
+     * @param permission The permission to check.
+     * @return Whether the sender has the specified permission.
      */
-    public boolean checkPermission(CommandSender sender, String permission) {
-        if (!sender.hasPermission(permission)) {
-            sender.sendMessage(ChatColor.RED + "In order to use this command, you need the following permission: '" + permission + "'");
+    public boolean checkPermissionAndInformSenderIfTheyDoNotHavePermission(CommandSender sender, String permission) {
+        if (checkPermission(sender, permission)) {
+            informSenderTheyDoNotHavePermission(sender, permission);
             return false;
         }
         return true;
     }
 
     /**
-     * Method to check whether or not a player has a permission.
-     *
-     * @param sender to verify.
-     * @param permissions to check.
-     * @return A {@link boolean} signifying whether or not the player has the specified permission.
+     * @param sender The sender of the command.
+     * @param permissions The permission to check.
+     * @return Whether the sender has one of the specified permissions.
      */
     public boolean checkPermission(CommandSender sender, ArrayList<String> permissions) {
         for (String permission : permissions) {
-            if (sender.hasPermission(permission)) {
+            if (checkPermission(sender, permission)) {
                 return true;
             }
         }
-        sender.sendMessage(ChatColor.RED + "In order to use this command, you need one of the the following permissions: " + permissions + "");
+        informSenderTheyDoNotHaveOneOfTheRequiredPermissions(sender, permissions);
         return false;
+    }
+
+    /**
+     * @param sender The sender of the command.
+     * @param permission The permission to check.
+     * @return Whether the sender has the specified permission.
+     */
+    public boolean checkPermission(CommandSender sender, String permission) {
+        return sender.hasPermission(permission);
+    }
+
+    private void informSenderTheyDoNotHavePermission(CommandSender sender, String permission) {
+        sender.sendMessage(ChatColor.RED + "In order to use this command, you need the following permission: '" + permission + "'");
+    }
+
+    private void informSenderTheyDoNotHaveOneOfTheRequiredPermissions(CommandSender sender, ArrayList<String> permissions) {
+        sender.sendMessage(ChatColor.RED + "In order to use this command, you need one of the following permission: '" + permissions + "'");
     }
 }
