@@ -2,7 +2,7 @@
   Copyright (c) 2022 Preponderous Software
   MIT License
  */
-package preponderous.ponder.minecraft.abs;
+package preponderous.ponder.minecraft.bukkit.abs;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
