@@ -19,7 +19,6 @@ import java.util.List;
  * @author Daniel McCoy Stephenson
  */
 public class LocaleService {
-
     private final PonderMC ponder;
 
     private ArrayList<String> supportedLanguageIDs;
