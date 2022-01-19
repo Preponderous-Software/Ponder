@@ -10,7 +10,7 @@ import preponderous.ponder.math.graphics.Point3D;
 /**
  * @author Daniel McCoy Stephenson
  */
-public abstract class AbstractDistanceCalculator {
+public abstract class DistanceCalculator {
 
     /**
      * @param firstPoint The first two-dimensional point.
