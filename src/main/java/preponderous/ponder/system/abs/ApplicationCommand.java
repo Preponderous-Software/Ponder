@@ -69,7 +69,8 @@ public abstract class ApplicationCommand {
     public int getIntSafe(String line, int orElse) {
         try {
             return Integer.parseInt(line);
-        } catch (Exception ex) {
+        }
+        catch (Exception ex) {
             return orElse;
         }
     }
