@@ -2,12 +2,12 @@
   Copyright (c) 2022 Preponderous Software
   MIT License
  */
-package preponderous.ponder.minecraft.spigot;
+package preponderous.ponder.minecraft.bukkit;
 
 import org.bukkit.plugin.java.JavaPlugin;
 import preponderous.ponder.Ponder;
-import preponderous.ponder.minecraft.spigot.services.CommandService;
-import preponderous.ponder.minecraft.spigot.services.LocaleService;
+import preponderous.ponder.minecraft.bukkit.services.CommandService;
+import preponderous.ponder.minecraft.bukkit.services.LocaleService;
 
 /**
  * @author Daniel McCoy Stephenson

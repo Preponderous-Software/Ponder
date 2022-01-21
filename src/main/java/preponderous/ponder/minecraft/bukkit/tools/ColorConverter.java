@@ -2,7 +2,7 @@
   Copyright (c) 2022 Preponderous Software
   MIT License
  */
-package preponderous.ponder.minecraft.spigot.tools;
+package preponderous.ponder.minecraft.bukkit.tools;
 
 import org.bukkit.Color;
 import org.jetbrains.annotations.NotNull;

@@ -2,9 +2,9 @@
   Copyright (c) 2022 Preponderous Software
   MIT License
  */
-package preponderous.ponder.minecraft.spigot.tools;
+package preponderous.ponder.minecraft.bukkit.utils;
 
-import preponderous.ponder.minecraft.spigot.PonderMC;
+import preponderous.ponder.minecraft.bukkit.PonderMC;
 
 /**
  * @author Daniel McCoy Stephenson

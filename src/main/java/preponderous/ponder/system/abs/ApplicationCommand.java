@@ -4,6 +4,8 @@
  */
 package preponderous.ponder.system.abs;
 
+import preponderous.ponder.misc.ArgumentParser;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -67,7 +69,8 @@ public abstract class ApplicationCommand {
     public int getIntSafe(String line, int orElse) {
         try {
             return Integer.parseInt(line);
-        } catch (Exception ex) {
+        }
+        catch (Exception ex) {
             return orElse;
         }
     }
@@ -94,5 +97,14 @@ public abstract class ApplicationCommand {
 
     public ArrayList<String> getPermissions() {
         return permissions;
+    }
+
+    public ArrayList<String> extractArgumentsInsideDoubleQuotes(String[] args) throws Exception {
+        ArgumentParser argumentParser = new ArgumentParser();
+        ArrayList<String> doubleQuoteArgs = argumentParser.getArgumentsInsideDoubleQuotes(args);
+        if (doubleQuoteArgs.size() < 2) {
+            throw new Exception();
+        }
+        return doubleQuoteArgs;
     }
 }

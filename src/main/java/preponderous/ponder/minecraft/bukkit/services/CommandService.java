@@ -2,13 +2,13 @@
   Copyright (c) 2022 Preponderous Software
   MIT License
  */
-package preponderous.ponder.minecraft.spigot.services;
+package preponderous.ponder.minecraft.bukkit.services;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
-import preponderous.ponder.minecraft.abs.AbstractPluginCommand;
-import preponderous.ponder.minecraft.spigot.PonderMC;
-import preponderous.ponder.minecraft.spigot.tools.PermissionChecker;
+import preponderous.ponder.minecraft.bukkit.abs.AbstractPluginCommand;
+import preponderous.ponder.minecraft.bukkit.tools.PermissionChecker;
+import preponderous.ponder.minecraft.bukkit.PonderMC;
 import preponderous.ponder.misc.ArgumentParser;
 
 import java.util.ArrayList;

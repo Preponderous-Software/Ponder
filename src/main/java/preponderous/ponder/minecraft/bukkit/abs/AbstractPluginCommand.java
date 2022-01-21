@@ -2,10 +2,11 @@
   Copyright (c) 2022 Preponderous Software
   MIT License
  */
-package preponderous.ponder.minecraft.abs;
+package preponderous.ponder.minecraft.bukkit.abs;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
+import preponderous.ponder.misc.ArgumentParser;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -97,5 +98,14 @@ public abstract class AbstractPluginCommand {
      */
     public ArrayList<String> getPermissions() {
         return permissions;
+    }
+
+    public ArrayList<String> extractArgumentsInsideDoubleQuotes(String[] args) throws Exception {
+        ArgumentParser argumentParser = new ArgumentParser();
+        ArrayList<String> doubleQuoteArgs = argumentParser.getArgumentsInsideDoubleQuotes(args);
+        if (doubleQuoteArgs.size() < 2) {
+            throw new Exception();
+        }
+        return doubleQuoteArgs;
     }
 }

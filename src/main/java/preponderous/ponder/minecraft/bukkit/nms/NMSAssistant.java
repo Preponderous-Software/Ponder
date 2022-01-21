@@ -2,7 +2,7 @@
   Copyright (c) 2022 Preponderous Software
   MIT License
  */
-package preponderous.ponder.minecraft.nms;
+package preponderous.ponder.minecraft.bukkit.nms;
 
 /**
  * @author Callum Johnson
