@@ -15,7 +15,7 @@ For support, you can join our [support discord server](https://discord.gg/G6wQxf
 Please [fill out a bug report here](https://github.com/Preponderous-Software/Ponder/issues?q=is%3Aissue+is%3Aopen+label%3Abug).
 
 ## Installation/Configuration
-For help with installation/configuration, check out [this page](https://github.com/Preponderous-Software/Ponder/wiki/Tutorial-0-(Setup)). Please keep in mind that while this library can be used, it is unstable and likely to change.
+For help with installation/configuration, check out [this page](https://github.com/Preponderous-Software/Ponder/wiki/Setup-Tutorial-(Configuration)). Please keep in mind that while this library can be used, it is unstable and likely to change.
 
 ## Usage
 - [Tutorials](https://github.com/Preponderous-Software/Ponder/wiki/List-of-Tutorials)
