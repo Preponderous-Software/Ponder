@@ -20,7 +20,7 @@ public abstract class PonderBukkitPlugin extends JavaPlugin implements PonderPlu
     }
 
     @Override
-    public Ponder getPonder() {
+    public PonderMC getPonder() {
         return this.ponder;
     }
 }
