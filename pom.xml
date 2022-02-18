@@ -6,7 +6,7 @@
 
     <groupId>preponderous</groupId>
     <artifactId>Ponder</artifactId>
-    <version>v0.15-alpha-2</version>
+    <version>1.0</version>
     <packaging>jar</packaging>
 
     <name>Ponder</name>
