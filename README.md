@@ -19,8 +19,6 @@ For help with installation/configuration, check out [this page](https://github.c
 
 ## Usage
 - [Tutorials](https://github.com/Preponderous-Software/Ponder/wiki/List-of-Tutorials)
-- [User Guide](https://github.com/Preponderous-Software/Ponder/wiki/Guide) (coming soon)
-- [FAQ](https://github.com/Preponderous-Software/Ponder/wiki/FAQ) (coming soon)
 
 ## Example Application
 An example of an application created with Ponder can be found [here](https://github.com/Preponderous-Software/ExamplePonderApplication).
