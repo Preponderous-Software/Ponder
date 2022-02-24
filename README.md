@@ -41,6 +41,7 @@ Name | Main Contributions
 Callum | wrote some methods that are used in AbstractPluginCommand and ApplicationCommand; contributed NMSAssistant and NMSVersion; improved ColorChecker; contributed ColorConverter; improved EventHandlerRegistry; improved UUIDChecker; improved ArgumentParser; contributed ConfigurationFile
 [Pasarus](https://github.com/Pasarus) | wrote code that is used in JsonWriterReader and UUIDChecker; contributed Pair
 Caibinus | wrote code that is used in BlockChecker
+Deej | Set up the javadocs
 
 Have you made a contribution and don't see yourself above? Please add your name and open a PR!
 
