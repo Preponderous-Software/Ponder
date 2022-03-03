@@ -45,4 +45,24 @@ public class MaterialChecker {
         return material.name().contains("STONE");
     }
 
+    public boolean isAxe(@NotNull Material material) {
+        return material.name().contains("AXE");
+    }
+
+    public boolean isPickaxe(@NotNull Material material) {
+        return material.name().contains("PICKAXE");
+    }
+
+    public boolean isSword(@NotNull Material material) {
+        return material.name().contains("SWORD");
+    }
+
+    public boolean isShovel(@NotNull Material material) {
+        return material.name().contains("SHOVEL");
+    }
+
+    public boolean isHoe(@NotNull Material material) {
+        return material.name().contains("HOE");
+    }
+
 }
