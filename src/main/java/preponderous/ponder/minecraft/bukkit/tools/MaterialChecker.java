@@ -41,4 +41,8 @@ public class MaterialChecker {
         return material.name().contains("LOG");
     }
 
+    public boolean isStone(@NotNull Material material) {
+        return material.name().contains("STONE");
+    }
+
 }
