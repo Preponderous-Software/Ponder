@@ -42,6 +42,7 @@ Callum | wrote some methods that are used in AbstractPluginCommand and Applicati
 [Pasarus](https://github.com/Pasarus) | wrote code that is used in JsonWriterReader and UUIDChecker; contributed Pair
 Caibinus | wrote code that is used in BlockChecker
 Deej | Set up the javadocs
+VoChiDanh | Improved the BlockChecker and added the MaterialChecker
 
 Have you made a contribution and don't see yourself above? Please add your name and open a PR!
 
