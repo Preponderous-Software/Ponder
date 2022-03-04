@@ -7,6 +7,7 @@ package preponderous.ponder.minecraft.bukkit.tools;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.block.Chest;
+import org.jetbrains.annotations.NotNull;
 
 import static org.bukkit.Bukkit.getLogger;
 
@@ -21,8 +22,8 @@ public class BlockChecker {
      *
      * @return A {@link boolean} signifying whether or not the block is a chest.
      */
-    public boolean isChest(Block block) {
-        return block.getType() == Material.CHEST && block.getState() instanceof Chest;
+    public boolean isChest(@NotNull Block block) {
+        return block.getType().name().contains("CHEST") && block.getState() instanceof Chest;
     }
 
     /**
@@ -30,16 +31,8 @@ public class BlockChecker {
      *
      * @return A {@link boolean} signifying whether or not the block is a door.
      */
-    public boolean isDoor(Block block) {
-        return block.getType() == Material.ACACIA_DOOR ||
-                block.getType() == Material.BIRCH_DOOR ||
-                block.getType() == Material.DARK_OAK_DOOR ||
-                block.getType() == Material.IRON_DOOR ||
-                block.getType() == Material.JUNGLE_DOOR ||
-                block.getType() == Material.OAK_DOOR ||
-                block.getType() == Material.SPRUCE_DOOR ||
-                block.getType() == compatMaterial("CRIMSON_DOOR") ||
-                block.getType() == compatMaterial("WARPED_DOOR");
+    public boolean isDoor(@NotNull Block block) {
+        return block.getType().name().contains("DOOR");
     }
 
     /**
@@ -47,16 +40,8 @@ public class BlockChecker {
      *
      * @return A {@link boolean} signifying whether or not the block is a trapdoor.
      */
-    public boolean isTrapdoor(Block block) {
-        return block.getType() == Material.IRON_TRAPDOOR ||
-                block.getType() == Material.OAK_TRAPDOOR ||
-                block.getType() == Material.SPRUCE_TRAPDOOR ||
-                block.getType() == Material.BIRCH_TRAPDOOR ||
-                block.getType() == Material.JUNGLE_TRAPDOOR ||
-                block.getType() == Material.ACACIA_TRAPDOOR ||
-                block.getType() == Material.DARK_OAK_TRAPDOOR ||
-                block.getType() == compatMaterial("CRIMSON_TRAPDOOR") ||
-                block.getType() == compatMaterial("WARPED_TRAPDOOR");
+    public boolean isTrapdoor(@NotNull Block block) {
+        return block.getType().name().contains("TRAPDOOR");
     }
 
     /**
@@ -64,9 +49,8 @@ public class BlockChecker {
      *
      * @return A {@link boolean} signifying whether or not the block is a furnace.
      */
-    public boolean isFurnace(Block block) {
-        return block.getType() == Material.FURNACE ||
-                block.getType() == Material.BLAST_FURNACE;
+    public boolean isFurnace(@NotNull Block block) {
+        return block.getType().name().contains("FURNACE");
     }
 
     /**
@@ -74,10 +58,8 @@ public class BlockChecker {
      *
      * @return A {@link boolean} signifying whether or not the block is an anvil.
      */
-    public boolean isAnvil(Block block) {
-        return block.getType() == Material.ANVIL ||
-                block.getType() == Material.CHIPPED_ANVIL ||
-                block.getType() == Material.DAMAGED_ANVIL;
+    public boolean isAnvil(@NotNull Block block) {
+        return block.getType().name().contains("ANVIL");
     }
 
     /**
@@ -85,15 +67,8 @@ public class BlockChecker {
      *
      * @return A {@link boolean} signifying whether or not the block is a gate.
      */
-    public boolean isGate(Block block) {
-        return block.getType() == Material.OAK_FENCE_GATE ||
-                block.getType() == Material.SPRUCE_FENCE_GATE ||
-                block.getType() == Material.BIRCH_FENCE_GATE ||
-                block.getType() == Material.JUNGLE_FENCE_GATE ||
-                block.getType() == Material.ACACIA_FENCE_GATE ||
-                block.getType() == Material.DARK_OAK_FENCE_GATE ||
-                block.getType() == compatMaterial("CRIMSON_FENCE_GATE") ||
-                block.getType() == compatMaterial("WARPED_FENCE_GATE");
+    public boolean isGate(@NotNull Block block) {
+        return block.getType().name().contains("GATE");
     }
 
     /**
@@ -101,8 +76,8 @@ public class BlockChecker {
      *
      * @return A {@link boolean} signifying whether or not the block is an anvil.
      */
-    public boolean isBarrel(Block block) {
-        return block.getType() == Material.BARREL;
+    public boolean isBarrel(@NotNull Block block) {
+        return block.getType().name().contains("BARREL");
     }
 
     /**

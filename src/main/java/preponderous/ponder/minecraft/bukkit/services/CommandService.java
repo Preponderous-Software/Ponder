@@ -6,6 +6,7 @@ package preponderous.ponder.minecraft.bukkit.services;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
+import org.jetbrains.annotations.NotNull;
 import preponderous.ponder.minecraft.bukkit.abs.AbstractPluginCommand;
 import preponderous.ponder.minecraft.bukkit.tools.PermissionChecker;
 import preponderous.ponder.minecraft.bukkit.PonderMC;
@@ -24,7 +25,7 @@ public class CommandService {
     private final ArgumentParser parser = new ArgumentParser();
     private final PermissionChecker permissionChecker = new PermissionChecker();
 
-    public CommandService(PonderMC ponder) {
+    public CommandService(@NotNull PonderMC ponder) {
         coreCommands = ponder.getPlugin().getDescription().getCommands().keySet();
     }
 

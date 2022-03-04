@@ -12,7 +12,7 @@ public class Ponder {
     private boolean debugFlag = false;
 
     public String getVersion() {
-        return "v0.15-alpha-3";
+        return "v1.1-SNAPSHOT";
     }
 
     public boolean isDebugEnabled() {
