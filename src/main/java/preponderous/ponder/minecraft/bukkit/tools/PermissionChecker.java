@@ -7,7 +7,7 @@ package preponderous.ponder.minecraft.bukkit.tools;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 
-import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author Daniel McCoy Stephenson
@@ -32,7 +32,7 @@ public class PermissionChecker {
      * @param permissions The permission to check.
      * @return Whether the sender has one of the specified permissions.
      */
-    public boolean checkPermission(CommandSender sender, ArrayList<String> permissions) {
+    public boolean checkPermission(CommandSender sender, List<String> permissions) {
         for (String permission : permissions) {
             if (checkPermission(sender, permission)) {
                 return true;
@@ -55,7 +55,7 @@ public class PermissionChecker {
         sender.sendMessage(ChatColor.RED + "In order to use this command, you need the following permission: '" + permission + "'");
     }
 
-    private void informSenderTheyDoNotHaveOneOfTheRequiredPermissions(CommandSender sender, ArrayList<String> permissions) {
+    private void informSenderTheyDoNotHaveOneOfTheRequiredPermissions(CommandSender sender, List<String> permissions) {
         sender.sendMessage(ChatColor.RED + "In order to use this command, you need one of the following permission: '" + permissions + "'");
     }
 }

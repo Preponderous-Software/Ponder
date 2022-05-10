@@ -12,8 +12,9 @@ import com.google.gson.stream.JsonReader;
 import java.io.*;
 import java.lang.reflect.Type;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -27,7 +28,7 @@ public class JsonWriterReader {
     private final Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
     public JsonWriterReader() {
-        LIST_MAP_TYPE = new TypeToken<ArrayList<HashMap<String, String>>>(){}.getType();
+        LIST_MAP_TYPE = new TypeToken<List<Map<String, String>>>(){}.getType();
     }
 
     /**
@@ -69,19 +70,19 @@ public class JsonWriterReader {
      * Method to load data from a filename.
      *
      * @param filename to specify which file to load from.
-     * @return {@link ArrayList<HashMap<String, String>>} containing the data from the file.
+     * @return {@link List<Map<String, String>>} containing the data from the file.
      */
-    public ArrayList<HashMap<String, String>> loadDataFromFilename(String filename) {
+    public List<Map<String, String>> loadDataFromFilename(String filename) {
         try{
             return loadDataFromFileUsingGson(filename);
-        } catch (FileNotFoundException e) {
+        } catch (IOException e) {
             return new ArrayList<>();
         }
     }
 
-    private ArrayList<HashMap<String, String>> loadDataFromFileUsingGson(String filename) throws FileNotFoundException {
+    private List<Map<String, String>> loadDataFromFileUsingGson(String filename) throws IOException {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
-        JsonReader reader = new JsonReader(new InputStreamReader(new FileInputStream(filename), StandardCharsets.UTF_8));
+        JsonReader reader = new JsonReader(new InputStreamReader(Files.newInputStream(Paths.get(filename)), StandardCharsets.UTF_8));
         return gson.fromJson(reader, LIST_MAP_TYPE);
     }
 }

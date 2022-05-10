@@ -8,17 +8,17 @@ import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import preponderous.ponder.misc.ArgumentParser;
 
-import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * @author Daniel McCoy Stephenson
  */
 public abstract class AbstractPluginCommand {
-    private final ArrayList<String> names;
-    private final ArrayList<String> permissions;
+    private final List<String> names;
+    private final List<String> permissions;
 
-    public AbstractPluginCommand(ArrayList<String> names, ArrayList<String> permissions) {
+    public AbstractPluginCommand(List<String> names, List<String> permissions) {
         this.names = names;
         this.permissions = permissions;
     }
@@ -89,20 +89,20 @@ public abstract class AbstractPluginCommand {
     /**
      * @return A list of names of the command.
      */
-    public ArrayList<String> getNames() {
+    public List<String> getNames() {
         return names;
     }
 
     /**
      * @return A list of permissions of the command.
      */
-    public ArrayList<String> getPermissions() {
+    public List<String> getPermissions() {
         return permissions;
     }
 
-    public ArrayList<String> extractArgumentsInsideDoubleQuotes(String[] args) throws Exception {
+    public List<String> extractArgumentsInsideDoubleQuotes(String[] args) throws Exception {
         ArgumentParser argumentParser = new ArgumentParser();
-        ArrayList<String> doubleQuoteArgs = argumentParser.getArgumentsInsideDoubleQuotes(args);
+        List<String> doubleQuoteArgs = argumentParser.getArgumentsInsideDoubleQuotes(args);
         if (doubleQuoteArgs.size() < 2) {
             throw new Exception();
         }

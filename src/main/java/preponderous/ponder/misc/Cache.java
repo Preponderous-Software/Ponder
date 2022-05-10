@@ -8,20 +8,22 @@ import preponderous.ponder.misc.abs.Cacheable;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 /**
  * @author Daniel McCoy Stephenson
  */
 public class Cache {
-    private final HashSet<Cacheable> cache = new HashSet<>();
-    private final ArrayList<Cacheable> storage;
+    private final Set<Cacheable> cache = new HashSet<>();
+    private final List<Cacheable> storage;
 
     /**
      * Constructor to initialize the Cache.
      *
      * @param storage   {@link ArrayList} of {@link Cacheable} objects.
      */
-    public Cache(ArrayList<Cacheable> storage) {
+    public Cache(List<Cacheable> storage) {
         this.storage = storage;
     }
 

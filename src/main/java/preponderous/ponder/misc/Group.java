@@ -5,6 +5,7 @@
 package preponderous.ponder.misc;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author Daniel McCoy Stephenson
@@ -12,7 +13,7 @@ import java.util.ArrayList;
 public class Group<T> {
     protected String name;
     protected String description;
-    protected ArrayList<T> members = new ArrayList<>();
+    protected List<T> members = new ArrayList<>();
 
     public Group(String name, String description) {
         this.name = name;
@@ -80,7 +81,7 @@ public class Group<T> {
      * This can be utilized to access the list of members.
      * @return The list of members.
      */
-    public ArrayList<T> getMemberList() {
+    public List<T> getMemberList() {
         return members;
     }
 

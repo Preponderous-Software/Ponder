@@ -6,8 +6,8 @@ package preponderous.ponder.system.abs;
 
 import preponderous.ponder.misc.ArgumentParser;
 
-import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * @author Daniel McCoy Stephenson
@@ -16,10 +16,10 @@ import java.util.Arrays;
  * @author Callum Johnson
  */
 public abstract class ApplicationCommand {
-    private final ArrayList<String> names;
-    private final ArrayList<String> permissions;
+    private final List<String> names;
+    private final List<String> permissions;
 
-    public ApplicationCommand(ArrayList<String> names, ArrayList<String> permissions) {
+    public ApplicationCommand(List<String> names, List<String> permissions) {
         this.names = names;
         this.permissions = permissions;
     }
@@ -91,17 +91,17 @@ public abstract class ApplicationCommand {
         );
     }
 
-    public ArrayList<String> getNames() {
+    public List<String> getNames() {
         return names;
     }
 
-    public ArrayList<String> getPermissions() {
+    public List<String> getPermissions() {
         return permissions;
     }
 
-    public ArrayList<String> extractArgumentsInsideDoubleQuotes(String[] args) throws Exception {
+    public List<String> extractArgumentsInsideDoubleQuotes(String[] args) throws Exception {
         ArgumentParser argumentParser = new ArgumentParser();
-        ArrayList<String> doubleQuoteArgs = argumentParser.getArgumentsInsideDoubleQuotes(args);
+        List<String> doubleQuoteArgs = argumentParser.getArgumentsInsideDoubleQuotes(args);
         if (doubleQuoteArgs.size() < 2) {
             throw new Exception();
         }
