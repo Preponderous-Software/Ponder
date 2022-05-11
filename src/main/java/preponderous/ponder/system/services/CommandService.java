@@ -9,13 +9,14 @@ import preponderous.ponder.system.abs.ApplicationCommand;
 import preponderous.ponder.system.abs.CommandSender;
 
 import java.util.HashSet;
+import java.util.Set;
 
 /**
  * @author Daniel McCoy Stephenson
  * @since January 5th, 2022
  */
 public class CommandService {
-    private final HashSet<ApplicationCommand> commands;
+    private final Set<ApplicationCommand> commands;
     private final ArgumentParser argumentParser = new ArgumentParser();
 
     /**

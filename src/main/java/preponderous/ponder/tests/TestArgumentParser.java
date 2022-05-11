@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import preponderous.ponder.misc.ArgumentParser;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class TestArgumentParser {
 
@@ -24,7 +24,7 @@ public class TestArgumentParser {
         ArgumentParser argumentParser = new ArgumentParser();
 
         String[] args = {"command", "\"first", "argument\" \"the", "second", "argument\""};
-        ArrayList<String> doubleQuoteArgs = argumentParser.getArgumentsInsideDoubleQuotes(args);
+        List<String> doubleQuoteArgs = argumentParser.getArgumentsInsideDoubleQuotes(args);
 
         Assert.assertEquals(2, doubleQuoteArgs.size());
         Assert.assertEquals("first argument", doubleQuoteArgs.get(0));

@@ -14,13 +14,14 @@ import preponderous.ponder.minecraft.bukkit.PonderMC;
 import preponderous.ponder.misc.ArgumentParser;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 /**
  * @author Daniel McCoy Stephenson
  */
 public class CommandService {
-    private ArrayList<AbstractPluginCommand> commands = new ArrayList<>();
+    private List<AbstractPluginCommand> commands = new ArrayList<>();
     private final Set<String> coreCommands;
     private String notFoundMessage;
     private final ArgumentParser parser = new ArgumentParser();
@@ -38,7 +39,7 @@ public class CommandService {
         this(ponder.getPlugin());
     }
 
-    public void initialize(ArrayList<AbstractPluginCommand> commands, String notFoundMessage) {
+    public void initialize(List<AbstractPluginCommand> commands, String notFoundMessage) {
         this.commands = commands;
         this.notFoundMessage = notFoundMessage;
     }

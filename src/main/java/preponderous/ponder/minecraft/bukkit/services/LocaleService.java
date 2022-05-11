@@ -10,10 +10,7 @@ import preponderous.ponder.misc.Pair;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 /**
  * @author Daniel McCoy Stephenson
@@ -21,10 +18,10 @@ import java.util.List;
 public class LocaleService {
     private final PonderMC ponder;
 
-    private ArrayList<String> supportedLanguageIDs;
+    private List<String> supportedLanguageIDs;
 
-    private final ArrayList<String> keys;
-    private final HashMap<String, String> strings;
+    private final List<String> keys;
+    private final Map<String, String> strings;
 
     private String languageFolderPath;
     private String localizationFileName;
@@ -38,7 +35,7 @@ public class LocaleService {
         strings = new HashMap<>();
     }
 
-    public void initialize(ArrayList<String> supportedLanguageIDs, String pluginFolderPath, String pluginName, String defaultLanguageID) {
+    public void initialize(List<String> supportedLanguageIDs, String pluginFolderPath, String pluginName, String defaultLanguageID) {
         this.supportedLanguageIDs = supportedLanguageIDs;
         languageFolderPath = pluginFolderPath + pluginName + "/";
         localizationFileName = defaultLanguageID + ".tsv";

@@ -5,6 +5,7 @@
 package preponderous.ponder.misc;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -28,16 +29,16 @@ public class ArgumentParser {
 
     /**
      * @param args to compile and scan.
-     * @return {@link ArrayList} of {@link String} which were surrounded by " or Double-Quotes.
+     * @return {@link List} of {@link String} which were surrounded by " or Double-Quotes.
      * @throws IllegalArgumentException if the arguments given are invalid.
      */
-    public ArrayList<String> getArgumentsInsideDoubleQuotes(String[] args) {
+    public List<String> getArgumentsInsideDoubleQuotes(String[] args) {
         ensureArgumentsExist(args);
         return parseForArguments(args);
     }
 
-    private ArrayList<String> parseForArguments(String[] args) {
-        ArrayList<String> toReturn = new ArrayList<>();
+    private List<String> parseForArguments(String[] args) {
+        List<String> toReturn = new ArrayList<>();
         final String argumentString = String.join(" ", args);
         final Matcher matcher = Pattern.compile("\"[^\"]*\"").matcher(argumentString);
         while (matcher.find()) {
