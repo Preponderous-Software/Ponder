@@ -92,7 +92,7 @@ Callum | wrote some methods that are used in AbstractPluginCommand and Applicati
 Caibinus | wrote code that is used in BlockChecker
 Deej | Set up the javadocs
 VoChiDanh | Improved the BlockChecker and added the MaterialChecker
-alpyhen | Generified types of maps, lists and sets across the project
+alyphen | Generified types of maps, lists and sets across the project
 
 Have you made a contribution and don't see yourself above? Please add your name and open a PR!
 
