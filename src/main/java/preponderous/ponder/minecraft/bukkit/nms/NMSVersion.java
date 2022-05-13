@@ -11,8 +11,6 @@ import java.util.Objects;
 /**
  * @author Callum Johnson
  * @since 11/12/2021 - 22:47
- *
- * @author Daniel McCoy Stephenson
  */
 public class NMSVersion {
 

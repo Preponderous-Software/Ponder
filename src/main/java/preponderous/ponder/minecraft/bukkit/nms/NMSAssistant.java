@@ -7,8 +7,6 @@ package preponderous.ponder.minecraft.bukkit.nms;
 /**
  * @author Callum Johnson
  * @since 11/12/2021 - 22:45
- *
- * @author Daniel McCoy Stephenson
  */
 public class NMSAssistant {
 
@@ -26,6 +24,15 @@ public class NMSAssistant {
      * @return {@code true} if it is.
      */
     public boolean isVersionGreaterThan(int version) {
+        return getNMSVersion().getMinor() > version;
+    }
+
+    /**
+     * Method to determine if the server version is greater than or equal to the given version.
+     * @param version to test against.
+     * @return {@code true} if it is.
+     */
+    public boolean isVersionGreaterThanOrEqualTo(int version) {
         return getNMSVersion().getMinor() >= version;
     }
 
@@ -36,6 +43,15 @@ public class NMSAssistant {
      */
     public boolean isVersionLessThan(int version) {
         return getNMSVersion().getMinor() < version;
+    }
+
+    /**
+     * Method to determine if the server version is less than the given version.
+     * @param version to test against.
+     * @return {@code true} if it is.
+     */
+    public boolean isVersionLessThanOrEqualTo(int version) {
+        return getNMSVersion().getMinor() <= version;
     }
 
     /**
