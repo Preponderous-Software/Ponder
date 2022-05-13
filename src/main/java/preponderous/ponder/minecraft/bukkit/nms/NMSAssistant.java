@@ -26,7 +26,7 @@ public class NMSAssistant {
      * @return {@code true} if it is.
      */
     public boolean isVersionGreaterThan(int version) {
-        return getNMSVersion().getMinor() > version;
+        return getNMSVersion().getMinor() >= version;
     }
 
     /**
