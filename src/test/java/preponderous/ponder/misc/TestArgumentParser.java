@@ -1,10 +1,11 @@
-package preponderous.ponder.tests;
+package preponderous.ponder.misc;
 
-import org.junit.Assert;
-import org.junit.Test;
-import preponderous.ponder.misc.ArgumentParser;
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestArgumentParser {
 
@@ -16,7 +17,7 @@ public class TestArgumentParser {
         args = argumentParser.dropFirstArgument(args);
         String[] expected = {"test2", "test3"};
 
-        Assert.assertArrayEquals(expected, args);
+        assertArrayEquals(expected, args);
     }
 
     @Test
@@ -26,9 +27,9 @@ public class TestArgumentParser {
         String[] args = {"command", "\"first", "argument\" \"the", "second", "argument\""};
         List<String> doubleQuoteArgs = argumentParser.getArgumentsInsideDoubleQuotes(args);
 
-        Assert.assertEquals(2, doubleQuoteArgs.size());
-        Assert.assertEquals("first argument", doubleQuoteArgs.get(0));
-        Assert.assertEquals("the second argument", doubleQuoteArgs.get(1));
+        assertEquals(2, doubleQuoteArgs.size());
+        assertEquals("first argument", doubleQuoteArgs.get(0));
+        assertEquals("the second argument", doubleQuoteArgs.get(1));
 
     }
 }
