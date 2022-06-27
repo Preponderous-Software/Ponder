@@ -30,7 +30,7 @@ There are a number of issues open which pose a question. Feel free to contribute
 ## Unguided
 - If you find a flaw in the code or a bug, please [create an issue here](https://github.com/Preponderous-Software/Ponder/issues).
 - If you see a way for the code to be improved, feel free to [create an issue here](https://github.com/Preponderous-Software/Ponder/issues) and tell us about it.
-  - If you're feeling especially motivated, you're welcome to implement your idea(s) and [submit a PR here](https://github.com/Preponderous-Software/Ponder/pulls).
+    - If you're feeling especially motivated, you're welcome to implement your idea(s) and [submit a PR here](https://github.com/Preponderous-Software/Ponder/pulls).
 
 # Notes
-- Java 16 can be used to build the project.
+- Java 17 can be used to build the project.
