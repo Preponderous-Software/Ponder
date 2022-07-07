@@ -1,10 +1,7 @@
 # Ponder
 
 ## Description
-
-Ponder is a library that assists with the development of software applications and plugins through the use of provided
-tools, services and specifications. Functionality that can be used in many areas has been abstracted out into usable
-frameworks.
+This library contains a collection of modules that assist with the development of console applications and Minecraft plugins. 
 
 A [list of features](https://github.com/Preponderous-Software/Ponder/wiki/Features) is available on the wiki.
 
