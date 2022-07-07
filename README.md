@@ -26,10 +26,6 @@ For help with installation/configuration, check
 out [this page](https://github.com/Preponderous-Software/Ponder/wiki/Setup-Tutorial-(Configuration)). Please keep in
 mind that while this library can be used, it is unstable and likely to change.
 
-## Usage
-
-- [Tutorials](https://github.com/Preponderous-Software/Ponder/wiki/List-of-Tutorials)
-
 ## Example Application
 
 An example of an application created with Ponder can be
@@ -67,13 +63,9 @@ found [here](https://github.com/Preponderous-Software/ExamplePonderPlugin).
         <dependency>
             <groupId>com.github.Preponderous-Software</groupId>
             <artifactId>Ponder</artifactId>
-            <version>v1.0</version>
+            <version>1.1</version>
         </dependency>
 ```
-
-## Roadmap
-
-- [Known Bugs](https://github.com/Preponderous-Software/Ponder/issues?q=is%3Aopen+is%3Aissue+label%3Abug)
 
 ## Contributing
 
@@ -89,7 +81,7 @@ Callum | wrote some methods that are used in AbstractPluginCommand and Applicati
 Caibinus | wrote code that is used in BlockChecker
 Deej | Set up the javadocs
 VoChiDanh | Improved the BlockChecker and added the MaterialChecker
-alyphen | Generified types of maps, lists and sets across the project
+alyphen | Generified types of maps, lists and sets across the project, massively overhauled the project and split it into three modules
 
 Have you made a contribution and don't see yourself above? Please add your name and open a PR!
 
