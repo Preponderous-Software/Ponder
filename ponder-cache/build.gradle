@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'com.dansplugins'
-version = "2.0.0-SNAPSHOT"
+version = "2.0.0"
 
 def repoUsername = ""
 def repoPassword = ""
@@ -35,7 +35,7 @@ publishing {
                 username repoUsername
                 password repoPassword
             }
-            url: "http://repo.dansplugins.com/repository/maven-releases/"
+            url "https://repo.dansplugins.com/repository/maven-releases/"
         }
     }
     publications {
