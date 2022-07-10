@@ -1,9 +1,21 @@
 plugins {
     id 'java-library'
     id 'org.jetbrains.kotlin.jvm' version '1.7.0'
+    id 'maven-publish'
 }
 
+group = 'com.dansplugins'
 version = "2.0.0-SNAPSHOT"
+
+def repoUsername = ""
+def repoPassword = ""
+def propertiesFile = new File("repo.properties")
+if (propertiesFile.exists()) {
+    def properties = new Properties()
+    properties.load(new FileInputStream(propertiesFile))
+    repoUsername = properties.getProperty("repo-username")
+    repoPassword = properties.getProperty("repo-password")
+}
 
 repositories {
     mavenCentral()
@@ -17,4 +29,25 @@ dependencies {
 
 tasks.named('test') {
     useJUnitPlatform()
+}
+
+publishing {
+    repositories {
+        maven {
+            credentials {
+                username repoUsername
+                password repoPassword
+            }
+            url: "http://repo.dansplugins.com/repository/maven-releases/"
+        }
+    }
+    publications {
+        maven(MavenPublication) {
+            groupId = project(":ponder-commands").group
+            artifactId = project(":ponder-commands").name
+            version = project(":ponder-commands").version
+
+            from components.java
+        }
+    }
 }
