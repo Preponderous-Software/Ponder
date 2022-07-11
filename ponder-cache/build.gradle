@@ -1,8 +1,20 @@
 plugins {
     id 'java-library'
+    id 'maven-publish'
 }
 
-version = "2.0.0-SNAPSHOT"
+group = 'com.dansplugins'
+version = "2.0.0"
+
+def repoUsername = ""
+def repoPassword = ""
+def propertiesFile = new File("repo.properties")
+if (propertiesFile.exists()) {
+    def properties = new Properties()
+    properties.load(new FileInputStream(propertiesFile))
+    repoUsername = properties.getProperty("repo-username")
+    repoPassword = properties.getProperty("repo-password")
+}
 
 repositories {
     mavenCentral()
@@ -14,4 +26,25 @@ dependencies {
 
 tasks.named('test') {
     useJUnitPlatform()
+}
+
+publishing {
+    repositories {
+        maven {
+            credentials {
+                username repoUsername
+                password repoPassword
+            }
+            url "https://repo.dansplugins.com/repository/maven-releases/"
+        }
+    }
+    publications {
+        maven(MavenPublication) {
+            groupId = project(":ponder-cache").group
+            artifactId = project(":ponder-cache").name
+            version = project(":ponder-cache").version
+
+            from components.java
+        }
+    }
 }
